@@ -1,0 +1,11 @@
+D:\Documentos U\Practica\ProyectoHogarAncianos\ProyectoHogarAncianos\bin\Debug\ProyectoHogarAncianos.exe.config
+D:\Documentos U\Practica\ProyectoHogarAncianos\ProyectoHogarAncianos\bin\Debug\ProyectoHogarAncianos.exe
+D:\Documentos U\Practica\ProyectoHogarAncianos\ProyectoHogarAncianos\bin\Debug\ProyectoHogarAncianos.pdb
+D:\Documentos U\Practica\ProyectoHogarAncianos\ProyectoHogarAncianos\bin\Debug\MaterialSkin.dll
+D:\Documentos U\Practica\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.csprojResolveAssemblyReference.cache
+D:\Documentos U\Practica\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.Properties.Resources.resources
+D:\Documentos U\Practica\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.csproj.GenerateResource.Cache
+D:\Documentos U\Practica\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.exe
+D:\Documentos U\Practica\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.pdb
+D:\Documentos U\Practica\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.Login.resources
+D:\Documentos U\Practica\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.MenuPrincipal.resources

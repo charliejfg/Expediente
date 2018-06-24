@@ -1,0 +1,5 @@
+D:\Documentos U\Practica\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\bin\Debug\ProyectoHogarAncianosEntidades.dll
+D:\Documentos U\Practica\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\bin\Debug\ProyectoHogarAncianosEntidades.pdb
+D:\Documentos U\Practica\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\obj\Debug\ProyectoHogarAncianosEntidades.csprojResolveAssemblyReference.cache
+D:\Documentos U\Practica\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\obj\Debug\ProyectoHogarAncianosEntidades.dll
+D:\Documentos U\Practica\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\obj\Debug\ProyectoHogarAncianosEntidades.pdb
