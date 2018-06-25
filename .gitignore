@@ -4,3 +4,7 @@
 *.exe
 
 *.pdb
+
+ProyectoHogarAncianos/\.vs/ProyectoHogarAncianos/v14/\.suo
+
+ProyectoHogarAncianos/ProyectoHogarAncianos/obj/Debug/
