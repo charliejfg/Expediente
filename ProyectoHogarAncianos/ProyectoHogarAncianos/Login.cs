@@ -40,6 +40,7 @@ namespace ProyectoHogarAncianos
             MenuPrincipal menu = new MenuPrincipal();
             this.Hide();
             menu.ShowDialog();
+            //hola
         }
     }
 }
