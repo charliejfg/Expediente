@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.btnRecetas = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnExpedientes = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnAdministracion = new MaterialSkin.Controls.MaterialRaisedButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnCalendario = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -56,35 +56,36 @@
             this.btnRecetas.UseVisualStyleBackColor = true;
             this.btnRecetas.Click += new System.EventHandler(this.materialRaisedButton1_Click);
             // 
-            // materialRaisedButton1
+            // btnExpedientes
             // 
-            this.materialRaisedButton1.AutoSize = true;
-            this.materialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialRaisedButton1.Depth = 0;
-            this.materialRaisedButton1.Icon = null;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(224, 213);
-            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton1.Name = "materialRaisedButton1";
-            this.materialRaisedButton1.Primary = true;
-            this.materialRaisedButton1.Size = new System.Drawing.Size(109, 36);
-            this.materialRaisedButton1.TabIndex = 3;
-            this.materialRaisedButton1.Text = "Expedientes";
-            this.materialRaisedButton1.UseVisualStyleBackColor = true;
+            this.btnExpedientes.AutoSize = true;
+            this.btnExpedientes.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnExpedientes.Depth = 0;
+            this.btnExpedientes.Icon = null;
+            this.btnExpedientes.Location = new System.Drawing.Point(224, 213);
+            this.btnExpedientes.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnExpedientes.Name = "btnExpedientes";
+            this.btnExpedientes.Primary = true;
+            this.btnExpedientes.Size = new System.Drawing.Size(109, 36);
+            this.btnExpedientes.TabIndex = 3;
+            this.btnExpedientes.Text = "Expedientes";
+            this.btnExpedientes.UseVisualStyleBackColor = true;
             // 
-            // materialRaisedButton2
+            // btnAdministracion
             // 
-            this.materialRaisedButton2.AutoSize = true;
-            this.materialRaisedButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialRaisedButton2.Depth = 0;
-            this.materialRaisedButton2.Icon = null;
-            this.materialRaisedButton2.Location = new System.Drawing.Point(12, 289);
-            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton2.Name = "materialRaisedButton2";
-            this.materialRaisedButton2.Primary = true;
-            this.materialRaisedButton2.Size = new System.Drawing.Size(223, 36);
-            this.materialRaisedButton2.TabIndex = 4;
-            this.materialRaisedButton2.Text = "Controles Administrativos";
-            this.materialRaisedButton2.UseVisualStyleBackColor = true;
+            this.btnAdministracion.AutoSize = true;
+            this.btnAdministracion.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAdministracion.Depth = 0;
+            this.btnAdministracion.Icon = null;
+            this.btnAdministracion.Location = new System.Drawing.Point(12, 289);
+            this.btnAdministracion.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnAdministracion.Name = "btnAdministracion";
+            this.btnAdministracion.Primary = true;
+            this.btnAdministracion.Size = new System.Drawing.Size(223, 36);
+            this.btnAdministracion.TabIndex = 4;
+            this.btnAdministracion.Text = "Controles Administrativos";
+            this.btnAdministracion.UseVisualStyleBackColor = true;
+            this.btnAdministracion.Click += new System.EventHandler(this.btnAdministracion_Click);
             // 
             // pictureBox2
             // 
@@ -116,30 +117,30 @@
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
             // 
-            // materialRaisedButton3
+            // btnCalendario
             // 
-            this.materialRaisedButton3.AutoSize = true;
-            this.materialRaisedButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialRaisedButton3.Depth = 0;
-            this.materialRaisedButton3.Icon = null;
-            this.materialRaisedButton3.Location = new System.Drawing.Point(378, 213);
-            this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton3.Name = "materialRaisedButton3";
-            this.materialRaisedButton3.Primary = true;
-            this.materialRaisedButton3.Size = new System.Drawing.Size(104, 36);
-            this.materialRaisedButton3.TabIndex = 6;
-            this.materialRaisedButton3.Text = "Calendario";
-            this.materialRaisedButton3.UseVisualStyleBackColor = true;
+            this.btnCalendario.AutoSize = true;
+            this.btnCalendario.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCalendario.Depth = 0;
+            this.btnCalendario.Icon = null;
+            this.btnCalendario.Location = new System.Drawing.Point(378, 213);
+            this.btnCalendario.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCalendario.Name = "btnCalendario";
+            this.btnCalendario.Primary = true;
+            this.btnCalendario.Size = new System.Drawing.Size(104, 36);
+            this.btnCalendario.TabIndex = 6;
+            this.btnCalendario.Text = "Calendario";
+            this.btnCalendario.UseVisualStyleBackColor = true;
             // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(718, 337);
-            this.Controls.Add(this.materialRaisedButton3);
+            this.Controls.Add(this.btnCalendario);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.materialRaisedButton2);
-            this.Controls.Add(this.materialRaisedButton1);
+            this.Controls.Add(this.btnAdministracion);
+            this.Controls.Add(this.btnExpedientes);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnRecetas);
@@ -158,9 +159,9 @@
         private MaterialSkin.Controls.MaterialRaisedButton btnRecetas;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
+        private MaterialSkin.Controls.MaterialRaisedButton btnExpedientes;
+        private MaterialSkin.Controls.MaterialRaisedButton btnAdministracion;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton3;
+        private MaterialSkin.Controls.MaterialRaisedButton btnCalendario;
     }
 }

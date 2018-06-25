@@ -80,5 +80,12 @@ namespace ProyectoHogarAncianos
         {
 
         }
+
+        private void btnAdministracion_Click(object sender, EventArgs e)
+        {
+            Administracion menu = new Administracion();
+            this.Hide();
+            menu.ShowDialog();
+        }
     }
 }
