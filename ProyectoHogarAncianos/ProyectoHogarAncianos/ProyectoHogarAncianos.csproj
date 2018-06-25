@@ -84,6 +84,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -98,6 +99,160 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\002-mortar-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\003-truck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\004-formula.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\005-sleeping.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\006-medical-history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\007-injury.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\008-toothbrush.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\009-condom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\010-caduceus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\011-hygeia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\012-health-insurance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\013-pharmacy-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\014-beauty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\015-spray-bottle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\016-ear-dropper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\017-prescription.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\018-effervescent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\019-vitamin-c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\020-pouring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\021-syrup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\022-bandage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\023-capsules.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\024-posion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\025-antibiotic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\026-emergency-call.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\027-medicine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\028-reminder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\029-cream.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\030-asthma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\031-pharmacy-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\032-drugs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\033-pharmacy-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\034-test-tube.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\035-pharmacy-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\036-medicines.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\037-transfusion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\038-thermometer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\039-stethoscope.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\040-pharmacy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\041-schedule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\042-invoice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\043-mortar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\044-eye-dropper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\045-pills.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\046-syringe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\047-pharmacist-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\048-pharmacist-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\049-pharmacist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\050-microscope.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001-pharmacy-5.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
