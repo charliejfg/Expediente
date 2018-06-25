@@ -38,6 +38,7 @@ namespace ProyectoHogarAncianos
         private void BtnAceptar_Click(object sender, EventArgs e)
         {
             MenuPrincipal menu = new MenuPrincipal();
+            this.Hide();
             menu.ShowDialog();
         }
     }
