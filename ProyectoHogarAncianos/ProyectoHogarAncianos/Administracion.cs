@@ -106,12 +106,12 @@ namespace ProyectoHogarAncianos
             menu.ShowDialog();
         }
 
-<<<<<<< HEAD
+
         private void LstPacientes_SelectedIndexChanged(object sender, EventArgs e)
         {
             Pacientes pa = new Pacientes();
             pa.ShowDialog();
-=======
+        }
         private void btnExpediente_Click(object sender, EventArgs e)
         {
             Expediente expediente = new Expediente();
@@ -122,7 +122,6 @@ namespace ProyectoHogarAncianos
         {
             Medicamentos meds = new Medicamentos();
             meds.Show();
->>>>>>> master
         }
     }
 }

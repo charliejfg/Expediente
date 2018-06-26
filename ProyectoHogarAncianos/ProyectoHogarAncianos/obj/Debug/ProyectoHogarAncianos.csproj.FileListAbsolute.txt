@@ -34,3 +34,5 @@ C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHoga
 C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.pdb
 C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.Administracion.resources
 C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.Actividades.resources
+C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.Expediente.resources
+C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.Medicamentos.resources

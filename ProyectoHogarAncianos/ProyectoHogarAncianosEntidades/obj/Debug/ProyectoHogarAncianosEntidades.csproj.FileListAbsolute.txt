@@ -8,3 +8,7 @@ C:\Users\charl\OneDrive\Documentos\Proyects\Expediente\ProyectoHogarAncianos\Pro
 C:\Users\charl\OneDrive\Documentos\Proyects\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\obj\Debug\ProyectoHogarAncianosEntidades.csprojResolveAssemblyReference.cache
 C:\Users\charl\OneDrive\Documentos\Proyects\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\obj\Debug\ProyectoHogarAncianosEntidades.dll
 C:\Users\charl\OneDrive\Documentos\Proyects\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\obj\Debug\ProyectoHogarAncianosEntidades.pdb
+C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\bin\Debug\ProyectoHogarAncianosEntidades.dll
+C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\bin\Debug\ProyectoHogarAncianosEntidades.pdb
+C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\obj\Debug\ProyectoHogarAncianosEntidades.dll
+C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\obj\Debug\ProyectoHogarAncianosEntidades.pdb
