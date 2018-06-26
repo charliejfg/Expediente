@@ -35,32 +35,34 @@
             this.tabUsuarios = new System.Windows.Forms.TabPage();
             this.tabCitas = new System.Windows.Forms.TabPage();
             this.tabExpediente = new System.Windows.Forms.TabPage();
-            this.tabRecetas = new System.Windows.Forms.TabPage();
-            this.tabMedicamentos = new System.Windows.Forms.TabPage();
-            this.tabActividades = new System.Windows.Forms.TabPage();
-            this.tabPacientes = new System.Windows.Forms.TabPage();
-            this.LstPacientes = new System.Windows.Forms.ListView();
-            this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Genero = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.NumExpediente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.LstActividades = new MaterialSkin.Controls.MaterialListView();
-            this.Actividad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.LstMedicamentos = new MaterialSkin.Controls.MaterialListView();
-            this.materialFlatButton3 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.NombreMedicamento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.TipoMedicamento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.materialFlatButton4 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.LstRecetas = new MaterialSkin.Controls.MaterialListView();
-            this.numReceta = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.PacienteReceta = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.materialFlatButton5 = new MaterialSkin.Controls.MaterialFlatButton();
             this.LstExpediente = new MaterialSkin.Controls.MaterialListView();
             this.Expediente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ExpPaciente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.materialFlatButton5 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.tabRecetas = new System.Windows.Forms.TabPage();
+            this.LstRecetas = new MaterialSkin.Controls.MaterialListView();
+            this.numReceta = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.PacienteReceta = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.materialFlatButton4 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.tabMedicamentos = new System.Windows.Forms.TabPage();
+            this.materialFlatButton3 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.LstMedicamentos = new MaterialSkin.Controls.MaterialListView();
+            this.NombreMedicamento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.TipoMedicamento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tabActividades = new System.Windows.Forms.TabPage();
+            this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.LstActividades = new MaterialSkin.Controls.MaterialListView();
+            this.Actividad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tabPacientes = new System.Windows.Forms.TabPage();
+            this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.LstPacientes = new System.Windows.Forms.ListView();
+            this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Genero = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.NumExpediente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnExpediente = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnMedicamentos = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialTabControl1.SuspendLayout();
             this.tabExpediente.SuspendLayout();
             this.tabRecetas.SuspendLayout();
@@ -95,7 +97,7 @@
             this.materialTabControl1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabControl1.Name = "materialTabControl1";
             this.materialTabControl1.SelectedIndex = 0;
-            this.materialTabControl1.Size = new System.Drawing.Size(793, 249);
+            this.materialTabControl1.Size = new System.Drawing.Size(793, 294);
             this.materialTabControl1.TabIndex = 2;
             // 
             // tabUsuarios
@@ -120,269 +122,15 @@
             // 
             // tabExpediente
             // 
+            this.tabExpediente.Controls.Add(this.btnExpediente);
             this.tabExpediente.Controls.Add(this.LstExpediente);
             this.tabExpediente.Controls.Add(this.materialFlatButton5);
             this.tabExpediente.Location = new System.Drawing.Point(4, 22);
             this.tabExpediente.Name = "tabExpediente";
-            this.tabExpediente.Size = new System.Drawing.Size(785, 223);
+            this.tabExpediente.Size = new System.Drawing.Size(785, 268);
             this.tabExpediente.TabIndex = 2;
             this.tabExpediente.Text = "Expedientes";
             this.tabExpediente.UseVisualStyleBackColor = true;
-            // 
-            // tabRecetas
-            // 
-            this.tabRecetas.Controls.Add(this.LstRecetas);
-            this.tabRecetas.Controls.Add(this.materialFlatButton4);
-            this.tabRecetas.Location = new System.Drawing.Point(4, 22);
-            this.tabRecetas.Name = "tabRecetas";
-            this.tabRecetas.Size = new System.Drawing.Size(785, 223);
-            this.tabRecetas.TabIndex = 3;
-            this.tabRecetas.Text = "Recetas";
-            this.tabRecetas.UseVisualStyleBackColor = true;
-            // 
-            // tabMedicamentos
-            // 
-            this.tabMedicamentos.Controls.Add(this.materialFlatButton3);
-            this.tabMedicamentos.Controls.Add(this.LstMedicamentos);
-            this.tabMedicamentos.Location = new System.Drawing.Point(4, 22);
-            this.tabMedicamentos.Name = "tabMedicamentos";
-            this.tabMedicamentos.Size = new System.Drawing.Size(785, 223);
-            this.tabMedicamentos.TabIndex = 4;
-            this.tabMedicamentos.Text = "Medicamentos";
-            this.tabMedicamentos.UseVisualStyleBackColor = true;
-            // 
-            // tabActividades
-            // 
-            this.tabActividades.Controls.Add(this.materialFlatButton2);
-            this.tabActividades.Controls.Add(this.LstActividades);
-            this.tabActividades.Location = new System.Drawing.Point(4, 22);
-            this.tabActividades.Name = "tabActividades";
-            this.tabActividades.Size = new System.Drawing.Size(785, 223);
-            this.tabActividades.TabIndex = 5;
-            this.tabActividades.Text = "Actividades";
-            this.tabActividades.UseVisualStyleBackColor = true;
-            // 
-            // tabPacientes
-            // 
-            this.tabPacientes.Controls.Add(this.materialFlatButton1);
-            this.tabPacientes.Controls.Add(this.LstPacientes);
-            this.tabPacientes.Location = new System.Drawing.Point(4, 22);
-            this.tabPacientes.Name = "tabPacientes";
-            this.tabPacientes.Size = new System.Drawing.Size(785, 223);
-            this.tabPacientes.TabIndex = 6;
-            this.tabPacientes.Text = "Pacientes";
-            this.tabPacientes.UseVisualStyleBackColor = true;
-            // 
-            // LstPacientes
-            // 
-            this.LstPacientes.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Nombre,
-            this.Genero,
-            this.NumExpediente});
-            this.LstPacientes.FullRowSelect = true;
-            this.LstPacientes.Location = new System.Drawing.Point(70, 51);
-            this.LstPacientes.Name = "LstPacientes";
-            this.LstPacientes.Size = new System.Drawing.Size(661, 160);
-            this.LstPacientes.SmallImageList = this.imageList1;
-            this.LstPacientes.TabIndex = 2;
-            this.LstPacientes.UseCompatibleStateImageBehavior = false;
-            this.LstPacientes.View = System.Windows.Forms.View.Details;
-            // 
-            // Nombre
-            // 
-            this.Nombre.Text = "Nombre";
-            this.Nombre.Width = 279;
-            // 
-            // Genero
-            // 
-            this.Genero.Text = "Género";
-            this.Genero.Width = 119;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "usuario.bmp");
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProyectoHogarAncianos.Properties.Resources.Action___States___Vol__3_19_512;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 355);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(49, 43);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // materialFlatButton1
-            // 
-            this.materialFlatButton1.AutoSize = true;
-            this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton1.Depth = 0;
-            this.materialFlatButton1.Icon = null;
-            this.materialFlatButton1.Location = new System.Drawing.Point(297, 6);
-            this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton1.Name = "materialFlatButton1";
-            this.materialFlatButton1.Primary = false;
-            this.materialFlatButton1.Size = new System.Drawing.Size(134, 36);
-            this.materialFlatButton1.TabIndex = 4;
-            this.materialFlatButton1.Text = "Nuevo Paciente";
-            this.materialFlatButton1.UseVisualStyleBackColor = true;
-            // 
-            // NumExpediente
-            // 
-            this.NumExpediente.Text = "Número de expediente";
-            this.NumExpediente.Width = 127;
-            // 
-            // LstActividades
-            // 
-            this.LstActividades.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.LstActividades.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Actividad});
-            this.LstActividades.Depth = 0;
-            this.LstActividades.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.LstActividades.FullRowSelect = true;
-            this.LstActividades.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.LstActividades.Location = new System.Drawing.Point(152, 84);
-            this.LstActividades.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.LstActividades.MouseState = MaterialSkin.MouseState.OUT;
-            this.LstActividades.Name = "LstActividades";
-            this.LstActividades.OwnerDraw = true;
-            this.LstActividades.Size = new System.Drawing.Size(464, 98);
-            this.LstActividades.TabIndex = 0;
-            this.LstActividades.UseCompatibleStateImageBehavior = false;
-            this.LstActividades.View = System.Windows.Forms.View.Details;
-            // 
-            // Actividad
-            // 
-            this.Actividad.Text = "Actividad";
-            this.Actividad.Width = 446;
-            // 
-            // materialFlatButton2
-            // 
-            this.materialFlatButton2.AutoSize = true;
-            this.materialFlatButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton2.Depth = 0;
-            this.materialFlatButton2.Icon = null;
-            this.materialFlatButton2.Location = new System.Drawing.Point(320, 23);
-            this.materialFlatButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton2.Name = "materialFlatButton2";
-            this.materialFlatButton2.Primary = false;
-            this.materialFlatButton2.Size = new System.Drawing.Size(139, 36);
-            this.materialFlatButton2.TabIndex = 5;
-            this.materialFlatButton2.Text = "Nueva Actividad";
-            this.materialFlatButton2.UseVisualStyleBackColor = true;
-            // 
-            // LstMedicamentos
-            // 
-            this.LstMedicamentos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.LstMedicamentos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.NombreMedicamento,
-            this.TipoMedicamento});
-            this.LstMedicamentos.Depth = 0;
-            this.LstMedicamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.LstMedicamentos.FullRowSelect = true;
-            this.LstMedicamentos.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.LstMedicamentos.Location = new System.Drawing.Point(60, 70);
-            this.LstMedicamentos.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.LstMedicamentos.MouseState = MaterialSkin.MouseState.OUT;
-            this.LstMedicamentos.Name = "LstMedicamentos";
-            this.LstMedicamentos.OwnerDraw = true;
-            this.LstMedicamentos.Size = new System.Drawing.Size(689, 115);
-            this.LstMedicamentos.TabIndex = 0;
-            this.LstMedicamentos.UseCompatibleStateImageBehavior = false;
-            this.LstMedicamentos.View = System.Windows.Forms.View.Details;
-            // 
-            // materialFlatButton3
-            // 
-            this.materialFlatButton3.AutoSize = true;
-            this.materialFlatButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton3.Depth = 0;
-            this.materialFlatButton3.Icon = null;
-            this.materialFlatButton3.Location = new System.Drawing.Point(284, 23);
-            this.materialFlatButton3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton3.Name = "materialFlatButton3";
-            this.materialFlatButton3.Primary = false;
-            this.materialFlatButton3.Size = new System.Drawing.Size(167, 36);
-            this.materialFlatButton3.TabIndex = 1;
-            this.materialFlatButton3.Text = "Nuevo Medicamento";
-            this.materialFlatButton3.UseVisualStyleBackColor = true;
-            // 
-            // NombreMedicamento
-            // 
-            this.NombreMedicamento.Text = "Nombre";
-            this.NombreMedicamento.Width = 285;
-            // 
-            // TipoMedicamento
-            // 
-            this.TipoMedicamento.Text = "Tipo";
-            this.TipoMedicamento.Width = 419;
-            // 
-            // materialFlatButton4
-            // 
-            this.materialFlatButton4.AutoSize = true;
-            this.materialFlatButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton4.Depth = 0;
-            this.materialFlatButton4.Icon = null;
-            this.materialFlatButton4.Location = new System.Drawing.Point(311, 23);
-            this.materialFlatButton4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton4.Name = "materialFlatButton4";
-            this.materialFlatButton4.Primary = false;
-            this.materialFlatButton4.Size = new System.Drawing.Size(119, 36);
-            this.materialFlatButton4.TabIndex = 0;
-            this.materialFlatButton4.Text = "Nueva Receta";
-            this.materialFlatButton4.UseVisualStyleBackColor = true;
-            // 
-            // LstRecetas
-            // 
-            this.LstRecetas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.LstRecetas.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.numReceta,
-            this.PacienteReceta});
-            this.LstRecetas.Depth = 0;
-            this.LstRecetas.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.LstRecetas.FullRowSelect = true;
-            this.LstRecetas.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.LstRecetas.Location = new System.Drawing.Point(49, 68);
-            this.LstRecetas.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.LstRecetas.MouseState = MaterialSkin.MouseState.OUT;
-            this.LstRecetas.Name = "LstRecetas";
-            this.LstRecetas.OwnerDraw = true;
-            this.LstRecetas.Size = new System.Drawing.Size(689, 119);
-            this.LstRecetas.TabIndex = 1;
-            this.LstRecetas.UseCompatibleStateImageBehavior = false;
-            this.LstRecetas.View = System.Windows.Forms.View.Details;
-            // 
-            // numReceta
-            // 
-            this.numReceta.Text = "Numero de Receta";
-            this.numReceta.Width = 300;
-            // 
-            // PacienteReceta
-            // 
-            this.PacienteReceta.Text = "Paciente de receta";
-            this.PacienteReceta.Width = 340;
-            // 
-            // materialFlatButton5
-            // 
-            this.materialFlatButton5.AutoSize = true;
-            this.materialFlatButton5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton5.Depth = 0;
-            this.materialFlatButton5.Icon = null;
-            this.materialFlatButton5.Location = new System.Drawing.Point(276, 15);
-            this.materialFlatButton5.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton5.Name = "materialFlatButton5";
-            this.materialFlatButton5.Primary = false;
-            this.materialFlatButton5.Size = new System.Drawing.Size(149, 36);
-            this.materialFlatButton5.TabIndex = 0;
-            this.materialFlatButton5.Text = "Nuevo Expediente";
-            this.materialFlatButton5.UseVisualStyleBackColor = true;
             // 
             // LstExpediente
             // 
@@ -414,11 +162,299 @@
             this.ExpPaciente.Text = "Paciente";
             this.ExpPaciente.Width = 254;
             // 
+            // materialFlatButton5
+            // 
+            this.materialFlatButton5.AutoSize = true;
+            this.materialFlatButton5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton5.Depth = 0;
+            this.materialFlatButton5.Icon = null;
+            this.materialFlatButton5.Location = new System.Drawing.Point(276, 15);
+            this.materialFlatButton5.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton5.Name = "materialFlatButton5";
+            this.materialFlatButton5.Primary = false;
+            this.materialFlatButton5.Size = new System.Drawing.Size(149, 36);
+            this.materialFlatButton5.TabIndex = 0;
+            this.materialFlatButton5.Text = "Nuevo Expediente";
+            this.materialFlatButton5.UseVisualStyleBackColor = true;
+            // 
+            // tabRecetas
+            // 
+            this.tabRecetas.Controls.Add(this.LstRecetas);
+            this.tabRecetas.Controls.Add(this.materialFlatButton4);
+            this.tabRecetas.Location = new System.Drawing.Point(4, 22);
+            this.tabRecetas.Name = "tabRecetas";
+            this.tabRecetas.Size = new System.Drawing.Size(785, 268);
+            this.tabRecetas.TabIndex = 3;
+            this.tabRecetas.Text = "Recetas";
+            this.tabRecetas.UseVisualStyleBackColor = true;
+            // 
+            // LstRecetas
+            // 
+            this.LstRecetas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LstRecetas.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.numReceta,
+            this.PacienteReceta});
+            this.LstRecetas.Depth = 0;
+            this.LstRecetas.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.LstRecetas.FullRowSelect = true;
+            this.LstRecetas.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.LstRecetas.Location = new System.Drawing.Point(49, 68);
+            this.LstRecetas.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.LstRecetas.MouseState = MaterialSkin.MouseState.OUT;
+            this.LstRecetas.Name = "LstRecetas";
+            this.LstRecetas.OwnerDraw = true;
+            this.LstRecetas.Size = new System.Drawing.Size(689, 119);
+            this.LstRecetas.TabIndex = 1;
+            this.LstRecetas.UseCompatibleStateImageBehavior = false;
+            this.LstRecetas.View = System.Windows.Forms.View.Details;
+            // 
+            // numReceta
+            // 
+            this.numReceta.Text = "Numero de Receta";
+            this.numReceta.Width = 300;
+            // 
+            // PacienteReceta
+            // 
+            this.PacienteReceta.Text = "Paciente de receta";
+            this.PacienteReceta.Width = 340;
+            // 
+            // materialFlatButton4
+            // 
+            this.materialFlatButton4.AutoSize = true;
+            this.materialFlatButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton4.Depth = 0;
+            this.materialFlatButton4.Icon = null;
+            this.materialFlatButton4.Location = new System.Drawing.Point(311, 23);
+            this.materialFlatButton4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton4.Name = "materialFlatButton4";
+            this.materialFlatButton4.Primary = false;
+            this.materialFlatButton4.Size = new System.Drawing.Size(119, 36);
+            this.materialFlatButton4.TabIndex = 0;
+            this.materialFlatButton4.Text = "Nueva Receta";
+            this.materialFlatButton4.UseVisualStyleBackColor = true;
+            // 
+            // tabMedicamentos
+            // 
+            this.tabMedicamentos.Controls.Add(this.btnMedicamentos);
+            this.tabMedicamentos.Controls.Add(this.materialFlatButton3);
+            this.tabMedicamentos.Controls.Add(this.LstMedicamentos);
+            this.tabMedicamentos.Location = new System.Drawing.Point(4, 22);
+            this.tabMedicamentos.Name = "tabMedicamentos";
+            this.tabMedicamentos.Size = new System.Drawing.Size(785, 268);
+            this.tabMedicamentos.TabIndex = 4;
+            this.tabMedicamentos.Text = "Medicamentos";
+            this.tabMedicamentos.UseVisualStyleBackColor = true;
+            // 
+            // materialFlatButton3
+            // 
+            this.materialFlatButton3.AutoSize = true;
+            this.materialFlatButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton3.Depth = 0;
+            this.materialFlatButton3.Icon = null;
+            this.materialFlatButton3.Location = new System.Drawing.Point(284, 23);
+            this.materialFlatButton3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton3.Name = "materialFlatButton3";
+            this.materialFlatButton3.Primary = false;
+            this.materialFlatButton3.Size = new System.Drawing.Size(167, 36);
+            this.materialFlatButton3.TabIndex = 1;
+            this.materialFlatButton3.Text = "Nuevo Medicamento";
+            this.materialFlatButton3.UseVisualStyleBackColor = true;
+            // 
+            // LstMedicamentos
+            // 
+            this.LstMedicamentos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LstMedicamentos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.NombreMedicamento,
+            this.TipoMedicamento});
+            this.LstMedicamentos.Depth = 0;
+            this.LstMedicamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.LstMedicamentos.FullRowSelect = true;
+            this.LstMedicamentos.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.LstMedicamentos.Location = new System.Drawing.Point(60, 70);
+            this.LstMedicamentos.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.LstMedicamentos.MouseState = MaterialSkin.MouseState.OUT;
+            this.LstMedicamentos.Name = "LstMedicamentos";
+            this.LstMedicamentos.OwnerDraw = true;
+            this.LstMedicamentos.Size = new System.Drawing.Size(705, 147);
+            this.LstMedicamentos.TabIndex = 0;
+            this.LstMedicamentos.UseCompatibleStateImageBehavior = false;
+            this.LstMedicamentos.View = System.Windows.Forms.View.Details;
+            // 
+            // NombreMedicamento
+            // 
+            this.NombreMedicamento.Text = "Nombre";
+            this.NombreMedicamento.Width = 285;
+            // 
+            // TipoMedicamento
+            // 
+            this.TipoMedicamento.Text = "Tipo";
+            this.TipoMedicamento.Width = 419;
+            // 
+            // tabActividades
+            // 
+            this.tabActividades.Controls.Add(this.materialFlatButton2);
+            this.tabActividades.Controls.Add(this.LstActividades);
+            this.tabActividades.Location = new System.Drawing.Point(4, 22);
+            this.tabActividades.Name = "tabActividades";
+            this.tabActividades.Size = new System.Drawing.Size(785, 223);
+            this.tabActividades.TabIndex = 5;
+            this.tabActividades.Text = "Actividades";
+            this.tabActividades.UseVisualStyleBackColor = true;
+            // 
+            // materialFlatButton2
+            // 
+            this.materialFlatButton2.AutoSize = true;
+            this.materialFlatButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton2.Depth = 0;
+            this.materialFlatButton2.Icon = null;
+            this.materialFlatButton2.Location = new System.Drawing.Point(320, 23);
+            this.materialFlatButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton2.Name = "materialFlatButton2";
+            this.materialFlatButton2.Primary = false;
+            this.materialFlatButton2.Size = new System.Drawing.Size(139, 36);
+            this.materialFlatButton2.TabIndex = 5;
+            this.materialFlatButton2.Text = "Nueva Actividad";
+            this.materialFlatButton2.UseVisualStyleBackColor = true;
+            // 
+            // LstActividades
+            // 
+            this.LstActividades.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LstActividades.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Actividad});
+            this.LstActividades.Depth = 0;
+            this.LstActividades.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.LstActividades.FullRowSelect = true;
+            this.LstActividades.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.LstActividades.Location = new System.Drawing.Point(152, 84);
+            this.LstActividades.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.LstActividades.MouseState = MaterialSkin.MouseState.OUT;
+            this.LstActividades.Name = "LstActividades";
+            this.LstActividades.OwnerDraw = true;
+            this.LstActividades.Size = new System.Drawing.Size(464, 98);
+            this.LstActividades.TabIndex = 0;
+            this.LstActividades.UseCompatibleStateImageBehavior = false;
+            this.LstActividades.View = System.Windows.Forms.View.Details;
+            // 
+            // Actividad
+            // 
+            this.Actividad.Text = "Actividad";
+            this.Actividad.Width = 446;
+            // 
+            // tabPacientes
+            // 
+            this.tabPacientes.Controls.Add(this.materialFlatButton1);
+            this.tabPacientes.Controls.Add(this.LstPacientes);
+            this.tabPacientes.Location = new System.Drawing.Point(4, 22);
+            this.tabPacientes.Name = "tabPacientes";
+            this.tabPacientes.Size = new System.Drawing.Size(785, 223);
+            this.tabPacientes.TabIndex = 6;
+            this.tabPacientes.Text = "Pacientes";
+            this.tabPacientes.UseVisualStyleBackColor = true;
+            // 
+            // materialFlatButton1
+            // 
+            this.materialFlatButton1.AutoSize = true;
+            this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton1.Depth = 0;
+            this.materialFlatButton1.Icon = null;
+            this.materialFlatButton1.Location = new System.Drawing.Point(297, 6);
+            this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton1.Name = "materialFlatButton1";
+            this.materialFlatButton1.Primary = false;
+            this.materialFlatButton1.Size = new System.Drawing.Size(134, 36);
+            this.materialFlatButton1.TabIndex = 4;
+            this.materialFlatButton1.Text = "Nuevo Paciente";
+            this.materialFlatButton1.UseVisualStyleBackColor = true;
+            // 
+            // LstPacientes
+            // 
+            this.LstPacientes.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Nombre,
+            this.Genero,
+            this.NumExpediente});
+            this.LstPacientes.FullRowSelect = true;
+            this.LstPacientes.Location = new System.Drawing.Point(70, 51);
+            this.LstPacientes.Name = "LstPacientes";
+            this.LstPacientes.Size = new System.Drawing.Size(661, 160);
+            this.LstPacientes.SmallImageList = this.imageList1;
+            this.LstPacientes.TabIndex = 2;
+            this.LstPacientes.UseCompatibleStateImageBehavior = false;
+            this.LstPacientes.View = System.Windows.Forms.View.Details;
+            // 
+            // Nombre
+            // 
+            this.Nombre.Text = "Nombre";
+            this.Nombre.Width = 279;
+            // 
+            // Genero
+            // 
+            this.Genero.Text = "Género";
+            this.Genero.Width = 119;
+            // 
+            // NumExpediente
+            // 
+            this.NumExpediente.Text = "Número de expediente";
+            this.NumExpediente.Width = 127;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "usuario.bmp");
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoHogarAncianos.Properties.Resources.Action___States___Vol__3_19_512;
+            this.pictureBox1.Location = new System.Drawing.Point(16, 404);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(49, 43);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // btnExpediente
+            // 
+            this.btnExpediente.AutoSize = true;
+            this.btnExpediente.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnExpediente.Depth = 0;
+            this.btnExpediente.Icon = null;
+            this.btnExpediente.Location = new System.Drawing.Point(716, 229);
+            this.btnExpediente.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnExpediente.Name = "btnExpediente";
+            this.btnExpediente.Primary = true;
+            this.btnExpediente.Size = new System.Drawing.Size(66, 36);
+            this.btnExpediente.TabIndex = 2;
+            this.btnExpediente.Text = "Nuevo";
+            this.btnExpediente.UseVisualStyleBackColor = true;
+            this.btnExpediente.Click += new System.EventHandler(this.btnExpediente_Click);
+            // 
+            // btnMedicamentos
+            // 
+            this.btnMedicamentos.AutoSize = true;
+            this.btnMedicamentos.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMedicamentos.Depth = 0;
+            this.btnMedicamentos.Icon = null;
+            this.btnMedicamentos.Location = new System.Drawing.Point(699, 229);
+            this.btnMedicamentos.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnMedicamentos.Name = "btnMedicamentos";
+            this.btnMedicamentos.Primary = true;
+            this.btnMedicamentos.Size = new System.Drawing.Size(66, 36);
+            this.btnMedicamentos.TabIndex = 2;
+            this.btnMedicamentos.Text = "Nuevo";
+            this.btnMedicamentos.UseVisualStyleBackColor = true;
+            this.btnMedicamentos.Click += new System.EventHandler(this.btnMedicamentos_Click);
+            // 
             // Administracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(817, 410);
+            this.ClientSize = new System.Drawing.Size(817, 459);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.materialTabControl1);
             this.Controls.Add(this.materialTabSelector1);
@@ -474,5 +510,7 @@
         private System.Windows.Forms.ColumnHeader Expediente;
         private System.Windows.Forms.ColumnHeader ExpPaciente;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton5;
+        private MaterialSkin.Controls.MaterialRaisedButton btnExpediente;
+        private MaterialSkin.Controls.MaterialRaisedButton btnMedicamentos;
     }
 }

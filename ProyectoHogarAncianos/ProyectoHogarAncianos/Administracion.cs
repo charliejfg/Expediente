@@ -74,5 +74,17 @@ namespace ProyectoHogarAncianos
             this.Hide();
             menu.ShowDialog();
         }
+
+        private void btnExpediente_Click(object sender, EventArgs e)
+        {
+            Expediente expediente = new Expediente();
+            expediente.Show();
+        }
+
+        private void btnMedicamentos_Click(object sender, EventArgs e)
+        {
+            Medicamentos meds = new Medicamentos();
+            meds.Show();
+        }
     }
 }
