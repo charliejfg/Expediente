@@ -123,5 +123,35 @@ namespace ProyectoHogarAncianos
             Medicamentos meds = new Medicamentos();
             meds.Show();
         }
+
+        private void LstMedicamentos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Medicamentos me = new Medicamentos();
+            me.ShowDialog();
+        }
+
+        private void LstExpediente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Expediente ex = new Expediente();
+            ex.ShowDialog();
+        }
+
+        private void LstActividades_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Actividades ac = new Actividades();
+            ac.ShowDialog();
+        }
+
+        private void LstUsuarios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Usuarios us = new Usuarios();
+            us.ShowDialog(); 
+        }
+
+        private void LstCitas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Cita ci = new Cita();
+            ci.ShowDialog(); 
+        }
     }
 }

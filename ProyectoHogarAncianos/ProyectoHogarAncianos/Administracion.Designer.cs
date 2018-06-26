@@ -133,6 +133,7 @@
             this.LstUsuarios.TabIndex = 2;
             this.LstUsuarios.UseCompatibleStateImageBehavior = false;
             this.LstUsuarios.View = System.Windows.Forms.View.Details;
+            this.LstUsuarios.SelectedIndexChanged += new System.EventHandler(this.LstUsuarios_SelectedIndexChanged);
             // 
             // Usuario
             // 
@@ -198,6 +199,7 @@
             this.LstCitas.TabIndex = 2;
             this.LstCitas.UseCompatibleStateImageBehavior = false;
             this.LstCitas.View = System.Windows.Forms.View.Details;
+            this.LstCitas.SelectedIndexChanged += new System.EventHandler(this.LstCitas_SelectedIndexChanged);
             // 
             // PacienteCita
             // 
@@ -260,6 +262,7 @@
             this.LstExpediente.TabIndex = 1;
             this.LstExpediente.UseCompatibleStateImageBehavior = false;
             this.LstExpediente.View = System.Windows.Forms.View.Details;
+            this.LstExpediente.SelectedIndexChanged += new System.EventHandler(this.LstExpediente_SelectedIndexChanged);
             // 
             // Expediente
             // 
@@ -390,6 +393,7 @@
             this.LstMedicamentos.TabIndex = 0;
             this.LstMedicamentos.UseCompatibleStateImageBehavior = false;
             this.LstMedicamentos.View = System.Windows.Forms.View.Details;
+            this.LstMedicamentos.SelectedIndexChanged += new System.EventHandler(this.LstMedicamentos_SelectedIndexChanged);
             // 
             // NombreMedicamento
             // 
@@ -446,6 +450,7 @@
             this.LstActividades.TabIndex = 0;
             this.LstActividades.UseCompatibleStateImageBehavior = false;
             this.LstActividades.View = System.Windows.Forms.View.Details;
+            this.LstActividades.SelectedIndexChanged += new System.EventHandler(this.LstActividades_SelectedIndexChanged);
             // 
             // Actividad
             // 

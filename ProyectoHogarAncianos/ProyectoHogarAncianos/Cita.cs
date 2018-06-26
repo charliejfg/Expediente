@@ -12,12 +12,11 @@ using MaterialSkin;
 
 namespace ProyectoHogarAncianos
 {
-    public partial class Actividades : MaterialForm
+    public partial class Cita : MaterialForm
     {
-        public Actividades()
+        public Cita()
         {
             InitializeComponent();
-
             MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
