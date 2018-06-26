@@ -3,3 +3,8 @@ D:\Documentos U\Practica\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\bi
 D:\Documentos U\Practica\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\obj\Debug\ProyectoHogarAncianosEntidades.csprojResolveAssemblyReference.cache
 D:\Documentos U\Practica\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\obj\Debug\ProyectoHogarAncianosEntidades.dll
 D:\Documentos U\Practica\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\obj\Debug\ProyectoHogarAncianosEntidades.pdb
+C:\Users\charl\OneDrive\Documentos\Proyects\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\bin\Debug\ProyectoHogarAncianosEntidades.dll
+C:\Users\charl\OneDrive\Documentos\Proyects\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\bin\Debug\ProyectoHogarAncianosEntidades.pdb
+C:\Users\charl\OneDrive\Documentos\Proyects\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\obj\Debug\ProyectoHogarAncianosEntidades.csprojResolveAssemblyReference.cache
+C:\Users\charl\OneDrive\Documentos\Proyects\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\obj\Debug\ProyectoHogarAncianosEntidades.dll
+C:\Users\charl\OneDrive\Documentos\Proyects\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\obj\Debug\ProyectoHogarAncianosEntidades.pdb

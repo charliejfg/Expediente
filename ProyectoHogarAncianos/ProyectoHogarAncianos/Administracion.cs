@@ -19,11 +19,16 @@ namespace ProyectoHogarAncianos
         {
             InitializeComponent();
 
-            materialSkinManager = MaterialSkinManager.Instance;
+            MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
 
+            // Configure color schema
+            materialSkinManager.ColorScheme = new ColorScheme(
+                Primary.Blue400, Primary.Blue500,
+                Primary.Blue500, Accent.LightBlue200,
+                TextShade.WHITE
+            );
         }
 
         private void Administracion_Load(object sender, EventArgs e)
@@ -101,10 +106,23 @@ namespace ProyectoHogarAncianos
             menu.ShowDialog();
         }
 
+<<<<<<< HEAD
         private void LstPacientes_SelectedIndexChanged(object sender, EventArgs e)
         {
             Pacientes pa = new Pacientes();
             pa.ShowDialog();
+=======
+        private void btnExpediente_Click(object sender, EventArgs e)
+        {
+            Expediente expediente = new Expediente();
+            expediente.Show();
+        }
+
+        private void btnMedicamentos_Click(object sender, EventArgs e)
+        {
+            Medicamentos meds = new Medicamentos();
+            meds.Show();
+>>>>>>> master
         }
     }
 }
