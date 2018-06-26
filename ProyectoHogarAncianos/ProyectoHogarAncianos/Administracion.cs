@@ -28,17 +28,43 @@ namespace ProyectoHogarAncianos
 
         private void Administracion_Load(object sender, EventArgs e)
         {
+            //Se llena la listview de pacientes
+            LstPacientes.Items.Add("Carlos Fernadez Garcia", 0);
+            LstPacientes.Items[0].SubItems.Add("Hombre");
+            LstPacientes.Items[0].SubItems.Add("1");
+            LstPacientes.Items.Add("Georgi Mesen Cerdas", 0);
+            LstPacientes.Items[1].SubItems.Add("Hombre");
+            LstPacientes.Items[1].SubItems.Add("2");
+            LstPacientes.Items.Add("Pedro Ramos Llano", 0);
+            LstPacientes.Items[2].SubItems.Add("Hombre");
+            LstPacientes.Items[2].SubItems.Add("3");
+            LstPacientes.Items.Add("Andres Cordero Ruiz", 0);
+            LstPacientes.Items[3].SubItems.Add("Hombre");
+            LstPacientes.Items[3].SubItems.Add("4");
+            LstPacientes.Items.Add("Marco Perez Gomez", 0);
+            LstPacientes.Items[4].SubItems.Add("Hombre");
+            LstPacientes.Items[4].SubItems.Add("5");
 
-            listView1.Items.Add("Carlos Fernadez Garcia", 0);
-            listView1.Items[0].SubItems.Add("Hombre");
-            listView1.Items.Add("Georgi Mesen Cerdas", 0);
-            listView1.Items[1].SubItems.Add("Hombre");
-            listView1.Items.Add("Pedro Ramos Llano", 0);
-            listView1.Items[2].SubItems.Add("Hombre");
-            listView1.Items.Add("Andres Cordero Ruiz", 0);
-            listView1.Items[3].SubItems.Add("Hombre");
-            listView1.Items.Add("Marco Perez Gomez", 0);
-            listView1.Items[4].SubItems.Add("Hombre");
+            //Se llena la listview de actividades
+            LstActividades.Items.Add("Ejercicio");
+            LstActividades.Items.Add("Pasear");
+            LstActividades.Items.Add("Manualidades");
+
+            //Se llena la listview de medicamentos
+            LstMedicamentos.Items.Add("Morfina");
+            LstMedicamentos.Items[0].SubItems.Add("Anestésicos");
+            LstMedicamentos.Items.Add("Paracetamol");
+            LstMedicamentos.Items[1].SubItems.Add("Antiinflamatorios");
+            LstMedicamentos.Items.Add("Fenobarbital");
+            LstMedicamentos.Items[2].SubItems.Add("Anticonvulsivo");
+
+            //Se llena la listview de recetas
+            LstRecetas.Items.Add("1");
+            LstRecetas.Items[0].SubItems.Add("Andres Cordero Ruiz");
+            LstRecetas.Items.Add("2");
+            LstRecetas.Items[1].SubItems.Add("Marco Perez Gomez");
+            LstRecetas.Items.Add("3");
+            LstRecetas.Items[2].SubItems.Add("Pedro Ramos Llano");
 
         }
 
