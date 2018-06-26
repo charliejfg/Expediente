@@ -43,7 +43,6 @@
             this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Genero = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
             this.NumExpediente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.LstActividades = new MaterialSkin.Controls.MaterialListView();
@@ -61,7 +60,19 @@
             this.LstExpediente = new MaterialSkin.Controls.MaterialListView();
             this.Expediente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ExpPaciente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.materialFlatButton6 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.materialFlatButton7 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.LstCitas = new MaterialSkin.Controls.MaterialListView();
+            this.PacienteCita = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FechaCita = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Hora = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.LstUsuarios = new System.Windows.Forms.ListView();
+            this.Usuario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.NomUsuario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.materialTabControl1.SuspendLayout();
+            this.tabUsuarios.SuspendLayout();
+            this.tabCitas.SuspendLayout();
             this.tabExpediente.SuspendLayout();
             this.tabRecetas.SuspendLayout();
             this.tabMedicamentos.SuspendLayout();
@@ -100,6 +111,8 @@
             // 
             // tabUsuarios
             // 
+            this.tabUsuarios.Controls.Add(this.LstUsuarios);
+            this.tabUsuarios.Controls.Add(this.materialFlatButton7);
             this.tabUsuarios.Location = new System.Drawing.Point(4, 22);
             this.tabUsuarios.Name = "tabUsuarios";
             this.tabUsuarios.Padding = new System.Windows.Forms.Padding(3);
@@ -110,6 +123,8 @@
             // 
             // tabCitas
             // 
+            this.tabCitas.Controls.Add(this.LstCitas);
+            this.tabCitas.Controls.Add(this.materialFlatButton6);
             this.tabCitas.Location = new System.Drawing.Point(4, 22);
             this.tabCitas.Name = "tabCitas";
             this.tabCitas.Padding = new System.Windows.Forms.Padding(3);
@@ -187,6 +202,7 @@
             this.LstPacientes.TabIndex = 2;
             this.LstPacientes.UseCompatibleStateImageBehavior = false;
             this.LstPacientes.View = System.Windows.Forms.View.Details;
+            this.LstPacientes.SelectedIndexChanged += new System.EventHandler(this.LstPacientes_SelectedIndexChanged);
             // 
             // Nombre
             // 
@@ -203,17 +219,6 @@
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "usuario.bmp");
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProyectoHogarAncianos.Properties.Resources.Action___States___Vol__3_19_512;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 355);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(49, 43);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // materialFlatButton1
             // 
@@ -250,7 +255,7 @@
             this.LstActividades.MouseState = MaterialSkin.MouseState.OUT;
             this.LstActividades.Name = "LstActividades";
             this.LstActividades.OwnerDraw = true;
-            this.LstActividades.Size = new System.Drawing.Size(464, 98);
+            this.LstActividades.Size = new System.Drawing.Size(540, 113);
             this.LstActividades.TabIndex = 0;
             this.LstActividades.UseCompatibleStateImageBehavior = false;
             this.LstActividades.View = System.Windows.Forms.View.Details;
@@ -286,12 +291,12 @@
             this.LstMedicamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.LstMedicamentos.FullRowSelect = true;
             this.LstMedicamentos.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.LstMedicamentos.Location = new System.Drawing.Point(60, 70);
+            this.LstMedicamentos.Location = new System.Drawing.Point(58, 68);
             this.LstMedicamentos.MouseLocation = new System.Drawing.Point(-1, -1);
             this.LstMedicamentos.MouseState = MaterialSkin.MouseState.OUT;
             this.LstMedicamentos.Name = "LstMedicamentos";
             this.LstMedicamentos.OwnerDraw = true;
-            this.LstMedicamentos.Size = new System.Drawing.Size(689, 115);
+            this.LstMedicamentos.Size = new System.Drawing.Size(689, 139);
             this.LstMedicamentos.TabIndex = 0;
             this.LstMedicamentos.UseCompatibleStateImageBehavior = false;
             this.LstMedicamentos.View = System.Windows.Forms.View.Details;
@@ -315,12 +320,12 @@
             // NombreMedicamento
             // 
             this.NombreMedicamento.Text = "Nombre";
-            this.NombreMedicamento.Width = 285;
+            this.NombreMedicamento.Width = 274;
             // 
             // TipoMedicamento
             // 
             this.TipoMedicamento.Text = "Tipo";
-            this.TipoMedicamento.Width = 419;
+            this.TipoMedicamento.Width = 202;
             // 
             // materialFlatButton4
             // 
@@ -414,6 +419,108 @@
             this.ExpPaciente.Text = "Paciente";
             this.ExpPaciente.Width = 254;
             // 
+            // materialFlatButton6
+            // 
+            this.materialFlatButton6.AutoSize = true;
+            this.materialFlatButton6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton6.Depth = 0;
+            this.materialFlatButton6.Icon = null;
+            this.materialFlatButton6.Location = new System.Drawing.Point(288, 9);
+            this.materialFlatButton6.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton6.Name = "materialFlatButton6";
+            this.materialFlatButton6.Primary = false;
+            this.materialFlatButton6.Size = new System.Drawing.Size(99, 36);
+            this.materialFlatButton6.TabIndex = 1;
+            this.materialFlatButton6.Text = "Nueva Cita";
+            this.materialFlatButton6.UseVisualStyleBackColor = true;
+            // 
+            // materialFlatButton7
+            // 
+            this.materialFlatButton7.AutoSize = true;
+            this.materialFlatButton7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton7.Depth = 0;
+            this.materialFlatButton7.Icon = null;
+            this.materialFlatButton7.Location = new System.Drawing.Point(273, 18);
+            this.materialFlatButton7.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton7.Name = "materialFlatButton7";
+            this.materialFlatButton7.Primary = false;
+            this.materialFlatButton7.Size = new System.Drawing.Size(126, 36);
+            this.materialFlatButton7.TabIndex = 1;
+            this.materialFlatButton7.Text = "Nuevo Usuario";
+            this.materialFlatButton7.UseVisualStyleBackColor = true;
+            // 
+            // LstCitas
+            // 
+            this.LstCitas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LstCitas.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.PacienteCita,
+            this.FechaCita,
+            this.Hora});
+            this.LstCitas.Depth = 0;
+            this.LstCitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.LstCitas.FullRowSelect = true;
+            this.LstCitas.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.LstCitas.Location = new System.Drawing.Point(131, 66);
+            this.LstCitas.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.LstCitas.MouseState = MaterialSkin.MouseState.OUT;
+            this.LstCitas.Name = "LstCitas";
+            this.LstCitas.OwnerDraw = true;
+            this.LstCitas.Size = new System.Drawing.Size(625, 122);
+            this.LstCitas.TabIndex = 2;
+            this.LstCitas.UseCompatibleStateImageBehavior = false;
+            this.LstCitas.View = System.Windows.Forms.View.Details;
+            // 
+            // PacienteCita
+            // 
+            this.PacienteCita.Text = "Paciente";
+            this.PacienteCita.Width = 212;
+            // 
+            // FechaCita
+            // 
+            this.FechaCita.Text = "Fecha";
+            this.FechaCita.Width = 173;
+            // 
+            // Hora
+            // 
+            this.Hora.Text = "Hora";
+            this.Hora.Width = 141;
+            // 
+            // LstUsuarios
+            // 
+            this.LstUsuarios.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Usuario,
+            this.NomUsuario});
+            this.LstUsuarios.Location = new System.Drawing.Point(115, 74);
+            this.LstUsuarios.Name = "LstUsuarios";
+            this.LstUsuarios.Size = new System.Drawing.Size(447, 109);
+            this.LstUsuarios.SmallImageList = this.imageList1;
+            this.LstUsuarios.TabIndex = 2;
+            this.LstUsuarios.UseCompatibleStateImageBehavior = false;
+            this.LstUsuarios.View = System.Windows.Forms.View.Details;
+            // 
+            // Usuario
+            // 
+            this.Usuario.Text = "Usuario";
+            this.Usuario.Width = 142;
+            // 
+            // NomUsuario
+            // 
+            this.NomUsuario.Text = "Nombre";
+            this.NomUsuario.Width = 257;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoHogarAncianos.Properties.Resources.Action___States___Vol__3_19_512;
+            this.pictureBox1.Location = new System.Drawing.Point(16, 355);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(49, 43);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Administracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -423,9 +530,13 @@
             this.Controls.Add(this.materialTabControl1);
             this.Controls.Add(this.materialTabSelector1);
             this.Name = "Administracion";
-            this.Text = "Administración - Mantemientos";
+            this.Text = "Administración - Mantenimientos";
             this.Load += new System.EventHandler(this.Administracion_Load);
             this.materialTabControl1.ResumeLayout(false);
+            this.tabUsuarios.ResumeLayout(false);
+            this.tabUsuarios.PerformLayout();
+            this.tabCitas.ResumeLayout(false);
+            this.tabCitas.PerformLayout();
             this.tabExpediente.ResumeLayout(false);
             this.tabExpediente.PerformLayout();
             this.tabRecetas.ResumeLayout(false);
@@ -474,5 +585,14 @@
         private System.Windows.Forms.ColumnHeader Expediente;
         private System.Windows.Forms.ColumnHeader ExpPaciente;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton5;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton7;
+        private MaterialSkin.Controls.MaterialListView LstCitas;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton6;
+        private System.Windows.Forms.ColumnHeader PacienteCita;
+        private System.Windows.Forms.ColumnHeader FechaCita;
+        private System.Windows.Forms.ColumnHeader Hora;
+        private System.Windows.Forms.ListView LstUsuarios;
+        private System.Windows.Forms.ColumnHeader Usuario;
+        private System.Windows.Forms.ColumnHeader NomUsuario;
     }
 }

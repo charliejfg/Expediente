@@ -66,6 +66,32 @@ namespace ProyectoHogarAncianos
             LstRecetas.Items.Add("3");
             LstRecetas.Items[2].SubItems.Add("Pedro Ramos Llano");
 
+            //Se llena la listview de expedientes
+            LstExpediente.Items.Add("116620079");
+            LstExpediente.Items[0].SubItems.Add("Andres Cordero Ruiz");
+            LstExpediente.Items.Add("202947575");
+            LstExpediente.Items[1].SubItems.Add("Marco Perez Gomez");
+            LstExpediente.Items.Add("347759038");
+            LstExpediente.Items[2].SubItems.Add("Pedro Ramos Llano");
+
+            //Se llena la listview de Usuarios
+            LstUsuarios.Items.Add("CFERNANDEZ", 0);
+            LstUsuarios.Items[0].SubItems.Add("Carlos Fernadez Garcia");
+            LstUsuarios.Items.Add("GMESEN", 0);
+            LstUsuarios.Items[1].SubItems.Add("Georgi Mesen Cerdas");
+
+            //Se llena la listview de Citas
+            LstCitas.Items.Add("Carlos Fernadez Garcia");
+            LstCitas.Items[0].SubItems.Add("13/05/2018");
+            LstCitas.Items[0].SubItems.Add("10:00 am");
+            LstCitas.Items.Add("Marco Perez Gomez");
+            LstCitas.Items[1].SubItems.Add("29/01/2018");
+            LstCitas.Items[1].SubItems.Add("3:00 pm");
+            LstCitas.Items.Add("Pedro Ramos Llano");
+            LstCitas.Items[2].SubItems.Add("25/08/2018");
+            LstCitas.Items[2].SubItems.Add("8:00 am");
+
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -73,6 +99,12 @@ namespace ProyectoHogarAncianos
             MenuPrincipal menu = new MenuPrincipal();
             this.Hide();
             menu.ShowDialog();
+        }
+
+        private void LstPacientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Pacientes pa = new Pacientes();
+            pa.ShowDialog();
         }
     }
 }
