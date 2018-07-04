@@ -1,6 +1,8 @@
 ﻿using System;
 using HjaContext;
 using ProyectoHogarAncianosDatos;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace ProyectoHogarAncianosLogica
 {
@@ -34,17 +36,39 @@ namespace ProyectoHogarAncianosLogica
         public Persona entradaPersona(String nombre, String clave)
         {
             int existePersona = PersonaDatos.ExistePersona(nombre);
-
-            if (existePersona == 0){
-
+            Persona usuarioPorNombre = null;
+            if (existePersona == 0)
+            {
+                usuarioPorNombre = PersonaDatos.TrearPersonaPorNombre(nombre);
+                if (usuarioPorNombre.Clave.Equals(getClaveEncriptada(clave)))
+                {
+                    return usuarioPorNombre;
+                }
+                else
+                {
+                    return null;
+                }
             }
             else{
                 if (existePersona == 1)
                 {
-
+                    return null;
                 }
             }
-            return respuesta;
-        } 
+            return null;
+        }
+
+        public String getClaveEncriptada(String clave)
+        {
+            MD5CryptoServiceProvider newProvider = new MD5CryptoServiceProvider();
+            newProvider.ComputeHash(ASCIIEncoding.ASCII.GetBytes(clave));
+            byte[] clavehasheada = newProvider.Hash;
+            StringBuilder str = new StringBuilder();
+            for (int i = 0; i < clavehasheada.Length; i++)
+            {
+                str.Append(clavehasheada[i].ToString("x2"));
+            }
+            return str.ToString();
+        }
     }
 }

@@ -7,13 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HjaContext;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using ProyectoHogarAncianosEntidades;
 
 namespace ProyectoHogarAncianos
 {
     public partial class MenuPrincipal : MaterialForm
     {
+        private Persona personaNueva;
         public MenuPrincipal()
         {
             InitializeComponent();
@@ -21,6 +24,15 @@ namespace ProyectoHogarAncianos
             MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+
+            //
+            //
+            //Agregar datos del encargado logeado en los lavels afuera con la clase global PersonaLogeada
+            personaNueva = PersonaLogeada.GetInstance();
+
+            //
+            //
+            //
 
             // Configure color schema
             materialSkinManager.ColorScheme = new ColorScheme(

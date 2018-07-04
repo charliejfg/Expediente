@@ -23,6 +23,27 @@ namespace ProyectoHogarAncianosDatos
            }
            return 0;
        }
+        public static Persona TrearPersonaPorNombre(String nombreUsuario)
+        {
+            int respuesta;
+            Persona personaSeleccionada = null;
+            try
+            {
+                var query = from it in context.Personas
+                    where nombreUsuario != null && it.Nombre == nombreUsuario
+                    select it;
+                foreach (Persona personaLista in query)
+                {
+                    personaSeleccionada = personaLista;
+                }
+            }
+            catch (Exception)
+            {
+                return personaSeleccionada;
+            }
+
+            return personaSeleccionada;
+        }
 
         public static int ExistePersona(String nombreUsuario)
         {
@@ -33,11 +54,11 @@ namespace ProyectoHogarAncianosDatos
                     select it;
                 if (query.ToList().Count >= 1)
                 {
-                    return 1;
+                    return 0;
                 }
                 else
                 {
-                    return 0;
+                    return 1;
                 }
             }catch (Exception)
             {

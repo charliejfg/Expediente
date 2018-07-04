@@ -69,3 +69,9 @@ C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\bin\Debu
 C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\bin\Debug\Devart.Data.Linq.dll
 C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\bin\Debug\Devart.Data.PostgreSql.dll
 C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\bin\Debug\Devart.Data.PostgreSql.Linq.dll
+C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\bin\Debug\ProyectoHogarAncianosEntidades.dll
+C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\bin\Debug\ProyectoHogarAncianosLogica.dll
+C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\bin\Debug\ProyectoHogarAncianosDatos.dll
+C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\bin\Debug\ProyectoHogarAncianosEntidades.pdb
+C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\bin\Debug\ProyectoHogarAncianosLogica.pdb
+C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\bin\Debug\ProyectoHogarAncianosDatos.pdb
