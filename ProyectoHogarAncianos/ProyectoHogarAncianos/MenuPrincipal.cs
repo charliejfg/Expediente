@@ -87,5 +87,10 @@ namespace ProyectoHogarAncianos
             this.Hide();
             menu.ShowDialog();
         }
+
+        private void MenuPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
