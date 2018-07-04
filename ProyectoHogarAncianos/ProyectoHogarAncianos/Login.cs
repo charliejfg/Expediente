@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using HjaContext;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using ProyectoHogarAncianosEntidades;
+using ProyectoHogarAncianosLogica;
 
 namespace ProyectoHogarAncianos
 {
@@ -37,9 +32,23 @@ namespace ProyectoHogarAncianos
 
         private void BtnAceptar_Click(object sender, EventArgs e)
         {
-            MenuPrincipal menu = new MenuPrincipal();
-            this.Hide();
-            menu.ShowDialog();
+            
+            
+            PersonaLogica nuevaLogica = new PersonaLogica();
+            Persona posiblePersona = nuevaLogica.entradaPersona(materialSingleLineTextField1.Text, materialSingleLineTextField2.Text);
+            if (posiblePersona == null)
+            {
+                //hacer que msj se muestre con el error, o en este caso una clave incorrecta
+            }
+            else
+            {
+                PersonaLogeada claseEncargado = new PersonaLogeada(posiblePersona);
+                MenuPrincipal menu = new MenuPrincipal();
+                this.Hide();
+                menu.ShowDialog();
+            }
+
+            
             //hola
         }
     }

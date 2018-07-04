@@ -12,3 +12,13 @@ C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHoga
 C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\bin\Debug\ProyectoHogarAncianosEntidades.pdb
 C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\obj\Debug\ProyectoHogarAncianosEntidades.dll
 C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\obj\Debug\ProyectoHogarAncianosEntidades.pdb
+C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\bin\Debug\ProyectoHogarAncianosEntidades.dll.config
+C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\bin\Debug\ProyectoHogarAncianosEntidades.dll
+C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\bin\Debug\ProyectoHogarAncianosEntidades.pdb
+C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\bin\Debug\Devart.Data.dll
+C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\bin\Debug\Devart.Data.Linq.dll
+C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\bin\Debug\Devart.Data.PostgreSql.dll
+C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\bin\Debug\Devart.Data.PostgreSql.Linq.dll
+C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\obj\Debug\ProyectoHogarAncianosEntidades.csprojResolveAssemblyReference.cache
+C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\obj\Debug\ProyectoHogarAncianosEntidades.dll
+C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianosEntidades\obj\Debug\ProyectoHogarAncianosEntidades.pdb
