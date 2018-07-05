@@ -153,5 +153,11 @@ namespace ProyectoHogarAncianos
             Cita ci = new Cita();
             ci.ShowDialog(); 
         }
+
+        private void LstRecetas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Recetas re = new Recetas();
+            re.ShowDialog();
+        }
     }
 }
