@@ -34,6 +34,8 @@
             this.materialSingleLineTextField2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.BtnAceptar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.nombreTitulo = new MaterialSkin.Controls.MaterialLabel();
+            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.SuspendLayout();
             // 
             // materialLabel1
@@ -127,11 +129,41 @@
             this.materialRaisedButton2.Text = "Cancelar";
             this.materialRaisedButton2.UseVisualStyleBackColor = true;
             // 
+            // nombreTitulo
+            // 
+            this.nombreTitulo.AutoSize = true;
+            this.nombreTitulo.Depth = 0;
+            this.nombreTitulo.Font = new System.Drawing.Font("Roboto", 11F);
+            this.nombreTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.nombreTitulo.Location = new System.Drawing.Point(143, 33);
+            this.nombreTitulo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.nombreTitulo.Name = "nombreTitulo";
+            this.nombreTitulo.Size = new System.Drawing.Size(0, 19);
+            this.nombreTitulo.TabIndex = 6;
+            // 
+            // materialRaisedButton1
+            // 
+            this.materialRaisedButton1.AutoSize = true;
+            this.materialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton1.Depth = 0;
+            this.materialRaisedButton1.Icon = null;
+            this.materialRaisedButton1.Location = new System.Drawing.Point(402, 223);
+            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton1.Name = "materialRaisedButton1";
+            this.materialRaisedButton1.Primary = true;
+            this.materialRaisedButton1.Size = new System.Drawing.Size(99, 36);
+            this.materialRaisedButton1.TabIndex = 7;
+            this.materialRaisedButton1.Text = "Encryptar ";
+            this.materialRaisedButton1.UseVisualStyleBackColor = true;
+            this.materialRaisedButton1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(504, 271);
+            this.Controls.Add(this.materialRaisedButton1);
+            this.Controls.Add(this.nombreTitulo);
             this.Controls.Add(this.materialRaisedButton2);
             this.Controls.Add(this.BtnAceptar);
             this.Controls.Add(this.materialSingleLineTextField2);
@@ -154,6 +186,8 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField2;
         private MaterialSkin.Controls.MaterialRaisedButton BtnAceptar;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
+        private MaterialSkin.Controls.MaterialLabel nombreTitulo;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
     }
 }
 

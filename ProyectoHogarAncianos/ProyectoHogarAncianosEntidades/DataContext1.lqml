@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database Name="hja" EntityNamespace="HjaContext" ContextNamespace="HjaContext" Class="HjaDataContext" xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" ed:Guid="771f8539-d650-45ef-a363-0bb444b71481" Provider="Devart.Data.PostgreSql.Linq.Provider.PgSqlDataProvider, Devart.Data.PostgreSql.Linq" Extended="true" xmlns="http://schemas.devart.com/linqconnect/mapping">
+  <Connection Mode="ConnectionString" ConnectionString="User Id=hja;Password=hja;Host=localhost;Port=5434;Database=hja;Persist Security Info=True;Initial Schema=hja" Provider="Devart.Data.PostgreSql" />
+  <Table Name="hja.persona" Member="Personas">
+    <Type Name="Persona" ed:Guid="22d1bf2f-9bbe-4de1-b453-82d4ae1932c7">
+      <Column Name="id" Member="Id" Type="System.Int64" DbType="INT8 NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="90a54524-4393-4ce8-ade8-0fffbc311315" />
+      <Column Name="nombre" Member="Nombre" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="145668d0-d289-4c7f-b646-aa2809c4a30a" />
+      <Column Name="apellido_uno" Member="ApellidoUno" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="a5a832e8-ed9e-4a9a-8edd-41dc47835e18" />
+      <Column Name="apellido_dos" Member="ApellidoDos" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="42dc65d4-884b-4bb4-bb56-f03102f17bb5" />
+      <Column Name="cedula" Member="Cedula" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="b9116b98-fb47-4377-a5d5-77252fd9ada7" />
+      <Column Name="telefono" Member="Telefono" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="2f4f01b2-1990-4cce-a9ad-4d68b351fda1" />
+      <Column Name="correo" Member="Correo" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="03697d9f-289d-49d4-8e4c-fd0b24ed41a2" />
+      <Column Name="clave" Member="Clave" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="9801b5df-7b69-4c1e-975e-e5dc2b03fa88" />
+      <Column Name="entrada" Member="Entrada" Type="System.Boolean" DbType="BOOL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="1db782bf-7d44-460e-86a7-0b2acc019289" />
+    </Type>
+  </Table>
+</Database>
