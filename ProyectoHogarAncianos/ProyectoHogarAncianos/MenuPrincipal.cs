@@ -90,7 +90,8 @@ namespace ProyectoHogarAncianos
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
-
+            Recetas re = new Recetas();
+            re.ShowDialog();
         }
 
         private void btnAdministracion_Click(object sender, EventArgs e)

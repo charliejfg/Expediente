@@ -25,7 +25,6 @@ namespace ProyectoHogarAncianosDatos
        }
         public static Persona TrearPersonaPorNombre(String nombreUsuario)
         {
-            int respuesta;
             Persona personaSeleccionada = null;
             try
             {
@@ -47,8 +46,7 @@ namespace ProyectoHogarAncianosDatos
 
         public static int ExistePersona(String nombreUsuario)
         {
-            int respuesta;
-            try{Persona existePersona;
+            try{
                 var query = from it in context.Personas
                     where nombreUsuario != null && it.Nombre == nombreUsuario
                     select it;

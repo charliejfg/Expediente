@@ -126,6 +126,7 @@
             this.LstUsuarios.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Usuario,
             this.NomUsuario});
+            this.LstUsuarios.FullRowSelect = true;
             this.LstUsuarios.Location = new System.Drawing.Point(115, 74);
             this.LstUsuarios.Name = "LstUsuarios";
             this.LstUsuarios.Size = new System.Drawing.Size(447, 109);
@@ -320,6 +321,7 @@
             this.LstRecetas.TabIndex = 1;
             this.LstRecetas.UseCompatibleStateImageBehavior = false;
             this.LstRecetas.View = System.Windows.Forms.View.Details;
+            this.LstRecetas.SelectedIndexChanged += new System.EventHandler(this.LstRecetas_SelectedIndexChanged);
             // 
             // numReceta
             // 

@@ -32,8 +32,8 @@
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.SuspendLayout();
             // 
             // materialLabel1
@@ -86,21 +86,6 @@
             this.textBox1.Size = new System.Drawing.Size(264, 121);
             this.textBox1.TabIndex = 3;
             // 
-            // materialRaisedButton1
-            // 
-            this.materialRaisedButton1.AutoSize = true;
-            this.materialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialRaisedButton1.Depth = 0;
-            this.materialRaisedButton1.Icon = null;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(187, 321);
-            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton1.Name = "materialRaisedButton1";
-            this.materialRaisedButton1.Primary = true;
-            this.materialRaisedButton1.Size = new System.Drawing.Size(84, 36);
-            this.materialRaisedButton1.TabIndex = 11;
-            this.materialRaisedButton1.Text = "Guardar";
-            this.materialRaisedButton1.UseVisualStyleBackColor = true;
-            // 
             // materialFlatButton1
             // 
             this.materialFlatButton1.AutoSize = true;
@@ -116,6 +101,21 @@
             this.materialFlatButton1.TabIndex = 10;
             this.materialFlatButton1.Text = "Cancelar";
             this.materialFlatButton1.UseVisualStyleBackColor = true;
+            // 
+            // materialRaisedButton1
+            // 
+            this.materialRaisedButton1.AutoSize = true;
+            this.materialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton1.Depth = 0;
+            this.materialRaisedButton1.Icon = null;
+            this.materialRaisedButton1.Location = new System.Drawing.Point(187, 321);
+            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton1.Name = "materialRaisedButton1";
+            this.materialRaisedButton1.Primary = true;
+            this.materialRaisedButton1.Size = new System.Drawing.Size(84, 36);
+            this.materialRaisedButton1.TabIndex = 11;
+            this.materialRaisedButton1.Text = "Guardar";
+            this.materialRaisedButton1.UseVisualStyleBackColor = true;
             // 
             // Actividades
             // 
@@ -141,7 +141,7 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
         private System.Windows.Forms.TextBox textBox1;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
     }
 }
