@@ -18,3 +18,7 @@ ProyectoHogarAncianos/ProyectoHogarAncianosDatos/obj/Debug/
 *.dll
 
 *.manifest
+
+ProyectoHogarAncianos/ProyectoHogarAncianosEntidades/obj/Debug/
+
+ProyectoHogarAncianos/ProyectoHogarAncianosLogica/obj/Debug/
