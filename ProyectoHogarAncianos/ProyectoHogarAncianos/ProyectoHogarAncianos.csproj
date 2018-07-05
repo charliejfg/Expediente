@@ -88,6 +88,12 @@
     <Compile Include="Cita.Designer.cs">
       <DependentUpon>Cita.cs</DependentUpon>
     </Compile>
+    <Compile Include="Encryptado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Encryptado.Designer.cs">
+      <DependentUpon>Encryptado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Expediente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cita.resx">
       <DependentUpon>Cita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Encryptado.resx">
+      <DependentUpon>Encryptado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Expediente.resx">
       <DependentUpon>Expediente.cs</DependentUpon>
