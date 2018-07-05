@@ -16,3 +16,5 @@ ProyectoHogarAncianos/ProyectoHogarAncianosDatos/bin/Debug/
 ProyectoHogarAncianos/ProyectoHogarAncianosDatos/obj/Debug/
 
 *.dll
+
+*.manifest
