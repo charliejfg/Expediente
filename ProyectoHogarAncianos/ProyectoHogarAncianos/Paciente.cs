@@ -8,22 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using HjaContext;
-using MaterialSkin.Controls;
 using MaterialSkin;
+using MaterialSkin.Controls;
 using ProyectoHogarAncianosEntidades;
 
 namespace ProyectoHogarAncianos
 {
-    public partial class Expediente : MaterialForm
+    public partial class Paciente : MaterialForm
     {
-        private Persona personaNueva = null;
-        public Expediente()
+        Persona personaNueva = null;
+        public Paciente()
         {
             InitializeComponent();
             this.CenterToScreen();
             MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+
 
             //
             //
@@ -42,16 +43,14 @@ namespace ProyectoHogarAncianos
             );
         }
 
-        private void Expediente_Load(object sender, EventArgs e)
+        private void Paciente_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void materialFlatButton2_Click(object sender, EventArgs e)
+        private void materialRaisedButton2_Click(object sender, EventArgs e)
         {
-            Paciente nuevoMenu = new Paciente();
-            Hide();
-            nuevoMenu.ShowDialog();
+
         }
     }
 }

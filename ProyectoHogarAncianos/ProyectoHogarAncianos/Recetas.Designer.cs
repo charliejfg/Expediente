@@ -260,6 +260,7 @@
             this.materialRaisedButton1.TabIndex = 15;
             this.materialRaisedButton1.Text = "Guardar";
             this.materialRaisedButton1.UseVisualStyleBackColor = true;
+            this.materialRaisedButton1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
             // 
             // materialFlatButton1
             // 

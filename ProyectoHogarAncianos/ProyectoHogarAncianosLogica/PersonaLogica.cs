@@ -10,6 +10,7 @@ namespace ProyectoHogarAncianosLogica
     {
         public int CrearPersona(String apellidoUno, String apellidoDos, String nombre, String cedula, String telefono, String correo, String clave, bool entrada)
         {
+            PersonaDatos nuevoDatos = new PersonaDatos();
             int respuesta;
             try
             {
@@ -24,8 +25,13 @@ namespace ProyectoHogarAncianosLogica
                 nuevaPersona.Clave = clave;
                 nuevaPersona.Entrada = entrada;
 
+                Rol nuevoRol = nuevoDatos.TraerRolAdmin();
 
-                respuesta  = PersonaDatos.CrearPersona(nuevaPersona);
+                PersonaRol nuevoPacienteRol = new PersonaRol();
+                nuevoPacienteRol.Persona = nuevaPersona;
+                nuevoPacienteRol.Rol = nuevoRol;
+
+                respuesta = nuevoDatos.CrearPersona(nuevaPersona, nuevoRol, nuevoPacienteRol);
             }catch (Exception)
             {
                 return 1;
@@ -35,11 +41,12 @@ namespace ProyectoHogarAncianosLogica
 
         public Persona entradaPersona(String nombre, String clave)
         {
-            int existePersona = PersonaDatos.ExistePersona(nombre);
+            PersonaDatos nuevoDatos = new PersonaDatos();
+            int existePersona = nuevoDatos.ExistePersona(nombre);
             Persona usuarioPorNombre = null;
             if (existePersona == 0)
             {
-                usuarioPorNombre = PersonaDatos.TrearPersonaPorNombre(nombre);
+                usuarioPorNombre = nuevoDatos.TrearPersonaPorNombre(nombre);
                 if (usuarioPorNombre.Clave.Equals(getClaveEncriptada(clave)))
                 {
                     return usuarioPorNombre;

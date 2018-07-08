@@ -37,7 +37,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(245, 120);
+            this.button1.Location = new System.Drawing.Point(276, 223);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(101, 38);
             this.button1.TabIndex = 0;
@@ -47,14 +47,14 @@
             // 
             // txtClave
             // 
-            this.txtClave.Location = new System.Drawing.Point(191, 25);
+            this.txtClave.Location = new System.Drawing.Point(222, 128);
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(217, 20);
             this.txtClave.TabIndex = 1;
             // 
             // txtEncrypt
             // 
-            this.txtEncrypt.Location = new System.Drawing.Point(191, 80);
+            this.txtEncrypt.Location = new System.Drawing.Point(222, 183);
             this.txtEncrypt.Name = "txtEncrypt";
             this.txtEncrypt.Size = new System.Drawing.Size(217, 20);
             this.txtEncrypt.TabIndex = 2;
@@ -62,7 +62,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(91, 28);
+            this.label1.Location = new System.Drawing.Point(122, 131);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 3;
@@ -71,7 +71,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(91, 83);
+            this.label2.Location = new System.Drawing.Point(122, 186);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 4;
@@ -81,7 +81,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(630, 202);
+            this.ClientSize = new System.Drawing.Size(630, 343);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtEncrypt);
@@ -89,6 +89,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Encryptado";
             this.Text = "Encryptado";
+            this.Load += new System.EventHandler(this.Encryptado_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

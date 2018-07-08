@@ -20,6 +20,7 @@ namespace ProyectoHogarAncianos
         public MenuPrincipal()
         {
             InitializeComponent();
+            this.CenterToScreen();
             // Create a material theme manager and add the form to manage (this)
             MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
@@ -29,6 +30,8 @@ namespace ProyectoHogarAncianos
             //
             //Agregar datos del encargado logeado en los lavels afuera con la clase global PersonaLogeada
             personaNueva = PersonaLogeada.GetInstance();
+
+            nombreTitulo.Text = string.Format("{0} {1} {2}", personaNueva.Nombre, personaNueva.ApellidoUno, personaNueva.ApellidoDos);
 
             //
             //
@@ -104,6 +107,13 @@ namespace ProyectoHogarAncianos
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnExpedientes_Click(object sender, EventArgs e)
+        {
+            Expediente nuevaPagina = new Expediente();
+            Hide();
+            nuevaPagina.ShowDialog();
         }
     }
 }

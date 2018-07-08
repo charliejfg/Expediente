@@ -47,9 +47,10 @@
             this.materialLabel1.Location = new System.Drawing.Point(67, 106);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(65, 19);
+            this.materialLabel1.Size = new System.Drawing.Size(59, 19);
             this.materialLabel1.TabIndex = 0;
-            this.materialLabel1.Text = "Usuario:";
+            this.materialLabel1.Text = "Cedula:";
+            this.materialLabel1.Click += new System.EventHandler(this.materialLabel1_Click);
             // 
             // materialLabel2
             // 

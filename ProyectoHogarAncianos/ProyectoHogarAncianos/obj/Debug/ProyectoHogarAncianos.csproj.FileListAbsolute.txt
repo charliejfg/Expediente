@@ -77,3 +77,4 @@ C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\bin\Debu
 C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\bin\Debug\ProyectoHogarAncianosDatos.pdb
 C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.Recetas.resources
 C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.Encryptado.resources
+C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.Paciente.resources

@@ -12,6 +12,7 @@ namespace ProyectoHogarAncianos
         public Login()
         {
             InitializeComponent();
+            this.CenterToScreen();
             // Create a material theme manager and add the form to manage (this)
             MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
@@ -57,6 +58,11 @@ namespace ProyectoHogarAncianos
             Encryptado pagina = new Encryptado();
             Hide();
             pagina.ShowDialog();
+        }
+
+        private void materialLabel1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

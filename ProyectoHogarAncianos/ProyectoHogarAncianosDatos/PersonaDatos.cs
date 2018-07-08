@@ -10,26 +10,29 @@ namespace ProyectoHogarAncianosDatos
         // 0 = operacion esperada
         // 1 = operacion no esperada
         // 2 = operacion error de sistema (Exception)
-       private static HjaDataContext context = new HjaDataContext();
+       private HjaDataContext context = new HjaDataContext();
         
-       public static int CrearPersona(Persona personaNueva)
+       public int CrearPersona(Persona personaNueva, Rol nuevoRol , PersonaRol nuevoPersonaRol)
        {
            try
            {
                context.Personas.InsertOnSubmit(personaNueva);
+               context.Rols.InsertOnSubmit(nuevoRol);
+               context.PersonaRols.InsertOnSubmit(nuevoPersonaRol);
                context.SubmitChanges();
            }catch (Exception){
                return 2;
            }
            return 0;
        }
-        public static Persona TrearPersonaPorNombre(String nombreUsuario)
+        public Persona TrearPersonaPorNombre(String cedula)
         {
             Persona personaSeleccionada = null;
             try
             {
                 var query = from it in context.Personas
-                    where nombreUsuario != null && it.Nombre == nombreUsuario
+                            join dist in context.PersonaRols on it.Id equals dist.PersonaId
+                            where cedula != null && it.Cedula == cedula
                     select it;
                 foreach (Persona personaLista in query)
                 {
@@ -44,11 +47,11 @@ namespace ProyectoHogarAncianosDatos
             return personaSeleccionada;
         }
 
-        public static int ExistePersona(String nombreUsuario)
+        public int ExistePersona(String cedula)
         {
             try{
                 var query = from it in context.Personas
-                    where nombreUsuario != null && it.Nombre == nombreUsuario
+                            where cedula != null && it.Cedula == cedula
                     select it;
                 if (query.ToList().Count >= 1)
                 {
@@ -62,6 +65,27 @@ namespace ProyectoHogarAncianosDatos
             {
                 return 2;
             }
+        }
+        public Rol TraerRolAdmin()
+        {
+            Rol rolPaciente = null;
+            String nombrePaciente = "ADMIN";
+            try
+            {
+                var query = from it in context.Rols
+                    where it.RolNombre == nombrePaciente
+                    select it;
+                foreach (Rol ROLLista in query)
+                {
+                    rolPaciente = ROLLista;
+                }
+            }
+            catch (Exception)
+            {
+                return rolPaciente;
+            }
+
+            return rolPaciente;
         }
     }
 }
