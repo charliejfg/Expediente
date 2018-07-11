@@ -1,26 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using HjaContext;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using ProyectoHogarAncianosEntidades;
+using ProyectoHogarAncianosLogica;
 
 namespace ProyectoHogarAncianos
 {
     public partial class Paciente : MaterialForm
     {
-        Persona personaNueva = null;
+        private Persona _personaNueva = null;
         public Paciente()
         {
             InitializeComponent();
-            this.CenterToScreen();
+            CenterToScreen();
             MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
@@ -29,7 +23,7 @@ namespace ProyectoHogarAncianos
             //
             //
             //Agregar datos del encargado logeado en los lavels afuera con la clase global PersonaLogeada
-            personaNueva = PersonaLogeada.GetInstance();
+            _personaNueva = PersonaLogeada.GetInstance();
 
             //
             //
@@ -51,6 +45,39 @@ namespace ProyectoHogarAncianos
         private void materialRaisedButton2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        {
+            PersonaPacienteLogica nuevaLogica = new PersonaPacienteLogica();
+            int posiblePersona = nuevaLogica.CrearPersona(cedula: materialSingleLineTextField1.Text, nombre: materialSingleLineTextField2.Text, apellidoUno: materialSingleLineTextField3.Text, apellidoDos: materialSingleLineTextField4.Text);
+            if (posiblePersona == 0)
+            {
+                MessageBox.Show(@"Paciente guardado");
+
+            }
+            else
+            {
+                if (posiblePersona == 1)
+                {
+                    MessageBox.Show(@"Error de sistema por favor, intente de nuevo");
+                    materialSingleLineTextField1.Text = "";
+                    materialSingleLineTextField2.Text = "";
+                    materialSingleLineTextField3.Text = "";
+                    materialSingleLineTextField4.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show(@"Cedula ya existente por favor intente otra");
+                    materialSingleLineTextField1.Text = "";
+                    materialSingleLineTextField2.Text = "";
+                    materialSingleLineTextField3.Text = "";
+                    materialSingleLineTextField4.Text = "";
+                }
+            }
+
+
+            
         }
     }
 }

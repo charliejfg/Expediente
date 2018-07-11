@@ -46,7 +46,7 @@ namespace ProyectoHogarAncianosLogica
             Persona usuarioPorNombre = null;
             if (existePersona == 0)
             {
-                usuarioPorNombre = nuevoDatos.TrearPersonaPorNombre(nombre);
+                usuarioPorNombre = nuevoDatos.TrearPersonaPorCedula(nombre);
                 if (usuarioPorNombre.Clave.Equals(getClaveEncriptada(clave)))
                 {
                     return usuarioPorNombre;
@@ -64,6 +64,7 @@ namespace ProyectoHogarAncianosLogica
             }
             return null;
         }
+
 
         public String getClaveEncriptada(String clave)
         {

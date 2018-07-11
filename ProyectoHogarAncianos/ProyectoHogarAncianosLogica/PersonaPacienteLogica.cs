@@ -10,35 +10,44 @@ namespace ProyectoHogarAncianosLogica
 {
     public class PersonaPacienteLogica
     {
-        public int CrearPersona(String apellidoUno, String apellidoDos, String nombre, String cedula, String telefono, String correo, String clave, bool entrada)
+        public int CrearPersona(String apellidoUno, String apellidoDos, String nombre, String cedula )
         {
+            Persona nuevaPersona= null;
+            PersonaDatos datos = new PersonaDatos();
+            int existePersona = datos.ExistePersona(cedula);
             int respuesta;
             try
             {
-                // Create a new category
-                Persona nuevaPersona = new Persona();
-                nuevaPersona.Nombre = nombre;
-                nuevaPersona.ApellidoUno = apellidoUno;
-                nuevaPersona.ApellidoDos = apellidoDos;
-                nuevaPersona.Cedula = cedula;
-                nuevaPersona.Telefono = telefono;
-                nuevaPersona.Correo = correo;
-                nuevaPersona.Clave = clave;
-                nuevaPersona.Entrada = entrada;
+                if (existePersona == 1)
+                {
+                    // Create a new category
+                    nuevaPersona = new Persona();
+                    nuevaPersona.Nombre = nombre;
+                    nuevaPersona.ApellidoUno = apellidoUno;
+                    nuevaPersona.ApellidoDos = apellidoDos;
+                    nuevaPersona.Cedula = cedula;
+                    nuevaPersona.Telefono = " ";
+                    nuevaPersona.Correo = " ";
+                    nuevaPersona.Clave = " ";
+                    nuevaPersona.Entrada = false;
 
-                Rol nuevoRol = PersonaPacienteDatos.TraerRolPaciente();
+                    Rol nuevoRol = PersonaPacienteDatos.TraerRolPaciente();
 
-                PersonaRol nuevoPacienteRol = new PersonaRol();
-                nuevoPacienteRol.Persona = nuevaPersona;
-                nuevoPacienteRol.Rol = nuevoRol;
-
-                respuesta = PersonaPacienteDatos.CrearPaciente(nuevaPersona, nuevoRol , nuevoPacienteRol );
+                    PersonaRol nuevoPacienteRol = new PersonaRol();
+                    nuevoPacienteRol.Persona = nuevaPersona;
+                    nuevoPacienteRol.Rol = nuevoRol;
+                    respuesta = PersonaPacienteDatos.CrearPaciente(nuevaPersona, nuevoRol, nuevoPacienteRol);
+                }
+                else
+                {
+                    return 2;
+                }
             }
             catch (Exception)
             {
                 return 1;
             }
-            return respuesta;
+            return 0;
         }
 
         

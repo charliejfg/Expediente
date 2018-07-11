@@ -2,44 +2,44 @@
 <Database Name="hja" EntityNamespace="HjaContext" ContextNamespace="HjaContext" Class="HjaDataContext" xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" ed:Guid="771f8539-d650-45ef-a363-0bb444b71481" Provider="Devart.Data.PostgreSql.Linq.Provider.PgSqlDataProvider, Devart.Data.PostgreSql.Linq" Extended="true" xmlns="http://schemas.devart.com/linqconnect/mapping">
   <Connection Mode="ConnectionString" ConnectionString="User Id=hja;Password=hja;Host=localhost;Port=5434;Database=hja;Persist Security Info=True;Initial Schema=hja" Provider="Devart.Data.PostgreSql" />
   <Table Name="hja.medicamento" Member="Medicamentos">
-    <Type Name="Medicamento" ed:Guid="63a3b671-65e1-4b21-ace9-c69d50f28481">
-      <Column Name="id" Member="Id" Type="System.Int64" DbType="INT8 NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="f5bec441-6c59-4f8a-8181-ccb5a84db0fd" />
-      <Column Name="descripcion" Member="Descripcion" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="1c1b699b-0e0b-470c-a304-1ff5b1d5042f" />
-      <Column Name="codigo" Member="Codigo" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="a5d8d0ce-3d14-4b9a-85d1-43f4cec82a1f" />
-      <Column Name="clave" Member="Clave" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="37e1553f-0a22-43f0-8e7b-2edf298acfb6" />
-      <Column Name="encargado_id" Member="EncargadoId" Type="System.Int64" DbType="INT8" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="7185d0ba-daf5-4c3b-a112-d7d36d9faac3" />
-      <Association Name="Persona_Medicamento" ed:AssociationGuid="454939af-a124-4f4b-85f9-4cc8091b1c62" Member="Persona" ed:Guid="b9189528-7bc2-45ea-85a6-e779baf8a40f" ThisKey="EncargadoId" OtherKey="Id" Type="Persona" DeleteRule="NO ACTION" IsForeignKey="true" />
+    <Type Name="Medicamento" ed:Guid="fc8c9b41-f3a8-4792-9ce8-ef499c1605eb">
+      <Column Name="id" Member="Id" Type="System.Int64" DbType="INT8 NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="e7802365-c296-4443-8e68-cc9fdfd0846d" />
+      <Column Name="descripcion" Member="Descripcion" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="a44f836e-49e0-4441-9936-9fed651a7a3e" />
+      <Column Name="codigo" Member="Codigo" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="04a76a1d-98e9-4ac7-8f92-729662db1020" />
+      <Column Name="clave" Member="Clave" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="9c2bcf5f-fb3f-4a3a-b78d-cbf64445d1ec" />
+      <Column Name="encargado_id" Member="EncargadoId" Type="System.Int64" DbType="INT8" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="2aa56889-dafd-434a-88a9-9e2ea6621479" />
+      <Association Name="Persona_Medicamento" ed:AssociationGuid="383ae5ba-c82f-4b76-802c-5587e2c14b96" Member="Persona" ed:Guid="40ab3d9c-acd2-4db8-be2b-6e76f63b55d4" ThisKey="EncargadoId" OtherKey="Id" Type="Persona" DeleteRule="NO ACTION" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="hja.persona" Member="Personas">
-    <Type Name="Persona" ed:Guid="ff4f67cc-9aaf-4a22-980b-1b294b69998a">
-      <Column Name="id" Member="Id" Type="System.Int64" AutoSync="OnInsert" DbType="INT8 NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="d42bc1d3-be2c-4edd-8cc0-1c3d87053615" />
-      <Column Name="nombre" Member="Nombre" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="ae200ded-0f7c-49d0-802f-59b88ea60ff3" />
-      <Column Name="apellido_uno" Member="ApellidoUno" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="5cba138b-8eea-4d78-b7bd-65dc3aa1739d" />
-      <Column Name="apellido_dos" Member="ApellidoDos" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="1b22c0aa-a17f-4bf3-a4ec-e8607d86b1fe" />
-      <Column Name="cedula" Member="Cedula" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="439d7599-3af3-4f11-8012-19b7d85c9057" />
-      <Column Name="telefono" Member="Telefono" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="0d6d42e3-17de-41e9-abab-f1b2b16c24a3" />
-      <Column Name="correo" Member="Correo" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="06b2e77e-c246-4adb-87ca-6a6c27e25397" />
-      <Column Name="clave" Member="Clave" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="7ac58728-534c-4377-a703-6f2cd21da21f" />
-      <Column Name="entrada" Member="Entrada" Type="System.Boolean" DbType="BOOL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="ffbbb810-9e18-4abc-8326-bcc4ba4db57b" />
-      <Association Name="Persona_Medicamento" ed:AssociationGuid="454939af-a124-4f4b-85f9-4cc8091b1c62" Member="Medicamentos" ed:Guid="86966520-39ef-49e8-83a6-0251c1511dda" ThisKey="Id" OtherKey="EncargadoId" Type="Medicamento" />
-      <Association Name="Persona_PersonaRol" ed:AssociationGuid="8e8dc634-643c-4cbe-9b73-920e66c8e5e4" Member="PersonaRols" ed:Guid="507df986-acb8-4dbb-bb38-8a5b0a1e8b65" ThisKey="Id" OtherKey="PersonaId" Type="PersonaRol" />
+    <Type Name="Persona" ed:Guid="e3ad92dc-0868-4533-aaa9-3b09ce7df710">
+      <Column Name="id" Member="Id" Type="System.Int64" AutoSync="OnInsert" DbType="INT8 NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="536ce8a7-93f5-4004-aa71-63a020fc1d2a" />
+      <Column Name="nombre" Member="Nombre" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="3b9e64a3-8eb3-4104-a5a6-80ab8e2b0950" />
+      <Column Name="apellido_uno" Member="ApellidoUno" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="da32a112-20fe-4543-a8cf-22c3de9da01a" />
+      <Column Name="apellido_dos" Member="ApellidoDos" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="8442d7bb-47ae-4f11-bf0d-e1cf6b2a7581" />
+      <Column Name="cedula" Member="Cedula" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="65d84f80-d6d7-47e1-bc47-3c9d47f108ed" />
+      <Column Name="telefono" Member="Telefono" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="70004aa6-0e77-4f6b-a52e-d1da132e7cb7" />
+      <Column Name="correo" Member="Correo" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="5e3c72e6-6ecc-42c1-9945-d2ce951bd241" />
+      <Column Name="clave" Member="Clave" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="ef85bab9-8bad-44f3-8257-60170d9d8541" />
+      <Column Name="entrada" Member="Entrada" Type="System.Boolean" DbType="BOOL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="f41e4ba6-aa3d-4ee6-9d04-2e7610e21158" />
+      <Association Name="Persona_Medicamento" ed:AssociationGuid="383ae5ba-c82f-4b76-802c-5587e2c14b96" Member="Medicamentos" ed:Guid="4f84ee3c-88b6-4f40-9ad9-a9bedd5bde4c" ThisKey="Id" OtherKey="EncargadoId" Type="Medicamento" />
+      <Association Name="Persona_PersonaRol" ed:AssociationGuid="5da5b79d-cd36-40de-9b74-06cdceb05db6" Member="PersonaRols" ed:Guid="16093cda-35f7-4fbf-912b-7026ddd2ebf1" ThisKey="Id" OtherKey="PersonaId" Type="PersonaRol" />
     </Type>
   </Table>
   <Table Name="hja.rol" Member="Rols">
-    <Type Name="Rol" ed:Guid="401003ed-17a9-4b7c-88e3-38f11315bbf1">
-      <Column Name="id" Member="Id" Type="System.Int64" AutoSync="OnInsert" DbType="INT8 NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="31aa14e5-f28d-49f1-bb08-586ff97e1c6e" />
-      <Column Name="rol_nombre" Member="RolNombre" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="31e1423a-0a3e-4e90-9718-2fc74c5539d6" />
-      <Association Name="Rol_PersonaRol" ed:AssociationGuid="c4ea8016-70b5-4c1a-999b-c83c907e6e13" Member="PersonaRols" ed:Guid="55fdb7c4-ed83-4588-b50c-c90e7283849c" ThisKey="Id" OtherKey="RolId" Type="PersonaRol" />
+    <Type Name="Rol" ed:Guid="432f7187-323f-4d47-8f75-148555494023">
+      <Column Name="id" Member="Id" Type="System.Int64" AutoSync="OnInsert" DbType="INT8 NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="15bd5beb-07c0-4986-8410-7712822df957" />
+      <Column Name="rol_nombre" Member="RolNombre" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="7b854521-7c65-4e31-972a-a4c15b38e286" />
+      <Association Name="Rol_PersonaRol" ed:AssociationGuid="5d5f1641-cdbb-4981-b55e-a4c6a032a17a" Member="PersonaRols" ed:Guid="22fd8cd6-f579-4f9f-8e4e-93e31f4edba9" ThisKey="Id" OtherKey="RolId" Type="PersonaRol" />
     </Type>
   </Table>
   <Table Name="hja.persona_rol" Member="PersonaRols">
-    <Type Name="PersonaRol" ed:Guid="1ce9b051-8bc3-4bea-91e9-d92024878656">
-      <Column Name="id" Member="Id" Type="System.Int64" DbType="INT8 NOT null" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="f8dfb2f6-fca3-4bab-916f-22e37d39d37d" />
-      <Column Name="persona_id" Member="PersonaId" Type="System.Int64" DbType="INT8" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="4ada782e-791f-4efd-a7ac-b75eda09a044" />
-      <Column Name="rol_id" Member="RolId" Type="System.Int64" DbType="INT8" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="e7208180-9ed8-44de-99d2-10891655ba33" />
-      <Association Name="Persona_PersonaRol" ed:AssociationGuid="8e8dc634-643c-4cbe-9b73-920e66c8e5e4" Member="Persona" ed:Guid="9ac4a994-6302-465c-bfcb-16eb95bb5e39" ThisKey="PersonaId" OtherKey="Id" Type="Persona" DeleteRule="NO ACTION" IsForeignKey="true" />
-      <Association Name="Rol_PersonaRol" ed:AssociationGuid="c4ea8016-70b5-4c1a-999b-c83c907e6e13" Member="Rol" ed:Guid="c29458b3-62d3-472b-80a6-66bbe8105866" ThisKey="RolId" OtherKey="Id" Type="Rol" DeleteRule="NO ACTION" IsForeignKey="true" />
+    <Type Name="PersonaRol" ed:Guid="2cf7d9b9-72a1-43a2-a0c8-95a669c09255">
+      <Column Name="id" Member="Id" Type="System.Int64" AutoSync="OnInsert" DbType="INT8 NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="5f01fdbd-045c-4eb0-ad61-6b99829e5d4e" />
+      <Column Name="persona_id" Member="PersonaId" Type="System.Int64" DbType="INT8" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="3374a36c-f1b9-478f-97c9-146fd8176308" />
+      <Column Name="rol_id" Member="RolId" Type="System.Int64" DbType="INT8" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="103d4cf4-6e8d-4fe2-8cd4-5fbae5044082" />
+      <Association Name="Persona_PersonaRol" ed:AssociationGuid="5da5b79d-cd36-40de-9b74-06cdceb05db6" Member="Persona" ed:Guid="076a0968-04ba-49e5-95c4-9bba8b9e2d55" ThisKey="PersonaId" OtherKey="Id" Type="Persona" DeleteRule="NO ACTION" IsForeignKey="true" />
+      <Association Name="Rol_PersonaRol" ed:AssociationGuid="5d5f1641-cdbb-4981-b55e-a4c6a032a17a" Member="Rol" ed:Guid="393eed5a-e6cc-45e7-92f2-cace98fc49ca" ThisKey="RolId" OtherKey="Id" Type="Rol" DeleteRule="NO ACTION" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

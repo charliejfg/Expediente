@@ -25,7 +25,7 @@ namespace ProyectoHogarAncianosDatos
            }
            return 0;
        }
-        public Persona TrearPersonaPorNombre(String cedula)
+        public Persona TrearPersonaPorCedula(String cedula)
         {
             Persona personaSeleccionada = null;
             try
@@ -66,6 +66,7 @@ namespace ProyectoHogarAncianosDatos
                 return 2;
             }
         }
+
         public Rol TraerRolAdmin()
         {
             Rol rolPaciente = null;
@@ -87,5 +88,6 @@ namespace ProyectoHogarAncianosDatos
 
             return rolPaciente;
         }
+
     }
 }

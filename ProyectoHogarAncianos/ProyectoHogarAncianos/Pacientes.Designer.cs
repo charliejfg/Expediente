@@ -232,6 +232,7 @@
             this.materialRaisedButton3.TabIndex = 15;
             this.materialRaisedButton3.Text = "Guardar";
             this.materialRaisedButton3.UseVisualStyleBackColor = true;
+            this.materialRaisedButton3.Click += new System.EventHandler(this.materialRaisedButton3_Click);
             // 
             // materialFlatButton1
             // 
@@ -270,6 +271,7 @@
             this.Controls.Add(this.materialLabel1);
             this.Name = "Pacientes";
             this.Text = "Pacientes";
+            this.Load += new System.EventHandler(this.Pacientes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
