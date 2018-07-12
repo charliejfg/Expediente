@@ -37,9 +37,12 @@
             this.btnCalendario = new MaterialSkin.Controls.MaterialRaisedButton();
             this.nombreTitulo = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRecetas
@@ -48,7 +51,7 @@
             this.btnRecetas.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnRecetas.Depth = 0;
             this.btnRecetas.Icon = null;
-            this.btnRecetas.Location = new System.Drawing.Point(173, 330);
+            this.btnRecetas.Location = new System.Drawing.Point(43, 260);
             this.btnRecetas.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRecetas.Name = "btnRecetas";
             this.btnRecetas.Primary = true;
@@ -64,7 +67,7 @@
             this.btnExpedientes.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnExpedientes.Depth = 0;
             this.btnExpedientes.Icon = null;
-            this.btnExpedientes.Location = new System.Drawing.Point(319, 330);
+            this.btnExpedientes.Location = new System.Drawing.Point(189, 260);
             this.btnExpedientes.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnExpedientes.Name = "btnExpedientes";
             this.btnExpedientes.Primary = true;
@@ -93,7 +96,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::ProyectoHogarAncianos.Properties.Resources._006_medical_history;
-            this.pictureBox2.Location = new System.Drawing.Point(317, 200);
+            this.pictureBox2.Location = new System.Drawing.Point(187, 130);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(114, 113);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -103,7 +106,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ProyectoHogarAncianos.Properties.Resources._017_prescription;
-            this.pictureBox1.Location = new System.Drawing.Point(155, 200);
+            this.pictureBox1.Location = new System.Drawing.Point(25, 130);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(114, 113);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -113,7 +116,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::ProyectoHogarAncianos.Properties.Resources.calendar;
-            this.pictureBox3.Location = new System.Drawing.Point(468, 200);
+            this.pictureBox3.Location = new System.Drawing.Point(338, 130);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(114, 113);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -126,7 +129,7 @@
             this.btnCalendario.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnCalendario.Depth = 0;
             this.btnCalendario.Icon = null;
-            this.btnCalendario.Location = new System.Drawing.Point(473, 330);
+            this.btnCalendario.Location = new System.Drawing.Point(343, 260);
             this.btnCalendario.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCalendario.Name = "btnCalendario";
             this.btnCalendario.Primary = true;
@@ -162,11 +165,39 @@
             this.materialLabel1.TabIndex = 8;
             this.materialLabel1.Text = "Bienvenido:";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::ProyectoHogarAncianos.Properties.Resources._006_medical_history;
+            this.pictureBox4.InitialImage = global::ProyectoHogarAncianos.Properties.Resources._006_medical_history;
+            this.pictureBox4.Location = new System.Drawing.Point(486, 130);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(135, 113);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 9;
+            this.pictureBox4.TabStop = false;
+            // 
+            // materialRaisedButton1
+            // 
+            this.materialRaisedButton1.AutoSize = true;
+            this.materialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton1.Depth = 0;
+            this.materialRaisedButton1.Icon = null;
+            this.materialRaisedButton1.Location = new System.Drawing.Point(512, 260);
+            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton1.Name = "materialRaisedButton1";
+            this.materialRaisedButton1.Primary = true;
+            this.materialRaisedButton1.Size = new System.Drawing.Size(73, 36);
+            this.materialRaisedButton1.TabIndex = 10;
+            this.materialRaisedButton1.Text = "Kardex";
+            this.materialRaisedButton1.UseVisualStyleBackColor = true;
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(718, 469);
+            this.ClientSize = new System.Drawing.Size(643, 469);
+            this.Controls.Add(this.materialRaisedButton1);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.nombreTitulo);
             this.Controls.Add(this.btnCalendario);
@@ -182,6 +213,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,5 +230,7 @@
         private MaterialSkin.Controls.MaterialRaisedButton btnCalendario;
         private MaterialSkin.Controls.MaterialLabel nombreTitulo;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
     }
 }

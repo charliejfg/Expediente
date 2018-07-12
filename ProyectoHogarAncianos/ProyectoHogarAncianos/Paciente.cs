@@ -54,6 +54,10 @@ namespace ProyectoHogarAncianos
             if (posiblePersona == 0)
             {
                 MessageBox.Show(@"Paciente guardado");
+                Expediente movimientoPagina = new Expediente();
+                Close();
+                Hide();
+                movimientoPagina.ShowDialog();
 
             }
             else

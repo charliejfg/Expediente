@@ -13,12 +13,12 @@ namespace ProyectoHogarAncianosDatos
             try
             {
                 if (pacienteNueva != null) context.Personas.InsertOnSubmit(entity: pacienteNueva);
-                if (nuevoRol != null) context.Rols.InsertOnSubmit(entity: nuevoRol);
                 if (nuevoPersonaRol != null) context.PersonaRols.InsertOnSubmit(entity:  nuevoPersonaRol);
                 context.SubmitChanges();
             }
-            catch (Exception)
+            catch (Exception e )
             {
+                throw new Exception(e.Message);  
                 return 2;
             }
             return 0;

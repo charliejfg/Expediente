@@ -53,5 +53,13 @@ namespace ProyectoHogarAncianos
             Hide();
             nuevoMenu.ShowDialog();
         }
+
+        private void materialFlatButton1_Click(object sender, EventArgs e)
+        {
+            MenuPrincipal nuevo = new MenuPrincipal();
+            Hide();
+            Close();
+            nuevo.ShowDialog();
+        }
     }
 }
