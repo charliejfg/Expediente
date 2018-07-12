@@ -14,6 +14,7 @@ namespace ProyectoHogarAncianosDatos
         
        public int CrearPersona(Persona personaNueva, Rol nuevoRol , PersonaRol nuevoPersonaRol)
        {
+           Receta nueva = new Receta();
            try
            {
                context.Personas.InsertOnSubmit(personaNueva);
@@ -32,7 +33,9 @@ namespace ProyectoHogarAncianosDatos
             {
                 var query = from it in context.Personas
                             join dist in context.PersonaRols on it.Id equals dist.PersonaId
-                            where cedula != null && it.Cedula == cedula
+                            join de in context.Rols on dist.RolId equals de.Id
+                            where cedula != null && it.Cedula == cedula && de.RolNombre == "ADMIN"
+                            
                     select it;
                 foreach (Persona personaLista in query)
                 {

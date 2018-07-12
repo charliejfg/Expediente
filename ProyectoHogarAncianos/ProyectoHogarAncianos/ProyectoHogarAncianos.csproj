@@ -40,6 +40,8 @@
     <Reference Include="MaterialSkin">
       <HintPath>..\packages\MaterialSkin.Updated.0.2.2\lib\MaterialSkin.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Npgsql, Version=4.0.1.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
       <HintPath>..\packages\Npgsql.4.0.1\lib\net451\Npgsql.dll</HintPath>
       <Private>True</Private>
@@ -59,6 +61,7 @@
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -138,6 +141,12 @@
     <Compile Include="Recetas.Designer.cs">
       <DependentUpon>Recetas.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReporteReceta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteReceta.Designer.cs">
+      <DependentUpon>ReporteReceta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,10 +196,20 @@
     <EmbeddedResource Include="Recetas.resx">
       <DependentUpon>Recetas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReporteReceta.resx">
+      <DependentUpon>ReporteReceta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteRecetaPaciente.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteRecetaPacienteFinal.rdlc" />
     <EmbeddedResource Include="Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\HjaContext.HjaDataContext.datasource" />
+    <None Include="Properties\DataSources\HjaContext.Persona.datasource" />
+    <None Include="Properties\DataSources\HjaContext.PersonaRol.datasource" />
+    <None Include="Properties\DataSources\HjaContext.Receta.datasource" />
+    <None Include="Properties\DataSources\HjaContext.Rol.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -383,6 +402,9 @@
       <Project>{1d8aa5a3-a5a3-43cf-a6b0-00049ad1cea4}</Project>
       <Name>ProyectoHogarAncianosLogica</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

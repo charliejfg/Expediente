@@ -71,6 +71,11 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\HjaContext.HjaDataContext.datasource" />
+    <None Include="Properties\DataSources\HjaContext.Medicamento.datasource" />
+    <None Include="Properties\DataSources\HjaContext.Persona.datasource" />
+    <None Include="Properties\DataSources\HjaContext.PersonaRol.datasource" />
+    <None Include="Properties\DataSources\HjaContext.Rol.datasource" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

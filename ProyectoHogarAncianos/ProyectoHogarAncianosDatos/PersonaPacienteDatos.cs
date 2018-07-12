@@ -19,7 +19,6 @@ namespace ProyectoHogarAncianosDatos
             catch (Exception e )
             {
                 throw new Exception(e.Message);  
-                return 2;
             }
             return 0;
         }
@@ -33,9 +32,9 @@ namespace ProyectoHogarAncianosDatos
                 var query = from it in context.Rols
                             where it.RolNombre == nombrePaciente
                     select it;
-                foreach (Rol ROLLista in query)
+                foreach (Rol rolLista in query)
                 {
-                    rolPaciente = ROLLista;
+                    rolPaciente = rolLista;
                 }
             }
             catch (Exception)
