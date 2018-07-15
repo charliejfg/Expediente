@@ -48,9 +48,6 @@ namespace ProyectoHogarAncianos
                 this.Hide();
                 menu.ShowDialog();
             }
-
-            
-            //hola
         }
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using HjaContext;
+using System.Collections.Generic;
 
 namespace ProyectoHogarAncianosDatos
 {
@@ -48,6 +49,53 @@ namespace ProyectoHogarAncianosDatos
             }
 
             return personaSeleccionada;
+        }
+
+        public Persona TrearPacientePorCedula(String cedula)
+        {
+            Persona personaSeleccionada = null;
+            try
+            {
+                var query = from it in context.Personas
+                            join dist in context.PersonaRols on it.Id equals dist.PersonaId
+                            join de in context.Rols on dist.RolId equals de.Id
+                            where cedula != null && it.Cedula == cedula && de.RolNombre == "PACIENTE"
+
+                            select it;
+                foreach (Persona personaLista in query)
+                {
+                    personaSeleccionada = personaLista;
+                }
+            }
+            catch (Exception)
+            {
+                return personaSeleccionada;
+            }
+
+            return personaSeleccionada;
+        }
+
+        public List<Persona> TraerPacientes()
+        {
+            List<Persona> ListaPacientes = new List<Persona>();
+            try
+            {
+                var query = from it in context.Personas
+                            join dist in context.PersonaRols on it.Id equals dist.PersonaId
+                            join de in context.Rols on dist.RolId equals de.Id
+                            where de.RolNombre == "PACIENTE"
+                            select it;
+                foreach (Persona personaLista in query)
+                {
+                    ListaPacientes.Add(personaLista);
+                }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+
+            return ListaPacientes;
         }
 
         public int ExistePersona(String cedula)

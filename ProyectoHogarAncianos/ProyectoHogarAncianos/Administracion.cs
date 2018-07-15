@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using ProyectoHogarAncianosLogica;
+using HjaContext;
 
 namespace ProyectoHogarAncianos
 {
@@ -64,12 +66,20 @@ namespace ProyectoHogarAncianos
             LstMedicamentos.Items[2].SubItems.Add("Anticonvulsivo");
 
             //Se llena la listview de recetas
-            LstRecetas.Items.Add("1");
-            LstRecetas.Items[0].SubItems.Add("Andres Cordero Ruiz");
-            LstRecetas.Items.Add("2");
-            LstRecetas.Items[1].SubItems.Add("Marco Perez Gomez");
-            LstRecetas.Items.Add("3");
-            LstRecetas.Items[2].SubItems.Add("Pedro Ramos Llano");
+            RecetaLogica recetaLogica = new RecetaLogica();
+            List<Receta> ListaReceta = new List<Receta>();
+            ListaReceta = recetaLogica.TraerReceta();
+            foreach (Receta receta in ListaReceta)
+            {
+                LstRecetas.Items.Add(Convert.ToString(receta.Id));
+                LstRecetas.Items[0].SubItems.Add(Convert.ToString(receta.EncargadoId));
+            }
+            //LstRecetas.Items.Add("1");
+            //LstRecetas.Items[0].SubItems.Add("Andres Cordero Ruiz");
+            //LstRecetas.Items.Add("2");
+            //LstRecetas.Items[1].SubItems.Add("Marco Perez Gomez");
+            //LstRecetas.Items.Add("3");
+            //LstRecetas.Items[2].SubItems.Add("Pedro Ramos Llano");
 
             //Se llena la listview de expedientes
             LstExpediente.Items.Add("116620079");

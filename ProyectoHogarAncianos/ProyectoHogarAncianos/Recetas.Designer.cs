@@ -39,10 +39,10 @@
             this.Dosis = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Frecuencia = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtFecha = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialSingleLineTextField3 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialSingleLineTextField4 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.ddlPacientes = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
@@ -179,22 +179,22 @@
             this.materialSingleLineTextField1.TabStop = false;
             this.materialSingleLineTextField1.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField2
+            // txtFecha
             // 
-            this.materialSingleLineTextField2.Depth = 0;
-            this.materialSingleLineTextField2.Hint = "";
-            this.materialSingleLineTextField2.Location = new System.Drawing.Point(196, 134);
-            this.materialSingleLineTextField2.MaxLength = 32767;
-            this.materialSingleLineTextField2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField2.Name = "materialSingleLineTextField2";
-            this.materialSingleLineTextField2.PasswordChar = '\0';
-            this.materialSingleLineTextField2.SelectedText = "";
-            this.materialSingleLineTextField2.SelectionLength = 0;
-            this.materialSingleLineTextField2.SelectionStart = 0;
-            this.materialSingleLineTextField2.Size = new System.Drawing.Size(118, 23);
-            this.materialSingleLineTextField2.TabIndex = 8;
-            this.materialSingleLineTextField2.TabStop = false;
-            this.materialSingleLineTextField2.UseSystemPasswordChar = false;
+            this.txtFecha.Depth = 0;
+            this.txtFecha.Hint = "";
+            this.txtFecha.Location = new System.Drawing.Point(196, 134);
+            this.txtFecha.MaxLength = 32767;
+            this.txtFecha.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.PasswordChar = '\0';
+            this.txtFecha.SelectedText = "";
+            this.txtFecha.SelectionLength = 0;
+            this.txtFecha.SelectionStart = 0;
+            this.txtFecha.Size = new System.Drawing.Size(118, 23);
+            this.txtFecha.TabIndex = 8;
+            this.txtFecha.TabStop = false;
+            this.txtFecha.UseSystemPasswordChar = false;
             // 
             // materialSingleLineTextField3
             // 
@@ -230,13 +230,13 @@
             this.materialSingleLineTextField4.TabStop = false;
             this.materialSingleLineTextField4.UseSystemPasswordChar = false;
             // 
-            // comboBox1
+            // ddlPacientes
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(484, 91);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 11;
+            this.ddlPacientes.FormattingEnabled = true;
+            this.ddlPacientes.Location = new System.Drawing.Point(484, 91);
+            this.ddlPacientes.Name = "ddlPacientes";
+            this.ddlPacientes.Size = new System.Drawing.Size(121, 21);
+            this.ddlPacientes.TabIndex = 11;
             // 
             // comboBox2
             // 
@@ -286,10 +286,10 @@
             this.Controls.Add(this.materialRaisedButton1);
             this.Controls.Add(this.materialFlatButton1);
             this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.ddlPacientes);
             this.Controls.Add(this.materialSingleLineTextField4);
             this.Controls.Add(this.materialSingleLineTextField3);
-            this.Controls.Add(this.materialSingleLineTextField2);
+            this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.materialSingleLineTextField1);
             this.Controls.Add(this.materialListView1);
             this.Controls.Add(this.materialLabel6);
@@ -319,10 +319,10 @@
         private System.Windows.Forms.ColumnHeader Dosis;
         private System.Windows.Forms.ColumnHeader Frecuencia;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField2;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtFecha;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField3;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox ddlPacientes;
         private System.Windows.Forms.ComboBox comboBox2;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;

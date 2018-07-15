@@ -3,6 +3,7 @@ using HjaContext;
 using ProyectoHogarAncianosDatos;
 using System.Security.Cryptography;
 using System.Text;
+using System.Collections.Generic;
 
 namespace ProyectoHogarAncianosLogica
 {
@@ -77,6 +78,26 @@ namespace ProyectoHogarAncianosLogica
                 str.Append(clavehasheada[i].ToString("x2"));
             }
             return str.ToString();
+        }
+
+        public Persona TraerPacientePorCedula(String cedula)
+        {
+            PersonaDatos personaDatos = new PersonaDatos();
+            Persona Persona = new Persona();
+
+            Persona = personaDatos.TrearPacientePorCedula(cedula);
+
+            return Persona;
+        }
+
+        public List<Persona> TraerPacientes()
+        {
+            PersonaDatos personaDatos = new PersonaDatos();
+            List<Persona> ListaPersonas = new List<Persona>();
+
+            ListaPersonas = personaDatos.TraerPacientes();
+
+            return ListaPersonas;
         }
     }
 }
