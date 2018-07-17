@@ -98,6 +98,30 @@ namespace ProyectoHogarAncianosDatos
             return ListaPacientes;
         }
 
+        public List<Persona> BuscarPacientes(String buscar)
+        {
+            List<Persona> ListaPacientes = new List<Persona>();
+            try
+            {
+                var query = from it in context.Personas
+                            join dist in context.PersonaRols on it.Id equals dist.PersonaId
+                            join de in context.Rols on dist.RolId equals de.Id
+                            where de.RolNombre == "PACIENTE" 
+                            && (it.Cedula.Contains(buscar) || it.Nombre.Contains(buscar))
+                            select it;
+                foreach (Persona personaLista in query)
+                {
+                    ListaPacientes.Add(personaLista);
+                }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+
+            return ListaPacientes;
+        }
+
         public int ExistePersona(String cedula)
         {
             try{

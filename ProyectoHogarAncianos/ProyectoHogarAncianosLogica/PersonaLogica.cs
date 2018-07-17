@@ -99,5 +99,15 @@ namespace ProyectoHogarAncianosLogica
 
             return ListaPersonas;
         }
+
+        public List<Persona> BuscarPacientes(String buscar)
+        {
+            PersonaDatos personaDatos = new PersonaDatos();
+            List<Persona> ListaPersonas = new List<Persona>();
+
+            ListaPersonas = personaDatos.BuscarPacientes(buscar);
+
+            return ListaPersonas;
+        }
     }
 }

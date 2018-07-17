@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
@@ -42,10 +43,13 @@
             this.txtFecha = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialSingleLineTextField3 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialSingleLineTextField4 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.ddlPacientes = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.personaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cboPacientes = new System.Windows.Forms.ComboBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.personaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // materialLabel1
@@ -67,7 +71,7 @@
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(368, 94);
+            this.materialLabel2.Location = new System.Drawing.Point(368, 133);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(67, 19);
@@ -230,14 +234,6 @@
             this.materialSingleLineTextField4.TabStop = false;
             this.materialSingleLineTextField4.UseSystemPasswordChar = false;
             // 
-            // ddlPacientes
-            // 
-            this.ddlPacientes.FormattingEnabled = true;
-            this.ddlPacientes.Location = new System.Drawing.Point(484, 91);
-            this.ddlPacientes.Name = "ddlPacientes";
-            this.ddlPacientes.Size = new System.Drawing.Size(121, 21);
-            this.ddlPacientes.TabIndex = 11;
-            // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
@@ -278,15 +274,36 @@
             this.materialFlatButton1.Text = "Cancelar";
             this.materialFlatButton1.UseVisualStyleBackColor = true;
             // 
+            // personaBindingSource
+            // 
+            this.personaBindingSource.DataSource = typeof(HjaContext.Persona);
+            // 
+            // cboPacientes
+            // 
+            this.cboPacientes.FormattingEnabled = true;
+            this.cboPacientes.Location = new System.Drawing.Point(484, 134);
+            this.cboPacientes.Name = "cboPacientes";
+            this.cboPacientes.Size = new System.Drawing.Size(121, 21);
+            this.cboPacientes.TabIndex = 16;
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(484, 90);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(121, 20);
+            this.txtBuscar.TabIndex = 17;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            // 
             // Recetas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(803, 529);
+            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.cboPacientes);
             this.Controls.Add(this.materialRaisedButton1);
             this.Controls.Add(this.materialFlatButton1);
             this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.ddlPacientes);
             this.Controls.Add(this.materialSingleLineTextField4);
             this.Controls.Add(this.materialSingleLineTextField3);
             this.Controls.Add(this.txtFecha);
@@ -301,6 +318,7 @@
             this.Name = "Recetas";
             this.Text = "Recetas";
             this.Load += new System.EventHandler(this.Recetas_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.personaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -322,9 +340,11 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField txtFecha;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField3;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField4;
-        private System.Windows.Forms.ComboBox ddlPacientes;
         private System.Windows.Forms.ComboBox comboBox2;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
+        private System.Windows.Forms.BindingSource personaBindingSource;
+        private System.Windows.Forms.ComboBox cboPacientes;
+        private System.Windows.Forms.TextBox txtBuscar;
     }
 }

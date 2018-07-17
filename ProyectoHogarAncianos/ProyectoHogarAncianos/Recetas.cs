@@ -38,9 +38,9 @@ namespace ProyectoHogarAncianos
             PersonaLogica personaLogica = new PersonaLogica();
             List<Persona> ListaPacientes = personaLogica.TraerPacientes(); 
 
-            ddlPacientes.DataSource = ListaPacientes;
-            ddlPacientes.DisplayMember = "nombre";
-            ddlPacientes.ValueMember = "id";
+            cboPacientes.DataSource = ListaPacientes;
+            cboPacientes.DisplayMember = "nombre";
+            cboPacientes.ValueMember = "id";
 
             DateTime Hoy = DateTime.Today;
             txtFecha.Text = Convert.ToString(Hoy);
@@ -51,12 +51,13 @@ namespace ProyectoHogarAncianos
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
             RecetaLogica recetaLogica = new RecetaLogica();
-            int resultado = recetaLogica.CrearReceta(Convert.ToInt32(Encargado.Id), Convert.ToInt32(ddlPacientes.SelectedValue), DateTime.Parse(txtFecha.Text));
+            int resultado = recetaLogica.CrearReceta(Convert.ToInt32(Encargado.Id), Convert.ToInt32(cboPacientes.SelectedValue), DateTime.Parse(txtFecha.Text));
             if (resultado == 0)
             {
                 MessageBox.Show(@"Receta guardado");
 
             }
+
             else
             {
                 if (resultado == 1)
@@ -64,6 +65,16 @@ namespace ProyectoHogarAncianos
                     MessageBox.Show(@"Error de sistema por favor, intente de nuevo");
                 }
             }
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            PersonaLogica personaLogica = new PersonaLogica();
+            List<Persona> ResultadoPacientes = personaLogica.BuscarPacientes(txtBuscar.Text);
+
+            cboPacientes.DataSource = ResultadoPacientes;
+            cboPacientes.DisplayMember = "nombre";
+            cboPacientes.ValueMember = "id";
         }
     }
 }
