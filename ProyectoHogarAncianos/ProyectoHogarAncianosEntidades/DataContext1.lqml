@@ -72,4 +72,11 @@
       <Association Name="Persona_PersonaRol" ed:AssociationGuid="37a6aa4e-715e-4288-a0cc-bdca9003db4c" Member="Persona" ed:Guid="ca433d76-5536-43be-91ec-27bc0331a3ad" ThisKey="PersonaId" OtherKey="Id" Type="Persona" DeleteRule="NO ACTION" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="hja.actividades" Member="Actividades">
+    <Type Name="Actividade" ed:Guid="621f9aa3-dcfa-4029-8ac7-393a84304999">
+      <Column Name="id" Member="Id" Type="System.Int64" DbType="INT8 NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="308dbed2-33d1-444e-b0a2-bf18740b10fd" />
+      <Column Name="actividad" Member="Actividad" Type="System.String" DbType="VARCHAR(50)" CanBeNull="true" UpdateCheck="Never" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="3a13c248-90d4-4983-86d9-51ad21c524ec" />
+      <Column Name="&quot;Descripcion&quot;" Member="Descripcion" Type="System.String" DbType="VARCHAR(80)" CanBeNull="true" UpdateCheck="Never" MaxLength="80" Unicode="true" ed:ValidateMaxLength="80" ed:ValidateRequired="false" ed:Guid="e4d4f9e0-ebad-4c2e-ae3e-d05b025496d0" />
+    </Type>
+  </Table>
 </Database>

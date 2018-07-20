@@ -30,8 +30,8 @@
         {
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtActividad = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txaDescripcion = new System.Windows.Forms.TextBox();
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.SuspendLayout();
@@ -62,29 +62,30 @@
             this.materialLabel2.TabIndex = 1;
             this.materialLabel2.Text = "Descripcion";
             // 
-            // materialSingleLineTextField1
+            // txtActividad
             // 
-            this.materialSingleLineTextField1.Depth = 0;
-            this.materialSingleLineTextField1.Hint = "";
-            this.materialSingleLineTextField1.Location = new System.Drawing.Point(110, 84);
-            this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
-            this.materialSingleLineTextField1.PasswordChar = '\0';
-            this.materialSingleLineTextField1.SelectedText = "";
-            this.materialSingleLineTextField1.SelectionLength = 0;
-            this.materialSingleLineTextField1.SelectionStart = 0;
-            this.materialSingleLineTextField1.Size = new System.Drawing.Size(264, 23);
-            this.materialSingleLineTextField1.TabIndex = 2;
-            this.materialSingleLineTextField1.TabStop = false;
-            this.materialSingleLineTextField1.UseSystemPasswordChar = false;
+            this.txtActividad.Depth = 0;
+            this.txtActividad.Hint = "";
+            this.txtActividad.Location = new System.Drawing.Point(110, 84);
+            this.txtActividad.MaxLength = 32767;
+            this.txtActividad.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtActividad.Name = "txtActividad";
+            this.txtActividad.PasswordChar = '\0';
+            this.txtActividad.SelectedText = "";
+            this.txtActividad.SelectionLength = 0;
+            this.txtActividad.SelectionStart = 0;
+            this.txtActividad.Size = new System.Drawing.Size(264, 23);
+            this.txtActividad.TabIndex = 2;
+            this.txtActividad.TabStop = false;
+            this.txtActividad.UseSystemPasswordChar = false;
             // 
-            // textBox1
+            // txaDescripcion
             // 
-            this.textBox1.Location = new System.Drawing.Point(110, 165);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(264, 121);
-            this.textBox1.TabIndex = 3;
+            this.txaDescripcion.Location = new System.Drawing.Point(110, 165);
+            this.txaDescripcion.Multiline = true;
+            this.txaDescripcion.Name = "txaDescripcion";
+            this.txaDescripcion.Size = new System.Drawing.Size(264, 121);
+            this.txaDescripcion.TabIndex = 3;
             // 
             // materialFlatButton1
             // 
@@ -124,12 +125,13 @@
             this.ClientSize = new System.Drawing.Size(408, 370);
             this.Controls.Add(this.materialRaisedButton1);
             this.Controls.Add(this.materialFlatButton1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.materialSingleLineTextField1);
+            this.Controls.Add(this.txaDescripcion);
+            this.Controls.Add(this.txtActividad);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
             this.Name = "Actividades";
             this.Text = "Actividades";
+            this.Load += new System.EventHandler(this.Actividades_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,9 +141,9 @@
 
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
-        private System.Windows.Forms.TextBox textBox1;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtActividad;
+        private System.Windows.Forms.TextBox txaDescripcion;
     }
 }

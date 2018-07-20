@@ -362,3 +362,24 @@ INSERT INTO via VALUES (nextval('via_seq'), 'INTRANASAL' );
 INSERT INTO via VALUES (nextval('via_seq'), 'RECTAL' );
 INSERT INTO via VALUES (nextval('via_seq'), 'PARENTERAL' );
 */
+
+CREATE TABLE hja."Actividades"
+(
+    id bigint NOT NULL,
+    actividad character varying(50),
+    "Descripcion" character varying(80),
+    PRIMARY KEY (id)
+)
+WITH (
+    OIDS = FALSE
+);
+
+ALTER TABLE hja."Actividades"
+    OWNER to postgres;
+
+CREATE SEQUENCE hja.actividades_seq
+    INCREMENT 1
+    START 8
+    MINVALUE 1
+    MAXVALUE 9223372036854775807
+    CACHE 1;

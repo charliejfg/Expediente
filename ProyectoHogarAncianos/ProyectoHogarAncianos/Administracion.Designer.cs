@@ -62,6 +62,7 @@
             this.tabActividades = new System.Windows.Forms.TabPage();
             this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
             this.LstActividades = new MaterialSkin.Controls.MaterialListView();
+            this.IdActividades = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Actividad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPacientes = new System.Windows.Forms.TabPage();
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
@@ -438,6 +439,7 @@
             // 
             this.LstActividades.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.LstActividades.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.IdActividades,
             this.Actividad});
             this.LstActividades.Depth = 0;
             this.LstActividades.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
@@ -454,10 +456,15 @@
             this.LstActividades.View = System.Windows.Forms.View.Details;
             this.LstActividades.SelectedIndexChanged += new System.EventHandler(this.LstActividades_SelectedIndexChanged);
             // 
+            // IdActividades
+            // 
+            this.IdActividades.Text = "Clave";
+            this.IdActividades.Width = 70;
+            // 
             // Actividad
             // 
-            this.Actividad.Text = "Actividad";
-            this.Actividad.Width = 446;
+            this.Actividad.Text = "Actividades";
+            this.Actividad.Width = 200;
             // 
             // tabPacientes
             // 
@@ -578,7 +585,6 @@
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
         private System.Windows.Forms.ColumnHeader NumExpediente;
         private MaterialSkin.Controls.MaterialListView LstActividades;
-        private System.Windows.Forms.ColumnHeader Actividad;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton2;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton3;
         private MaterialSkin.Controls.MaterialListView LstMedicamentos;
@@ -601,5 +607,7 @@
         private System.Windows.Forms.ListView LstUsuarios;
         private System.Windows.Forms.ColumnHeader Usuario;
         private System.Windows.Forms.ColumnHeader NomUsuario;
+        private System.Windows.Forms.ColumnHeader IdActividades;
+        private System.Windows.Forms.ColumnHeader Actividad;
     }
 }

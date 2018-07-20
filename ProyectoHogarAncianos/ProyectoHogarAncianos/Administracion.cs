@@ -53,9 +53,12 @@ namespace ProyectoHogarAncianos
             LstPacientes.Items[4].SubItems.Add("5");
 
             //Se llena la listview de actividades
-            LstActividades.Items.Add("Ejercicio");
-            LstActividades.Items.Add("Pasear");
-            LstActividades.Items.Add("Manualidades");
+            LstActividades.Items.Add("1");
+            LstActividades.Items[0].SubItems.Add("Ejercicio");
+            LstActividades.Items.Add("2");
+            LstActividades.Items[1].SubItems.Add("Pasear");
+            LstActividades.Items.Add("3");
+            LstActividades.Items[2].SubItems.Add("Manualidades");
 
             //Se llena la listview de medicamentos
             LstMedicamentos.Items.Add("Morfina");
@@ -66,13 +69,13 @@ namespace ProyectoHogarAncianos
             LstMedicamentos.Items[2].SubItems.Add("Anticonvulsivo");
 
             //Se llena la listview de recetas
-            RecetaLogica recetaLogica = new RecetaLogica();
-            List<Receta> ListaReceta = new List<Receta>();
-            ListaReceta = recetaLogica.TraerReceta();
-            foreach (Receta receta in ListaReceta)
+            ActividadLogica actividadLogica = new ActividadLogica();
+            List<Actividade> ListaActividad = new List<Actividade>();
+            ListaActividad = actividadLogica.TraerActividad();
+            foreach (Actividade actividadLista in ListaActividad)
             {
-                LstRecetas.Items.Add(Convert.ToString(receta.Id));
-                LstRecetas.Items[0].SubItems.Add(Convert.ToString(receta.EncargadoId));
+                LstRecetas.Items.Add(Convert.ToString(actividadLista.Id));
+                LstMedicamentos.Items[0].SubItems.Add(actividadLista.Actividad);
             }
             //LstRecetas.Items.Add("1");
             //LstRecetas.Items[0].SubItems.Add("Andres Cordero Ruiz");
@@ -149,6 +152,7 @@ namespace ProyectoHogarAncianos
         private void LstActividades_SelectedIndexChanged(object sender, EventArgs e)
         {
             Actividades ac = new Actividades();
+            ac.idActividad=Convert.ToInt32(LstActividades.SelectedItems[0].Text);
             ac.ShowDialog();
         }
 
