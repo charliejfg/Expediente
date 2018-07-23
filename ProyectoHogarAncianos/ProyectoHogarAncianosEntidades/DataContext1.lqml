@@ -3,7 +3,7 @@
   <Connection Mode="ConnectionString" ConnectionString="User Id=hja;Password=hja;Host=localhost;Port=5434;Database=hja;Persist Security Info=True;Initial Schema=hja" Provider="Devart.Data.PostgreSql" />
   <Table Name="hja.receta" Member="Recetas">
     <Type Name="Receta" ed:Guid="e5d59f79-3fdc-4a2e-a6ce-5f8122fe35a7">
-      <Column Name="id" Member="Id" Type="System.Int64" DbType="INT8 NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="1c74d8c1-420e-4284-b25c-45e0ca5fda7c" />
+      <Column Name="id" Member="Id" Type="System.Int64" DbType="INT8 NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="1c74d8c1-420e-4284-b25c-45e0ca5fda7c" />
       <Column Name="encargado_id" Member="EncargadoId" Type="System.Int64" DbType="INT8 NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="98320f0a-5cf3-41ca-9f96-9c199f272653" />
       <Column Name="pam_id" Member="PamId" Type="System.Int64" DbType="INT8 NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="87fe79a6-bd63-4c07-a47a-13907f17f8e7" />
       <Column Name="fecha" Member="Fecha" Type="System.DateTime" DbType="TIMESTAMP" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="d05d5068-39fb-446d-a889-35b9a75d03f8" />
@@ -80,8 +80,8 @@
       <Column Name="id" Member="Id" Type="System.Int64" AutoSync="OnInsert" DbType="INT8 NOT NULL " IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="7014bf5b-b60b-4379-9229-2053dc0430ca" />
       <Column Name="persona_id" Member="PersonaId" Type="System.Int64" DbType="INT8" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="5b187542-c7dd-45c5-8901-b0369cf1cda8" />
       <Column Name="rol_id" Member="RolId" Type="System.Int64" DbType="INT8" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="0dca0b6a-614a-4aab-8bc6-fc91eb95d4fe" />
-      <Association Name="Persona_PersonaRol" ed:AssociationGuid="66274aac-fa43-4299-83b4-8193862d020c" Member="Persona" ed:Guid="3269b5ba-afa5-4b73-b67f-7c95a138c26d" ThisKey="PersonaId" OtherKey="Id" Type="Persona" DeleteRule="NO ACTION" IsForeignKey="true" />
       <Association Name="Rol_PersonaRol" ed:AssociationGuid="da0e9ded-e2ce-4554-ba57-b4ecb62ff762" Member="Rol" ed:Guid="05bab280-2762-4c9a-aa6a-90285f778df2" ThisKey="RolId" OtherKey="Id" Type="Rol" DeleteRule="NO ACTION" IsForeignKey="true" />
+      <Association Name="Persona_PersonaRol" ed:AssociationGuid="66274aac-fa43-4299-83b4-8193862d020c" Member="Persona" ed:Guid="3269b5ba-afa5-4b73-b67f-7c95a138c26d" ThisKey="PersonaId" OtherKey="Id" Type="Persona" DeleteRule="NO ACTION" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>
