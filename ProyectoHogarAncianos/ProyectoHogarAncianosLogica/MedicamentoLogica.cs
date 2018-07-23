@@ -30,5 +30,14 @@ namespace ProyectoHogarAncianosLogica
             return Medicamento;
         }
 
+        public List<Medicamento> buscarMedicamentos(String buscar)
+        {
+            MedicamentoDatos medicamentoDatos = new MedicamentoDatos();
+            List<Medicamento> ListaMedicamento = new List<Medicamento>();
+
+            ListaMedicamento = medicamentoDatos.buscarMedicamentos(buscar);
+
+            return ListaMedicamento;
+        }
     }
 }

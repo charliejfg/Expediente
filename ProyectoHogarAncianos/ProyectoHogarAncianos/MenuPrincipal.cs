@@ -93,7 +93,8 @@ namespace ProyectoHogarAncianos
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
-            Recetas re = new Recetas();
+            RecetaPaciente re = new RecetaPaciente();
+            re.StartPosition = FormStartPosition.CenterScreen;
             re.ShowDialog();
         }
 

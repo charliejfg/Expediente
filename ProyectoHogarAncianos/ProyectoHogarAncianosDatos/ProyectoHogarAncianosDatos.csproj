@@ -69,6 +69,7 @@
     <Compile Include="PersonaDatos.cs" />
     <Compile Include="RecetaDatos.cs" />
     <Compile Include="DetallesRecetaDatos.cs" />
+    <Compile Include="ViaDatos.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ProyectoHogarAncianosEntidades\ProyectoHogarAncianosEntidades.csproj">

@@ -35,7 +35,7 @@ namespace ProyectoHogarAncianosDatos
 
         public List<Medicamento> TraerMedicamentos()
         {
-            List<Medicamento> ListaMedicamento = null;
+            List<Medicamento> ListaMedicamento = new List<Medicamento>();
             try
             {
                 var query = from it in context.Medicamentos
@@ -53,5 +53,25 @@ namespace ProyectoHogarAncianosDatos
             return ListaMedicamento;
         }
 
+        public List<Medicamento> buscarMedicamentos(String buscar)
+        {
+            List<Medicamento> ListaMedicamento = new List<Medicamento>();
+            try
+            {
+                var query = from it in context.Medicamentos
+                            where (it.Descripcion.Contains(buscar) || it.Codigo.Contains(buscar))
+                            select it;
+                foreach (Medicamento MedicamentoLista in query)
+                {
+                    ListaMedicamento.Add(MedicamentoLista);
+                }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+
+            return ListaMedicamento;
+        }
     }
 }

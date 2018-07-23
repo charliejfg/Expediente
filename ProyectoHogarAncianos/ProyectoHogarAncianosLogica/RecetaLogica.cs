@@ -10,9 +10,10 @@ namespace ProyectoHogarAncianosLogica
 {
     public class RecetaLogica
     {
-        public int CrearReceta(int cedulaEncargado,int cedulaPaciente,DateTime fecha)
+        public int CrearReceta(int cedulaEncargado, int cedulaPaciente, DateTime fecha, List<RecetaDetalle> detalles)
         {
             RecetaDatos recetaDatos = new RecetaDatos();
+            DetallesRecetaDatos detalleRecetaDatos = new DetallesRecetaDatos();
             int respuesta;
             try
             {
@@ -23,6 +24,11 @@ namespace ProyectoHogarAncianosLogica
                 nuevaReceta.Fecha = fecha;
 
                 respuesta = recetaDatos.CrearReceta(nuevaReceta);
+
+                foreach (RecetaDetalle detalle in detalles)
+                {
+                    detalleRecetaDatos.CrearRecetaDetalle(detalle);
+                }
             }
             catch (Exception)
             {

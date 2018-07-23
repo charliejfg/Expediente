@@ -52,6 +52,7 @@
     <Compile Include="PersonaPacienteLogica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecetaLogica.cs" />
+    <Compile Include="ViaLogica.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
