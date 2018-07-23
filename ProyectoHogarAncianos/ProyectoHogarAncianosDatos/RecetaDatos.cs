@@ -66,5 +66,25 @@ namespace ProyectoHogarAncianosDatos
         }
 
 
+        public int CrearRecetaConListaDetalle(Receta nuevaReceta, List<RecetaDetalle> listaDetalle)
+        {
+            List<RecetaDetalle> listaParaGuardar = new List<RecetaDetalle>();
+            try
+            {
+                context.Recetas.InsertOnSubmit(nuevaReceta);
+                foreach (RecetaDetalle detalle in listaDetalle)
+                {
+                    detalle.Receta = nuevaReceta;
+                    context.RecetaDetalles.InsertOnSubmit(detalle);
+                }
+                context.SubmitChanges();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return 2;
+            }
+            return 0;
+        }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,8 +46,9 @@ namespace ProyectoHogarAncianos
             lblPaciente.Text = paciente.Cedula + "-" + paciente.Nombre + " " + paciente.ApellidoUno + " " + paciente.ApellidoDos;
             //Se coloca la fecha de hoy
             DateTime Hoy = DateTime.Now;
-            txtFecha.Text = Convert.ToString(Hoy);
-            //Se trae al usuario que entro al sistema
+            txtFecha.Text = Hoy.ToString("dd/M/yyyy", CultureInfo.InvariantCulture);
+
+
             Encargado = PersonaLogeada.GetInstance();
             //Se llenan la vias
             cboVia.DataSource = viaLogica.TraerVias();
@@ -76,8 +78,7 @@ namespace ProyectoHogarAncianos
                 detalleReceta.Add(detalle);
             }
 
-            int resultado = recetaLogica.CrearReceta(Convert.ToInt32(Encargado.Id), 
-            Convert.ToInt32(paciente.Id), DateTime.Parse(txtFecha.Text));
+            int resultado = recetaLogica.CrearReceta(Convert.ToInt32(Encargado.Id), Convert.ToInt32(paciente.Id), DateTime.Parse(txtFecha.Text), detalleReceta);
             if (resultado == 0)
             {
                 MessageBox.Show(@"Receta guardado");
@@ -112,6 +113,16 @@ namespace ProyectoHogarAncianos
         {
             //Se elimina la fila seleccionada
             dgvDetalle.Rows.RemoveAt(dgvDetalle.CurrentRow.Index);
+        }
+
+        private void txtFecha_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBuscar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

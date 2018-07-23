@@ -22,13 +22,15 @@ namespace ProyectoHogarAncianosLogica
                 nuevaReceta.EncargadoId = cedulaEncargado;
                 nuevaReceta.PamId = cedulaPaciente;
                 nuevaReceta.Fecha = fecha;
-
+                /*
                 respuesta = recetaDatos.CrearReceta(nuevaReceta);
 
                 foreach (RecetaDetalle detalle in detalles)
                 {
                     detalleRecetaDatos.CrearRecetaDetalle(detalle);
                 }
+                 */
+                respuesta = recetaDatos.CrearRecetaConListaDetalle(nuevaReceta, detalles);
             }
             catch (Exception)
             {

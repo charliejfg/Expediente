@@ -45,8 +45,9 @@ namespace ProyectoHogarAncianosDatos
                     ListaMedicamento.Add(MedicamentoLista);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 return null;
             }
 
