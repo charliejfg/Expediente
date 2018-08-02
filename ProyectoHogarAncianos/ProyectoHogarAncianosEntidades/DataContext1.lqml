@@ -1,66 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Database Name="hja" EntityNamespace="HjaContext" ContextNamespace="HjaContext" Class="HjaDataContext" xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" ed:Guid="771f8539-d650-45ef-a363-0bb444b71481" Provider="Devart.Data.PostgreSql.Linq.Provider.PgSqlDataProvider, Devart.Data.PostgreSql.Linq" Extended="true" xmlns="http://schemas.devart.com/linqconnect/mapping">
-  <Connection Mode="ConnectionString" ConnectionString="User Id=hja;Password=hja;Host=localhost;Port=5434;Database=hja;Persist Security Info=True;Initial Schema=hja" Provider="Devart.Data.PostgreSql" />
+  <Connection Mode="ConnectionString" ConnectionString="User Id=hja;Password=hja;Host=localhost;Port=5432;Database=hja;Persist Security Info=True;Initial Schema=hja" Provider="Devart.Data.PostgreSql" />
   <Table Name="hja.receta" Member="Recetas">
     <Type Name="Receta" ed:Guid="fe8f4adf-e63c-4539-9708-e809b013dc83">
-      <Column Name="id" Member="Id" Type="System.Int64" DbType="INT8 NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="b2fcacf2-0afe-459c-8faf-c3162e6ff4e5" />
-      <Column Name="encargado_id" Member="EncargadoId" Type="System.Int64" DbType="INT8 NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="413c0d79-f722-4517-8e07-766138b333dd" />
-      <Column Name="pam_id" Member="PamId" Type="System.Int64" DbType="INT8 NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="9f69a7d4-61b4-4996-9f36-0ab73db79bb6" />
+      <Column Name="id" Member="Id" Type="System.Int32" AutoSync="OnInsert" DbType="SERIAL NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="b2fcacf2-0afe-459c-8faf-c3162e6ff4e5" />
+      <Column Name="encargado_id" Member="EncargadoId" Type="System.Int32" DbType="INT4" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="413c0d79-f722-4517-8e07-766138b333dd" />
+      <Column Name="pam_id" Member="PamId" Type="System.Int32" DbType="INT4 NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="9f69a7d4-61b4-4996-9f36-0ab73db79bb6" />
       <Column Name="fecha" Member="Fecha" Type="System.DateTime" DbType="TIMESTAMP" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="9cbb95d6-39cb-4cac-a4a2-9c39e4b51f39" />
-      <Association Name="Persona_Receta" ed:AssociationGuid="73793e06-2987-4a85-86f2-0cc6b98480c6" Member="Persona_EncargadoId" ed:Guid="2aaea780-b254-4334-905a-5658bc367266" ThisKey="EncargadoId" OtherKey="Id" Type="Persona" DeleteRule="CASCADE" IsForeignKey="true" />
-      <Association Name="Persona_Receta1" ed:AssociationGuid="1af4b218-0e45-4571-a566-06574597fb17" Member="Persona_PamId" ed:Guid="3e0a8303-b03a-47e6-9f83-3b9c691bfa05" ThisKey="PamId" OtherKey="Id" Type="Persona" DeleteRule="NO ACTION" IsForeignKey="true" />
-      <Association Name="Receta_RecetaDetalle" ed:AssociationGuid="318701a6-ae88-42a3-8b4c-1f854dcae4dd" Member="RecetaDetalles" ed:Guid="ca6a4a5c-3a22-40d4-8ad8-1d2de38bc76c" ThisKey="Id" OtherKey="RecetaId" Type="RecetaDetalle" />
+      <Association Name="Persona_Receta" ed:AssociationGuid="b4c20b7d-8f59-4f4e-be23-bb15743e9d1a" Member="Persona_EncargadoId" ed:Guid="075afc51-5f74-47da-b427-3aa498cc7205" ThisKey="EncargadoId" OtherKey="Id" Type="Persona" DeleteRule="CASCADE" IsForeignKey="true" />
+      <Association Name="Persona_Receta1" ed:AssociationGuid="5bcddcb9-6642-474c-82d0-15b3ecfdb221" Member="Persona_PamId" ed:Guid="c74976b1-9df4-4f0b-baaf-35a39a16b55c" ThisKey="PamId" OtherKey="Id" Type="Persona" DeleteRule="NO ACTION" IsForeignKey="true" />
+      <Association Name="Receta_RecetaDetalle" ed:AssociationGuid="098528a3-460d-4f34-a6c1-2c6f7ea2a409" Member="RecetaDetalles" ed:Guid="ea8eaa8e-58b8-4dec-85a7-13a6bdb9c50f" ThisKey="Id" OtherKey="RecetaId" Type="RecetaDetalle" />
     </Type>
   </Table>
-  <Table Name="hja.&quot;Actividades&quot;" Member="Actividades">
+  <Table Name="hja.actividades" Member="Actividades">
     <Type Name="Actividade" ed:Guid="34455817-8c03-445a-a0ce-a64399221004">
-      <Column Name="id" Member="Id" Type="System.Int64" DbType="INT8 NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="985e5586-c535-4c9f-8766-8a86b66cb355" />
+      <Column Name="id" Member="Id" Type="System.Int64" DbType="INT8 NOT NULL" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="985e5586-c535-4c9f-8766-8a86b66cb355" />
       <Column Name="actividad" Member="Actividad" Type="System.String" DbType="VARCHAR(50)" CanBeNull="true" UpdateCheck="Never" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="2779c89f-dbbf-4113-b725-b8a0c3279c1c" />
       <Column Name="&quot;Descripcion&quot;" Member="Descripcion" Type="System.String" DbType="VARCHAR(80)" CanBeNull="true" UpdateCheck="Never" MaxLength="80" Unicode="true" ed:ValidateMaxLength="80" ed:ValidateRequired="false" ed:Guid="54deae77-37e7-400e-a268-75348921e432" />
     </Type>
   </Table>
   <Table Name="hja.receta_detalle" Member="RecetaDetalles">
     <Type Name="RecetaDetalle" ed:Guid="d9d0540e-c053-40d3-b8c2-6eb5228e1a0c">
-      <Column Name="id" Member="Id" Type="System.Int64" DbType="INT8 NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="115d6c6c-d32b-43a4-b8ff-0eb3b4a2d855" />
-      <Column Name="receta_id" Member="RecetaId" Type="System.Int64" DbType="INT8 NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="7b3ae3e8-0fb7-4870-8e3f-df98ccf4d076" />
-      <Column Name="medicamento_id" Member="MedicamentoId" Type="System.Int64" DbType="INT8 NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="a16decf4-daa7-42b2-9db2-919f34536d9b" />
-      <Column Name="via_id" Member="ViaId" Type="System.Int64" DbType="INT8 NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="ac2d4510-a167-4d3b-9d6c-5d8089bf2d34" />
+      <Column Name="id" Member="Id" Type="System.Int32" AutoSync="OnInsert" DbType="SERIAL NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="115d6c6c-d32b-43a4-b8ff-0eb3b4a2d855" />
+      <Column Name="receta_id" Member="RecetaId" Type="System.Int32" DbType="INT4 NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="7b3ae3e8-0fb7-4870-8e3f-df98ccf4d076" />
+      <Column Name="medicamento_id" Member="MedicamentoId" Type="System.Int32" DbType="INT4 NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="a16decf4-daa7-42b2-9db2-919f34536d9b" />
+      <Column Name="via_id" Member="ViaId" Type="System.Int32" DbType="INT4 NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="ac2d4510-a167-4d3b-9d6c-5d8089bf2d34" />
       <Column Name="frecuencia" Member="Frecuencia" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="3a8c9d3b-27f5-4216-b1b9-8301b7eaca93" />
-      <Column Name="dosis" Member="Dosis" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="9f22dc09-3ed2-4ae2-b276-598dce076930" />
       <Column Name="fecha" Member="Fecha" Type="System.DateTime" DbType="TIMESTAMP" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="9452460a-0bc8-4736-865a-bfbc3da80f2b" />
-      <Association Name="Receta_RecetaDetalle" ed:AssociationGuid="318701a6-ae88-42a3-8b4c-1f854dcae4dd" Member="Receta" ed:Guid="ddefcaf8-add9-42d5-a498-2793385940c5" ThisKey="RecetaId" OtherKey="Id" Type="Receta" DeleteRule="CASCADE" IsForeignKey="true" />
-      <Association Name="Medicamento_RecetaDetalle" ed:AssociationGuid="17c2ff3b-25c8-49d9-adf2-d505df14b164" Member="Medicamento" ed:Guid="85ce3eec-ebde-470b-af93-84af94a8c93b" ThisKey="MedicamentoId" OtherKey="Id" Type="Medicamento" DeleteRule="CASCADE" IsForeignKey="true" />
-      <Association Name="Via_RecetaDetalle" ed:AssociationGuid="32b5beb7-f2c7-4b7c-be7a-b5c0e07179cb" Member="Via" ed:Guid="2b16066a-a022-4ada-b12f-96898264dc6f" ThisKey="ViaId" OtherKey="Id" Type="Via" DeleteRule="CASCADE" IsForeignKey="true" />
+      <Association Name="Medicamento_RecetaDetalle" ed:AssociationGuid="7cc14274-0786-42ea-a337-27152b66fdf4" Member="Medicamento" ed:Guid="c76819b2-497f-483d-a98e-b445df8b1c5f" ThisKey="MedicamentoId" OtherKey="Id" Type="Medicamento" DeleteRule="CASCADE" IsForeignKey="true" />
+      <Association Name="Receta_RecetaDetalle" ed:AssociationGuid="098528a3-460d-4f34-a6c1-2c6f7ea2a409" Member="Receta" ed:Guid="5dca439d-cc7e-426a-91e8-9af6f01cb0b1" ThisKey="RecetaId" OtherKey="Id" Type="Receta" DeleteRule="CASCADE" IsForeignKey="true" />
+      <Association Name="Via_RecetaDetalle" ed:AssociationGuid="e4fd9f21-88ba-45d3-893b-e47dec1f621f" Member="Via" ed:Guid="e05ad957-e14e-45cd-8eb3-0d904da84529" ThisKey="ViaId" OtherKey="Id" Type="Via" DeleteRule="CASCADE" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="hja.medicamento" Member="Medicamentos">
     <Type Name="Medicamento" ed:Guid="4d4b0762-d81f-4a3d-8d6b-a19dd470af62">
-      <Column Name="id" Member="Id" Type="System.Int64" DbType="INT8 NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="8cbcd2f3-1f54-4550-89e6-05de0c440b0e" />
+      <Column Name="id" Member="Id" Type="System.Int32" AutoSync="OnInsert" DbType="SERIAL NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="8cbcd2f3-1f54-4550-89e6-05de0c440b0e" />
       <Column Name="descripcion" Member="Descripcion" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="9cb1ba10-9310-4fd7-a230-767db98d8063" />
       <Column Name="codigo" Member="Codigo" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="0f2195ae-6348-444f-a5cb-6c07c0174f26" />
       <Column Name="clave" Member="Clave" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="cafb3158-9fce-4542-8a47-8d799867f6ad" />
-      <Column Name="encargado_id" Member="EncargadoId" Type="System.Int64" DbType="INT8" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="5d156c5a-abf5-4792-b800-9d2bffecf844" />
-      <Association Name="Medicamento_RecetaDetalle" ed:AssociationGuid="17c2ff3b-25c8-49d9-adf2-d505df14b164" Member="RecetaDetalles" ed:Guid="22e7589b-b779-4ba3-9ffe-b4733f46bbc6" ThisKey="Id" OtherKey="MedicamentoId" Type="RecetaDetalle" />
-      <Association Name="Persona_Medicamento" ed:AssociationGuid="ef63c27e-3079-4f50-b211-7b0319f3fe8f" Member="Persona" ed:Guid="742db5dc-ab2b-4377-b617-29851f13b94d" ThisKey="EncargadoId" OtherKey="Id" Type="Persona" DeleteRule="NO ACTION" IsForeignKey="true" />
+      <Column Name="usuario" Member="Usuario" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="b2e36392-3149-402c-bd54-ff7f1c9968a7" />
+      <Association Name="Medicamento_RecetaDetalle" ed:AssociationGuid="7cc14274-0786-42ea-a337-27152b66fdf4" Member="RecetaDetalles" ed:Guid="63673f9a-e5b6-4a17-986f-54bf6eee6130" ThisKey="Id" OtherKey="MedicamentoId" Type="RecetaDetalle" />
     </Type>
   </Table>
   <Table Name="hja.via" Member="Vias">
     <Type Name="Via" ed:Guid="4d045ad5-4409-4f26-85ee-797ecacc6b70">
-      <Column Name="id" Member="Id" Type="System.Int64" DbType="INT8 NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="8c7cd0ed-e288-4ba4-afcc-f48612f44bd6" />
+      <Column Name="id" Member="Id" Type="System.Int32" AutoSync="OnInsert" DbType="SERIAL NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="8c7cd0ed-e288-4ba4-afcc-f48612f44bd6" />
       <Column Name="descripcion" Member="Descripcion" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="29e92ecb-3006-4826-8464-b587daf6b4c6" />
-      <Association Name="Via_RecetaDetalle" ed:AssociationGuid="32b5beb7-f2c7-4b7c-be7a-b5c0e07179cb" Member="RecetaDetalles" ed:Guid="64ee7425-cee6-4fb9-adb3-dbd02ab248b7" ThisKey="Id" OtherKey="ViaId" Type="RecetaDetalle" />
+      <Association Name="Via_RecetaDetalle" ed:AssociationGuid="e4fd9f21-88ba-45d3-893b-e47dec1f621f" Member="RecetaDetalles" ed:Guid="eab49eef-e2d5-4e88-a0ae-6072ae8ef757" ThisKey="Id" OtherKey="ViaId" Type="RecetaDetalle" />
     </Type>
   </Table>
   <Table Name="hja.rol" Member="Rols">
     <Type Name="Rol" ed:Guid="1e5bbdd0-1035-4744-a7b8-d43cb1c62b45">
-      <Column Name="id" Member="Id" Type="System.Int64" AutoSync="OnInsert" DbType="INT8 NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="5ca6ef6f-f7da-41ee-bb93-8e8f4a003456" />
+      <Column Name="id" Member="Id" Type="System.Int32" AutoSync="OnInsert" DbType="SERIAL NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="5ca6ef6f-f7da-41ee-bb93-8e8f4a003456" />
       <Column Name="rol_nombre" Member="RolNombre" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="095a0c61-aa07-483e-b1ea-c718f14d15d5" />
-      <Association Name="Rol_PersonaRol" ed:AssociationGuid="87e23ee5-55d4-44b6-802d-4a3fc44569d2" Member="PersonaRols" ed:Guid="1abbff3f-49fb-4d89-be43-f3355b79a556" ThisKey="Id" OtherKey="RolId" Type="PersonaRol" />
+      <Association Name="Rol_PersonaRol" ed:AssociationGuid="6a11386f-c654-490c-80e9-64bb6672c1eb" Member="PersonaRols" ed:Guid="54f9f45e-c3e5-4b21-a233-6f50efbb5258" ThisKey="Id" OtherKey="RolId" Type="PersonaRol" />
     </Type>
   </Table>
   <Table Name="hja.persona" Member="Personas">
     <Type Name="Persona" ed:Guid="0ce20a3b-0ee0-4852-86b9-24fd16fde1c6">
-      <Column Name="id" Member="Id" Type="System.Int64" AutoSync="OnInsert" DbType="INT8 NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="6eb8a7e7-b85a-4b81-b323-39c0545e8a0b" />
+      <Column Name="id" Member="Id" Type="System.Int32" AutoSync="OnInsert" DbType="SERIAL NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="6eb8a7e7-b85a-4b81-b323-39c0545e8a0b" />
       <Column Name="nombre" Member="Nombre" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="27a6bbe6-5669-45f9-91e7-5aa06826622b" />
       <Column Name="apellido_uno" Member="ApellidoUno" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="9dc72ea1-047d-4494-bd34-d64cf3e96e07" />
       <Column Name="apellido_dos" Member="ApellidoDos" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="b172d104-b4a6-45f9-81f5-630d12a81639" />
@@ -69,19 +67,18 @@
       <Column Name="correo" Member="Correo" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="4ac68f1b-72a0-4fce-90f6-65e727159f97" />
       <Column Name="clave" Member="Clave" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="47a413ea-b012-4928-b090-2585f39d4e1a" />
       <Column Name="entrada" Member="Entrada" Type="System.Boolean" DbType="BOOL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="188a1a8d-1f8f-4f0b-88e0-866e6278a99d" />
-      <Association Name="Persona_Receta" ed:AssociationGuid="73793e06-2987-4a85-86f2-0cc6b98480c6" Member="Recetas_EncargadoId" ed:Guid="47394758-59e9-410d-ba8e-7ea6148d76f3" ThisKey="Id" OtherKey="EncargadoId" Type="Receta" />
-      <Association Name="Persona_Receta1" ed:AssociationGuid="1af4b218-0e45-4571-a566-06574597fb17" Member="Recetas_PamId" ed:Guid="b3bbb20a-1e5b-4605-9173-112d43903649" ThisKey="Id" OtherKey="PamId" Type="Receta" />
-      <Association Name="Persona_Medicamento" ed:AssociationGuid="ef63c27e-3079-4f50-b211-7b0319f3fe8f" Member="Medicamentos" ed:Guid="b0ba72e4-52e6-4843-814a-8501ef9d8cc1" ThisKey="Id" OtherKey="EncargadoId" Type="Medicamento" />
-      <Association Name="Persona_PersonaRol" ed:AssociationGuid="92bbabf8-f5ba-4dbd-9e3c-4e2891504eec" Member="PersonaRols" ed:Guid="6742c180-f36c-4c1c-985f-74b0bf34f7e0" ThisKey="Id" OtherKey="PersonaId" Type="PersonaRol" />
+      <Association Name="Persona_Receta" ed:AssociationGuid="b4c20b7d-8f59-4f4e-be23-bb15743e9d1a" Member="Recetas_EncargadoId" ed:Guid="3650fe8f-9bcd-42df-a175-ffac84122f23" ThisKey="Id" OtherKey="EncargadoId" Type="Receta" />
+      <Association Name="Persona_Receta1" ed:AssociationGuid="5bcddcb9-6642-474c-82d0-15b3ecfdb221" Member="Recetas_PamId" ed:Guid="cd3b7a82-e6e5-4c01-8ab5-371b9a945492" ThisKey="Id" OtherKey="PamId" Type="Receta" />
+      <Association Name="Persona_PersonaRol" ed:AssociationGuid="cbf5b09f-b97a-4190-8e1d-b492249fb717" Member="PersonaRols" ed:Guid="e72deaf2-85a7-4bff-9565-73a70f1e3625" ThisKey="Id" OtherKey="PersonaId" Type="PersonaRol" />
     </Type>
   </Table>
   <Table Name="hja.persona_rol" Member="PersonaRols">
     <Type Name="PersonaRol" ed:Guid="4c3cea1a-662c-4f89-9c16-203313050678">
-      <Column Name="id" Member="Id" Type="System.Int64" AutoSync="OnInsert" DbType="INT8 NOT NULL " IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="52cc0a53-8d38-4575-bf3b-2ffe1a5856d5" />
-      <Column Name="persona_id" Member="PersonaId" Type="System.Int64" DbType="INT8" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="5360cb62-83e3-477c-8717-44c66ee64f58" />
-      <Column Name="rol_id" Member="RolId" Type="System.Int64" DbType="INT8" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="f08b72e9-2f0b-42fd-8a1a-66a37d399c94" />
-      <Association Name="Persona_PersonaRol" ed:AssociationGuid="92bbabf8-f5ba-4dbd-9e3c-4e2891504eec" Member="Persona" ed:Guid="62555a1a-8527-4b51-81a6-f9bb81f10c8a" ThisKey="PersonaId" OtherKey="Id" Type="Persona" DeleteRule="NO ACTION" IsForeignKey="true" />
-      <Association Name="Rol_PersonaRol" ed:AssociationGuid="87e23ee5-55d4-44b6-802d-4a3fc44569d2" Member="Rol" ed:Guid="b8d191bf-20ad-4e05-bdb8-17d9a7b08116" ThisKey="RolId" OtherKey="Id" Type="Rol" DeleteRule="NO ACTION" IsForeignKey="true" />
+      <Column Name="id" Member="Id" Type="System.Int32" AutoSync="OnInsert" DbType="SERIAL NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="52cc0a53-8d38-4575-bf3b-2ffe1a5856d5" />
+      <Column Name="persona_id" Member="PersonaId" Type="System.Int32" DbType="INT4 NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="5360cb62-83e3-477c-8717-44c66ee64f58" />
+      <Column Name="rol_id" Member="RolId" Type="System.Int32" DbType="INT4 NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="f08b72e9-2f0b-42fd-8a1a-66a37d399c94" />
+      <Association Name="Persona_PersonaRol" ed:AssociationGuid="cbf5b09f-b97a-4190-8e1d-b492249fb717" Member="Persona" ed:Guid="5519a64e-5226-412b-91ac-eb496696399f" ThisKey="PersonaId" OtherKey="Id" Type="Persona" DeleteRule="NO ACTION" IsForeignKey="true" />
+      <Association Name="Rol_PersonaRol" ed:AssociationGuid="6a11386f-c654-490c-80e9-64bb6672c1eb" Member="Rol" ed:Guid="aa2d12d7-2b9b-47cf-81af-3c83aa52acd9" ThisKey="RolId" OtherKey="Id" Type="Rol" DeleteRule="NO ACTION" IsForeignKey="true" />
     </Type>
   </Table>
   <Type Name="InfoPamResult" ed:Guid="ef384ed4-003c-42cb-b70d-79b361414998">
@@ -90,8 +87,4 @@
     <Column Name="apellido_dos" Member="ApellidoDos" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="56bae38f-5222-4f93-a8d2-8b7c459ced12" />
     <Column Name="fecha" Member="Fecha" Type="System.DateTime" DbType="DATE" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="205f5e4a-c3db-494e-ac69-fb7e68a783c5" />
   </Type>
-  <Function Name="hja.info_pam" Method="InfoPam" IsComposable="true" ed:Guid="12dfb9a3-fcad-465d-85da-e7dff531b501">
-    <Parameter Name="p_receta_id" Type="System.Int64" DbType="BIGINT" />
-    <ElementType Type="InfoPamResult" />
-  </Function>
 </Database>

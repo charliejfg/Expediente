@@ -22,7 +22,7 @@ namespace ProyectoHogarAncianos
         private void RecetasReporte_Load(object sender, EventArgs e)
         {
             this.reportViewer1.LocalReport.SetParameters(
-                new Microsoft.Reporting.WinForms.ReportParameter("idReceta","0"));
+                new Microsoft.Reporting.WinForms.ReportParameter("idReceta","1"));
             this.reportViewer1.RefreshReport();
         }
     }
