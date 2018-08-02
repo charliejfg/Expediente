@@ -41,8 +41,8 @@
       <HintPath>..\packages\MaterialSkin.Updated.0.2.2\lib\MaterialSkin.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Npgsql, Version=4.0.1.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
       <HintPath>..\packages\Npgsql.4.0.1\lib\net451\Npgsql.dll</HintPath>
       <Private>True</Private>
@@ -148,11 +148,11 @@
     <Compile Include="Recetas.Designer.cs">
       <DependentUpon>Recetas.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReporteReceta.cs">
+    <Compile Include="RecetasReporte.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReporteReceta.Designer.cs">
-      <DependentUpon>ReporteReceta.cs</DependentUpon>
+    <Compile Include="RecetasReporte.Designer.cs">
+      <DependentUpon>RecetasReporte.cs</DependentUpon>
     </Compile>
     <Compile Include="Usuarios.cs">
       <SubType>Form</SubType>
@@ -206,10 +206,11 @@
     <EmbeddedResource Include="Recetas.resx">
       <DependentUpon>Recetas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReporteReceta.resx">
-      <DependentUpon>ReporteReceta.cs</DependentUpon>
+    <EmbeddedResource Include="RecetasReporte.resx">
+      <DependentUpon>RecetasReporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReporteRecetaPaciente.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteRecetaPacienteFinal - Copy.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteRecetaPacienteFinal.rdlc" />
     <EmbeddedResource Include="Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>
@@ -415,6 +416,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SubReport\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

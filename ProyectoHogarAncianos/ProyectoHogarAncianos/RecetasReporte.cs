@@ -10,16 +10,19 @@ using System.Windows.Forms;
 
 namespace ProyectoHogarAncianos
 {
-    public partial class ReporteReceta : Form
+    public partial class RecetasReporte : Form
     {
-        public ReporteReceta()
+        private long idReceta;
+        public RecetasReporte(/*int idReceta*/)
         {
+            //this.idReceta = idReceta;
             InitializeComponent();
         }
 
-        private void ReporteReceta_Load(object sender, EventArgs e)
+        private void RecetasReporte_Load(object sender, EventArgs e)
         {
-
+            this.reportViewer1.LocalReport.SetParameters(
+                new Microsoft.Reporting.WinForms.ReportParameter("idReceta","0"));
             this.reportViewer1.RefreshReport();
         }
     }

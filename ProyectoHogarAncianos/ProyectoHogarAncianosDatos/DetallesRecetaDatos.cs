@@ -14,6 +14,7 @@ namespace ProyectoHogarAncianosDatos
             Receta nueva = new Receta();
             try
             {
+                context.InfoPam()
                 context.RecetaDetalles.InsertOnSubmit(RecetaDetalle);
                 context.SubmitChanges();
             }

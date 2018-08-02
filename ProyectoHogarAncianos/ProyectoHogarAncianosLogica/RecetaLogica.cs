@@ -50,5 +50,12 @@ namespace ProyectoHogarAncianosLogica
             return ListaReceta;
         }
 
+        public long idUltimaReceta(long pacienteId)
+        {
+            RecetaDatos recetaDatos = new RecetaDatos();
+
+            return recetaDatos.trearRecetaId(pacienteId);
+        }
+
     }
 }

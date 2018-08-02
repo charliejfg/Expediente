@@ -86,5 +86,27 @@ namespace ProyectoHogarAncianosDatos
             }
             return 0;
         }
+
+        public long trearRecetaId(long pacienteId)
+        {
+            Receta Receta = null;
+            try
+            {
+                var valorMaximo = context.Recetas.Max(x => x.Id);
+                var query = from it in context.Recetas
+                    where it.Id == valorMaximo
+                    select it;
+                foreach (Receta RecetaLista in query)
+                {
+                    Receta = RecetaLista;
+                }
+            }
+            catch (Exception)
+            {
+                return 1;
+            }
+
+            return Receta.Id;
+        }
     }
 }

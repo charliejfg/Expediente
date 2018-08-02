@@ -124,5 +124,14 @@ namespace ProyectoHogarAncianos
         {
 
         }
+
+        private void materialRaisedButton2_Click(object sender, EventArgs e)
+        {
+            RecetaLogica recetaLogica = new RecetaLogica();
+            long resultado = recetaLogica.idUltimaReceta(Convert.ToInt32(paciente.Id));
+            RecetasReporte nuevaEscena = new RecetasReporte();
+            Hide();
+            nuevaEscena.Show();
+        }
     }
 }

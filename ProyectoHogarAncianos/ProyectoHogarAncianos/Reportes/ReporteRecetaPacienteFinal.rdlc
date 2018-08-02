@@ -502,7 +502,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value />
+                <Value>=Parameters!idReceta.Value</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -532,7 +532,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value />
+                <Value>=Fields!Frecuencia.Value</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -663,7 +663,7 @@
     </DataSet>
   </DataSets>
   <ReportParameters>
-    <ReportParameter Name="RecetaId">
+    <ReportParameter Name="idReceta">
       <DataType>Integer</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
