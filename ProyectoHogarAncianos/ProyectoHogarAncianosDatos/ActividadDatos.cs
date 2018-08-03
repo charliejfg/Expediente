@@ -11,12 +11,45 @@ namespace ProyectoHogarAncianosDatos
     {
         private HjaDataContext context = new HjaDataContext();
 
+        public int CrearActvidad(Actividade actividadNueva)
+        {
+            try
+            {
+                context.Actividades.InsertOnSubmit(actividadNueva);
+                context.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                return 2;
+            }
+            return 0;
+        }
+
+        public int ModificarActvidad(Actividade actividadNueva)
+        {
+            try
+            {
+                var query = (from it in context.Actividades
+                             where it.Id == actividadNueva.Id
+                             select it).FirstOrDefault();
+                query.Actividad = actividadNueva.Actividad;
+                query.Descripcion = actividadNueva.Descripcion;
+                context.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                return 2;
+            }
+            return 0;
+        }
+
         public List<Actividade> TraerActividad()
         {
             List<Actividade> ListaActividad = new List<Actividade>();
             try
             {
                 var query = from it in context.Actividades
+                            orderby it.Id ascending
                             select it;
                 foreach (Actividade actividadLista in query)
                 {
@@ -58,7 +91,7 @@ namespace ProyectoHogarAncianosDatos
             try
             {
                 var query = from it in context.Actividades
-                            where it.Actividad.Contains(buscarActividad)
+                            where it.Actividad.ToUpper().Contains(buscarActividad.ToUpper())
                             select it;
                 foreach (Actividade actividadLista in query)
                 {

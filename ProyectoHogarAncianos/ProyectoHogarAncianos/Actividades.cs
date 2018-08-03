@@ -16,7 +16,7 @@ namespace ProyectoHogarAncianos
 {
     public partial class Actividades : MaterialForm
     {
-        public int idActividad;
+        public int idActividad = -1;
         ActividadLogica actividadLogica = new ActividadLogica();
         public Actividades()
         {
@@ -37,8 +37,44 @@ namespace ProyectoHogarAncianos
         private void Actividades_Load(object sender, EventArgs e)
         {
             Actividade actividad = actividadLogica.TraerActividadPorId(idActividad);
-            txtActividad.Text = actividad.Actividad;
-            txaDescripcion.Text = actividad.Descripcion;
+            if (actividad != null)
+            {
+                txtActividad.Text = actividad.Actividad;
+                txaDescripcion.Text = actividad.Descripcion;
+            }
+        }
+
+        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        {
+            int posiblePersona = 1;
+            if (idActividad != -1)
+            {
+                posiblePersona = actividadLogica.ModificarActividad(idActividad, txtActividad.Text, txaDescripcion.Text);
+            }
+            else
+            {
+
+                posiblePersona = actividadLogica.CrearActividad(txtActividad.Text, txaDescripcion.Text);
+            }
+            if (posiblePersona == 0)
+            {
+                MessageBox.Show(@"Actividad guardada");
+                Administracion movimientoPagina = new Administracion();
+                Close();
+                Hide();
+                movimientoPagina.ShowDialog();
+            }
+            else
+            {
+                if (posiblePersona == 1)
+                {
+                    MessageBox.Show(@"Error de sistema por favor, intente de nuevo");
+                }
+                else
+                {
+                    MessageBox.Show(@"Actividad ya existente por favor intente otra");
+                }
+            }
         }
     }
 }
