@@ -53,12 +53,16 @@ namespace ProyectoHogarAncianos
             LstPacientes.Items[4].SubItems.Add("5");
 
             //Se llena la listview de actividades
-            LstActividades.Items.Add("1");
-            LstActividades.Items[0].SubItems.Add("Ejercicio");
-            LstActividades.Items.Add("2");
-            LstActividades.Items[1].SubItems.Add("Pasear");
-            LstActividades.Items.Add("3");
-            LstActividades.Items[2].SubItems.Add("Manualidades");
+            ActividadLogica actividadLogica = new ActividadLogica();
+            List<Actividade> ListaActividad = new List<Actividade>();
+            ListaActividad = actividadLogica.TraerActividad();
+            int i = 0;
+            foreach (Actividade actividadLista in ListaActividad)
+            {
+                LstActividades.Items.Add(Convert.ToString(actividadLista.Id));
+                LstActividades.Items[i].SubItems.Add(actividadLista.Actividad);
+                i++;
+            }
 
             //Se llena la listview de medicamentos
             LstMedicamentos.Items.Add("Morfina");
@@ -68,15 +72,6 @@ namespace ProyectoHogarAncianos
             LstMedicamentos.Items.Add("Fenobarbital");
             LstMedicamentos.Items[2].SubItems.Add("Anticonvulsivo");
 
-            //Se llena la listview de recetas
-            ActividadLogica actividadLogica = new ActividadLogica();
-            List<Actividade> ListaActividad = new List<Actividade>();
-            ListaActividad = actividadLogica.TraerActividad();
-            foreach (Actividade actividadLista in ListaActividad)
-            {
-                LstRecetas.Items.Add(Convert.ToString(actividadLista.Id));
-                LstMedicamentos.Items[0].SubItems.Add(actividadLista.Actividad);
-            }
             //LstRecetas.Items.Add("1");
             //LstRecetas.Items[0].SubItems.Add("Andres Cordero Ruiz");
             //LstRecetas.Items.Add("2");
@@ -172,6 +167,27 @@ namespace ProyectoHogarAncianos
         {
             Recetas re = new Recetas();
             re.ShowDialog();
+        }
+
+        private void txtBuscarActividad_TextChanged(object sender, EventArgs e)
+        {
+            LstActividades.Items.Clear();
+            ActividadLogica actividadLogica = new ActividadLogica();
+            List<Actividade> ListaActividad = new List<Actividade>();
+            ListaActividad = actividadLogica.BuscarActividad(txtBuscarActividad.Text);
+            int i = 0;
+            foreach (Actividade actividadLista in ListaActividad)
+            {
+                LstActividades.Items.Add(Convert.ToString(actividadLista.Id));
+                LstActividades.Items[i].SubItems.Add(actividadLista.Actividad);
+                i++;
+            }
+        }
+
+        private void btnNuevaActividad_Click(object sender, EventArgs e)
+        {
+            Actividades ac = new Actividades();
+            ac.ShowDialog();
         }
     }
 }

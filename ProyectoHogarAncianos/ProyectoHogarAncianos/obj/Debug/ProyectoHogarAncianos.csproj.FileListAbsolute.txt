@@ -83,7 +83,6 @@ C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debu
 C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.Encryptado.resources
 C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.Paciente.resources
 C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.Recetas.resources
-C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.ReporteReceta.resources
 C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\RdlCompile.cache
 C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\RdlCompile.compiled
 C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\bin\Debug\Devart.Data.dll
@@ -104,4 +103,5 @@ C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHoga
 C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.RecetaPaciente.resources
 C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.RecetaPaciente.resources
 C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.RecetasReporte.resources
+C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.RecetasReporte.resources
 C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.Lista.resources

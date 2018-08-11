@@ -37,7 +37,6 @@
             this.Usuario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.NomUsuario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.materialFlatButton7 = new MaterialSkin.Controls.MaterialFlatButton();
             this.tabCitas = new System.Windows.Forms.TabPage();
             this.LstCitas = new MaterialSkin.Controls.MaterialListView();
             this.PacienteCita = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -60,7 +59,8 @@
             this.NombreMedicamento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TipoMedicamento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabActividades = new System.Windows.Forms.TabPage();
-            this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.txtBuscarActividad = new System.Windows.Forms.TextBox();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.LstActividades = new MaterialSkin.Controls.MaterialListView();
             this.IdActividades = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Actividad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -71,6 +71,7 @@
             this.Genero = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.NumExpediente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnNuevaActividad = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialTabControl1.SuspendLayout();
             this.tabUsuarios.SuspendLayout();
             this.tabCitas.SuspendLayout();
@@ -113,7 +114,6 @@
             // tabUsuarios
             // 
             this.tabUsuarios.Controls.Add(this.LstUsuarios);
-            this.tabUsuarios.Controls.Add(this.materialFlatButton7);
             this.tabUsuarios.Location = new System.Drawing.Point(4, 22);
             this.tabUsuarios.Name = "tabUsuarios";
             this.tabUsuarios.Padding = new System.Windows.Forms.Padding(3);
@@ -152,22 +152,6 @@
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "usuario.bmp");
-            // 
-            // materialFlatButton7
-            // 
-            this.materialFlatButton7.AutoSize = true;
-            this.materialFlatButton7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton7.Depth = 0;
-            this.materialFlatButton7.Icon = null;
-            this.materialFlatButton7.Location = new System.Drawing.Point(273, 18);
-            this.materialFlatButton7.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton7.Name = "materialFlatButton7";
-            this.materialFlatButton7.Primary = false;
-            this.materialFlatButton7.Size = new System.Drawing.Size(126, 36);
-            this.materialFlatButton7.TabIndex = 1;
-            this.materialFlatButton7.Text = "Nuevo Usuario";
-            this.materialFlatButton7.UseVisualStyleBackColor = true;
             // 
             // tabCitas
             // 
@@ -410,7 +394,9 @@
             // 
             // tabActividades
             // 
-            this.tabActividades.Controls.Add(this.materialFlatButton2);
+            this.tabActividades.Controls.Add(this.btnNuevaActividad);
+            this.tabActividades.Controls.Add(this.txtBuscarActividad);
+            this.tabActividades.Controls.Add(this.materialLabel1);
             this.tabActividades.Controls.Add(this.LstActividades);
             this.tabActividades.Location = new System.Drawing.Point(4, 22);
             this.tabActividades.Name = "tabActividades";
@@ -419,21 +405,26 @@
             this.tabActividades.Text = "Actividades";
             this.tabActividades.UseVisualStyleBackColor = true;
             // 
-            // materialFlatButton2
+            // txtBuscarActividad
             // 
-            this.materialFlatButton2.AutoSize = true;
-            this.materialFlatButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton2.Depth = 0;
-            this.materialFlatButton2.Icon = null;
-            this.materialFlatButton2.Location = new System.Drawing.Point(320, 23);
-            this.materialFlatButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton2.Name = "materialFlatButton2";
-            this.materialFlatButton2.Primary = false;
-            this.materialFlatButton2.Size = new System.Drawing.Size(139, 36);
-            this.materialFlatButton2.TabIndex = 5;
-            this.materialFlatButton2.Text = "Nueva Actividad";
-            this.materialFlatButton2.UseVisualStyleBackColor = true;
+            this.txtBuscarActividad.Location = new System.Drawing.Point(213, 32);
+            this.txtBuscarActividad.Name = "txtBuscarActividad";
+            this.txtBuscarActividad.Size = new System.Drawing.Size(100, 20);
+            this.txtBuscarActividad.TabIndex = 11;
+            this.txtBuscarActividad.TextChanged += new System.EventHandler(this.txtBuscarActividad_TextChanged);
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(138, 34);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(55, 19);
+            this.materialLabel1.TabIndex = 10;
+            this.materialLabel1.Text = "Buscar";
             // 
             // LstActividades
             // 
@@ -535,6 +526,23 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // btnNuevaActividad
+            // 
+            this.btnNuevaActividad.AutoSize = true;
+            this.btnNuevaActividad.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnNuevaActividad.Depth = 0;
+            this.btnNuevaActividad.Icon = null;
+            this.btnNuevaActividad.Location = new System.Drawing.Point(387, 23);
+            this.btnNuevaActividad.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnNuevaActividad.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnNuevaActividad.Name = "btnNuevaActividad";
+            this.btnNuevaActividad.Primary = false;
+            this.btnNuevaActividad.Size = new System.Drawing.Size(139, 36);
+            this.btnNuevaActividad.TabIndex = 12;
+            this.btnNuevaActividad.Text = "Nueva Actividad";
+            this.btnNuevaActividad.UseVisualStyleBackColor = true;
+            this.btnNuevaActividad.Click += new System.EventHandler(this.btnNuevaActividad_Click);
+            // 
             // Administracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -548,7 +556,6 @@
             this.Load += new System.EventHandler(this.Administracion_Load);
             this.materialTabControl1.ResumeLayout(false);
             this.tabUsuarios.ResumeLayout(false);
-            this.tabUsuarios.PerformLayout();
             this.tabCitas.ResumeLayout(false);
             this.tabCitas.PerformLayout();
             this.tabExpediente.ResumeLayout(false);
@@ -585,7 +592,6 @@
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
         private System.Windows.Forms.ColumnHeader NumExpediente;
         private MaterialSkin.Controls.MaterialListView LstActividades;
-        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton2;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton3;
         private MaterialSkin.Controls.MaterialListView LstMedicamentos;
         private System.Windows.Forms.ColumnHeader NombreMedicamento;
@@ -598,7 +604,6 @@
         private System.Windows.Forms.ColumnHeader Expediente;
         private System.Windows.Forms.ColumnHeader ExpPaciente;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton5;
-        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton7;
         private MaterialSkin.Controls.MaterialListView LstCitas;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton6;
         private System.Windows.Forms.ColumnHeader PacienteCita;
@@ -609,5 +614,8 @@
         private System.Windows.Forms.ColumnHeader NomUsuario;
         private System.Windows.Forms.ColumnHeader IdActividades;
         private System.Windows.Forms.ColumnHeader Actividad;
+        private System.Windows.Forms.TextBox txtBuscarActividad;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialFlatButton btnNuevaActividad;
     }
 }
