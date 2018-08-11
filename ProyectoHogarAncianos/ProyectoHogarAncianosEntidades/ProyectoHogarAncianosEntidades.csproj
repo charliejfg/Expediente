@@ -56,6 +56,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataContext1.lqml</DependentUpon>
     </Compile>
+    <Compile Include="MedicamentoReport.cs" />
     <Compile Include="PersonaLogeada.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

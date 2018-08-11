@@ -104,6 +104,12 @@
     <Compile Include="Expediente.Designer.cs">
       <DependentUpon>Expediente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lista.Designer.cs">
+      <DependentUpon>Lista.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +181,9 @@
     <EmbeddedResource Include="Expediente.resx">
       <DependentUpon>Expediente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Lista.resx">
+      <DependentUpon>Lista.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,7 +219,6 @@
       <DependentUpon>RecetasReporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReporteRecetaPaciente.rdlc" />
-    <EmbeddedResource Include="Reportes\ReporteRecetaPacienteFinal - Copy.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteRecetaPacienteFinal.rdlc" />
     <EmbeddedResource Include="Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>
@@ -220,7 +228,9 @@
     <None Include="Properties\DataSources\HjaContext.Persona.datasource" />
     <None Include="Properties\DataSources\HjaContext.PersonaRol.datasource" />
     <None Include="Properties\DataSources\HjaContext.Receta.datasource" />
+    <None Include="Properties\DataSources\HjaContext.RecetaDetalle.datasource" />
     <None Include="Properties\DataSources\HjaContext.Rol.datasource" />
+    <None Include="Properties\DataSources\ProyectoHogarAncianosEntidades.MedicamentoReport.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

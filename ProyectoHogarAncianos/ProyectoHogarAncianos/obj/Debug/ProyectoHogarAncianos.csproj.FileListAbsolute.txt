@@ -104,3 +104,4 @@ C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHoga
 C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.RecetaPaciente.resources
 C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.RecetaPaciente.resources
 C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.RecetasReporte.resources
+C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.Lista.resources
