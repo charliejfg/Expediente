@@ -112,6 +112,7 @@
       <DependentUpon>Expediente.cs</DependentUpon>
     </Compile>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +132,8 @@
       <DependentUpon>Lista.cs</DependentUpon>
 >>>>>>> master
     </Compile>
+=======
+>>>>>>> parent of 071bf9a... Reporte
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +209,7 @@
       <DependentUpon>Expediente.cs</DependentUpon>
     </EmbeddedResource>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +220,8 @@
       <DependentUpon>Lista.cs</DependentUpon>
 >>>>>>> master
     </EmbeddedResource>
+=======
+>>>>>>> parent of 071bf9a... Reporte
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -251,6 +257,7 @@
       <DependentUpon>RecetasReporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReporteRecetaPaciente.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteRecetaPacienteFinal - Copy.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteRecetaPacienteFinal.rdlc" />
     <EmbeddedResource Include="Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>
@@ -260,13 +267,15 @@
     <None Include="Properties\DataSources\HjaContext.Persona.datasource" />
     <None Include="Properties\DataSources\HjaContext.PersonaRol.datasource" />
     <None Include="Properties\DataSources\HjaContext.Receta.datasource" />
-    <None Include="Properties\DataSources\HjaContext.RecetaDetalle.datasource" />
     <None Include="Properties\DataSources\HjaContext.Rol.datasource" />
+<<<<<<< HEAD
 <<<<<<< HEAD
     <None Include="Properties\DataSources\ProyectoHogarAncianosEntidades.Repo.datasource" />
 =======
     <None Include="Properties\DataSources\ProyectoHogarAncianosEntidades.MedicamentoReport.datasource" />
 >>>>>>> master
+=======
+>>>>>>> parent of 071bf9a... Reporte
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

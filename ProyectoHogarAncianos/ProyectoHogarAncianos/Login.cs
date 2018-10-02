@@ -66,9 +66,9 @@ namespace ProyectoHogarAncianos
 
         private void materialRaisedButton3_Click(object sender, EventArgs e)
         {
-            //RecetasReporte reporte = new RecetasReporte();
-            //Hide();
-            //reporte.ShowDialog();
+            RecetasReporte reporte = new RecetasReporte();
+            Hide();
+            reporte.ShowDialog();
         }
     }
 }

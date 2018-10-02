@@ -31,8 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
+            this.txtFrecuencia = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.cboMedicamento = new System.Windows.Forms.ComboBox();
             this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
@@ -52,8 +54,6 @@
             this.txtFecha = new MaterialSkin.Controls.MaterialLabel();
             this.personaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.txtDetalles = new System.Windows.Forms.RichTextBox();
-            this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -84,6 +84,19 @@
             this.materialLabel4.TabIndex = 3;
             this.materialLabel4.Text = "Via";
             // 
+            // materialLabel5
+            // 
+            this.materialLabel5.AutoSize = true;
+            this.materialLabel5.Depth = 0;
+            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel5.Location = new System.Drawing.Point(474, 192);
+            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel5.Name = "materialLabel5";
+            this.materialLabel5.Size = new System.Drawing.Size(82, 19);
+            this.materialLabel5.TabIndex = 4;
+            this.materialLabel5.Text = "Frecuencia";
+            // 
             // materialLabel3
             // 
             this.materialLabel3.AutoSize = true;
@@ -109,6 +122,23 @@
             this.materialLabel6.Size = new System.Drawing.Size(53, 19);
             this.materialLabel6.TabIndex = 5;
             this.materialLabel6.Text = "Fecha:";
+            // 
+            // txtFrecuencia
+            // 
+            this.txtFrecuencia.Depth = 0;
+            this.txtFrecuencia.Hint = "";
+            this.txtFrecuencia.Location = new System.Drawing.Point(574, 188);
+            this.txtFrecuencia.MaxLength = 32767;
+            this.txtFrecuencia.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtFrecuencia.Name = "txtFrecuencia";
+            this.txtFrecuencia.PasswordChar = '\0';
+            this.txtFrecuencia.SelectedText = "";
+            this.txtFrecuencia.SelectionLength = 0;
+            this.txtFrecuencia.SelectionStart = 0;
+            this.txtFrecuencia.Size = new System.Drawing.Size(176, 23);
+            this.txtFrecuencia.TabIndex = 10;
+            this.txtFrecuencia.TabStop = false;
+            this.txtFrecuencia.UseSystemPasswordChar = false;
             // 
             // cboMedicamento
             // 
@@ -320,34 +350,11 @@
             this.materialRaisedButton2.UseVisualStyleBackColor = true;
             this.materialRaisedButton2.Click += new System.EventHandler(this.materialRaisedButton2_Click);
             // 
-            // txtDetalles
-            // 
-            this.txtDetalles.Location = new System.Drawing.Point(489, 115);
-            this.txtDetalles.Name = "txtDetalles";
-            this.txtDetalles.Size = new System.Drawing.Size(266, 157);
-            this.txtDetalles.TabIndex = 25;
-            this.txtDetalles.Text = "";
-            // 
-            // materialLabel7
-            // 
-            this.materialLabel7.AutoSize = true;
-            this.materialLabel7.Depth = 0;
-            this.materialLabel7.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel7.Location = new System.Drawing.Point(369, 115);
-            this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel7.Name = "materialLabel7";
-            this.materialLabel7.Size = new System.Drawing.Size(64, 19);
-            this.materialLabel7.TabIndex = 26;
-            this.materialLabel7.Text = "Detalles";
-            // 
             // Recetas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(803, 529);
-            this.Controls.Add(this.materialLabel7);
-            this.Controls.Add(this.txtDetalles);
             this.Controls.Add(this.materialRaisedButton2);
             this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.btnEliminar);
@@ -360,7 +367,9 @@
             this.Controls.Add(this.materialRaisedButton1);
             this.Controls.Add(this.materialFlatButton1);
             this.Controls.Add(this.cboMedicamento);
+            this.Controls.Add(this.txtFrecuencia);
             this.Controls.Add(this.materialLabel6);
+            this.Controls.Add(this.materialLabel5);
             this.Controls.Add(this.materialLabel4);
             this.Controls.Add(this.materialLabel3);
             this.Controls.Add(this.materialLabel2);
@@ -377,8 +386,10 @@
         #endregion
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
+        private MaterialSkin.Controls.MaterialLabel materialLabel5;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialLabel materialLabel6;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtFrecuencia;
         private System.Windows.Forms.ComboBox cboMedicamento;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
@@ -398,7 +409,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Frecuencia;
         private MaterialSkin.Controls.MaterialLabel txtFecha;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
-        private System.Windows.Forms.RichTextBox txtDetalles;
-        private MaterialSkin.Controls.MaterialLabel materialLabel7;
     }
 }

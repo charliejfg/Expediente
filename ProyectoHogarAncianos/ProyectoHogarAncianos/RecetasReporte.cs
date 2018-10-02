@@ -8,24 +8,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using HjaContext;
-using Microsoft.Reporting.WinForms;
-using ProyectoHogarAncianosLogica;
 
 namespace ProyectoHogarAncianos
 {
     public partial class RecetasReporte : Form
     {
         private long idReceta;
-        private RecetaLogica recetaDatos;
-        public RecetasReporte(long idReceta)
+        public RecetasReporte(/*int idReceta*/)
         {
-            this.idReceta = idReceta;
+            //this.idReceta = idReceta;
             InitializeComponent();
         }
 
         private void RecetasReporte_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
 <<<<<<< HEAD
             List<string[]> list = new List<string[]>();
             //list.Add(new string[] { "Fecha", "Id", "Nombre" });
@@ -87,19 +84,20 @@ namespace ProyectoHogarAncianos
             Receta receta = recetaDatos.TraerRecetasPorId(idReceta);
             String nombreCompleto = paciente.Nombre + " " + paciente.ApellidoUno + " " + paciente.ApellidoDos;
             if (lista != null) reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", lista));
+=======
+>>>>>>> parent of 071bf9a... Reporte
             this.reportViewer1.LocalReport.SetParameters(
-                new Microsoft.Reporting.WinForms.ReportParameter("Nombre", nombreCompleto));
-            this.reportViewer1.LocalReport.SetParameters(
-                new Microsoft.Reporting.WinForms.ReportParameter("Cedula", paciente.Cedula));
-            this.reportViewer1.LocalReport.SetParameters(
-                new Microsoft.Reporting.WinForms.ReportParameter("Fecha", receta.Fecha.ToString()));
+                new Microsoft.Reporting.WinForms.ReportParameter("idReceta","0"));
             this.reportViewer1.RefreshReport();
         }
+<<<<<<< HEAD
 
         private void reportViewer1_Load(object sender, EventArgs e)
         {
 
 >>>>>>> master
         }
+=======
+>>>>>>> parent of 071bf9a... Reporte
     }
 }

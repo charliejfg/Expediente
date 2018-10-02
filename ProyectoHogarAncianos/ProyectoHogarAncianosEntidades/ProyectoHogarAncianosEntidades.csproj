@@ -57,8 +57,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataContext1.lqml</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="DetalleRecetaFavorita.cs" />
     <Compile Include="MedicamentoReport.cs" />
+=======
+>>>>>>> parent of 071bf9a... Reporte
     <Compile Include="PersonaLogeada.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecetaFavorita.cs" />
