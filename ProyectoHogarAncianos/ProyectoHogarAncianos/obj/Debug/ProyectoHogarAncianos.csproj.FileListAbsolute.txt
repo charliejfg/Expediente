@@ -103,6 +103,7 @@ C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHoga
 C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.RecetaPaciente.resources
 C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.RecetasReporte.resources
 C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.RecetasReporte.resources
+<<<<<<< HEAD
 C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\bin\Debug\Npgsql.dll
 C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\bin\Debug\Npgsql.xml
 C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.csproj.ProyectoHogarAncianos.exe.config
@@ -110,3 +111,6 @@ C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHoga
 C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.DatosExpediente.resources
 C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.ListaExpediente.resources
 C:\Users\Georgi\Documents\Proyecto\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.Form1.resources
+=======
+C:\HogarAncianos\Expediente\ProyectoHogarAncianos\ProyectoHogarAncianos\obj\Debug\ProyectoHogarAncianos.Lista.resources
+>>>>>>> master

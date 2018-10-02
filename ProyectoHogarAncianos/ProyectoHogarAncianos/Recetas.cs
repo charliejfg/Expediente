@@ -106,7 +106,7 @@ namespace ProyectoHogarAncianos
             Medicamento med = medicamentoLogica.TraerMedicamentoPorId(Convert.ToInt32(cboMedicamento.SelectedValue));
             Via via = viaLogica.TraerViaPorId(Convert.ToInt32(cboVia.SelectedValue));
             //Agrega filas
-            dgvDetalle.Rows.Add(med.Id,med.Codigo,med.Descripcion,via.Id,via.Descripcion,txtFrecuencia.Text);
+            dgvDetalle.Rows.Add(med.Id,med.Codigo,med.Descripcion,via.Id,via.Descripcion,txtDetalles.Text);
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -127,9 +127,7 @@ namespace ProyectoHogarAncianos
 
         private void materialRaisedButton2_Click(object sender, EventArgs e)
         {
-            RecetaLogica recetaLogica = new RecetaLogica();
-            long resultado = recetaLogica.idUltimaReceta(Convert.ToInt32(paciente.Id));
-            RecetasReporte nuevaEscena = new RecetasReporte();
+            Lista nuevaEscena = new Lista(paciente.Id);
             Hide();
             nuevaEscena.Show();
         }

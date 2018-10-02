@@ -24,7 +24,7 @@ namespace ProyectoHogarAncianosDatos
             return 0;
         }
 
-        public Receta TraerRecetaPorId(int idReceta)
+        public Receta TraerRecetaPorId(long idReceta)
         {
             Receta Receta = null;
             try
@@ -45,12 +45,13 @@ namespace ProyectoHogarAncianosDatos
             return Receta;
         }
 
-        public List<Receta> TraerReceta()
+        public List<Receta> TraerReceta(long pacienteId)
         {
             List<Receta> ListaRecetas = new List<Receta>();
             try
             {
                 var query = from it in context.Recetas
+                            where it.PamId == pacienteId
                             select it;
                 foreach (Receta RecetaLista in query)
                 {
@@ -107,6 +108,71 @@ namespace ProyectoHogarAncianosDatos
             }
 
             return Receta.Id;
+        }
+
+        public List<RecetaDetalle> traerRecetaDetallePorRecetaId(long recetaId)
+        {
+            List<RecetaDetalle> listaRecetaDetalle = new List<RecetaDetalle>();
+            try
+            {
+                var query = from it in context.RecetaDetalles
+                    where it.RecetaId == recetaId
+                    select it;
+                foreach (RecetaDetalle detalle in query)
+                {
+                    listaRecetaDetalle.Add(detalle);
+                }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+
+            return listaRecetaDetalle;
+        }
+
+        public List<Receta> traerRecetaFiltradaPorRecetaId(long pacienteId, DateTime fecha1, DateTime fecha2)
+        {
+            List<Receta> ListaRecetas = new List<Receta>();
+            try
+            {
+                var query = from it in context.Recetas
+                    where it.PamId == pacienteId &&
+                          (it.Fecha >= fecha1 && it.Fecha <= fecha2)
+                    select it;
+                foreach (Receta RecetaLista in query)
+                {
+                    ListaRecetas.Add(RecetaLista);
+                }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+
+            return ListaRecetas;
+        }
+
+        public Persona traerPacientePorRecetaId(long idReceta)
+        {
+            Persona paciente = new Persona();
+            try
+            {
+                var query = from it in context.Personas
+                    join rec in context.Recetas on it.Id equals rec.PamId
+                    where rec.Id == idReceta
+                    select it;
+                foreach (Persona persona in query)
+                {
+                    paciente = persona;
+                }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+
+            return paciente;
         }
     }
 }

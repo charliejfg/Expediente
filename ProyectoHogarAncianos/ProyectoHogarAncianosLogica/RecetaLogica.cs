@@ -40,12 +40,12 @@ namespace ProyectoHogarAncianosLogica
         }
 
 
-        public List<Receta> TraerReceta()
+        public List<Receta> TraerRecetasPorPaciente(long pacienteId)
         {
             RecetaDatos recetaDatos = new RecetaDatos();
             List<Receta> ListaReceta = new List<Receta>();
 
-            ListaReceta = recetaDatos.TraerReceta();
+            ListaReceta = recetaDatos.TraerReceta(pacienteId);
 
             return ListaReceta;
         }
@@ -59,6 +59,15 @@ namespace ProyectoHogarAncianosLogica
 
             return ListaReceta;
         }
+        public Receta TraerRecetasPorId(long recetaId)
+        {
+            RecetaDatos recetaDatos = new RecetaDatos();
+            Receta receta = new Receta();
+
+            receta = recetaDatos.TraerRecetaPorId(recetaId);
+
+            return receta;
+        }
 
         public long idUltimaReceta(long pacienteId)
         {
@@ -67,5 +76,56 @@ namespace ProyectoHogarAncianosLogica
             return recetaDatos.trearRecetaId(pacienteId);
         }
 
+        public List<RecetaDetalle> traerRecetaDetallePorRecetaId(long recetaId)
+        {
+            List<RecetaDetalle> lista = new List<RecetaDetalle>();
+            RecetaDatos recetaDatos = new RecetaDatos();
+            try
+            {
+                lista = recetaDatos.traerRecetaDetallePorRecetaId(recetaId);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                throw;
+            }
+
+            return lista.Any() ? lista : null;
+
+        }
+
+        public List<Receta> TraerRecetasFiltradoPorPaciente(long pacienteId, DateTime fecha1, DateTime fecha2)
+        {
+            List<Receta> lista = new List<Receta>();
+            RecetaDatos recetaDatos = new RecetaDatos();
+            try
+            {
+                lista = recetaDatos.traerRecetaFiltradaPorRecetaId(pacienteId, fecha1, fecha2);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                throw;
+            }
+
+            return lista.Any() ? lista : null;
+        }
+
+        public Persona TraerPacientePorReceta(long idReceta)
+        {
+            Persona persona = new Persona();
+            RecetaDatos recetaDatos = new RecetaDatos();
+            try
+            {
+                persona = recetaDatos.traerPacientePorRecetaId(idReceta);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                throw;
+            }
+
+            return persona;
+        }
     }
 }

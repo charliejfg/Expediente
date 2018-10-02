@@ -111,6 +111,7 @@
     <Compile Include="Expediente.Designer.cs">
       <DependentUpon>Expediente.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +123,13 @@
     </Compile>
     <Compile Include="ListaExpediente.Designer.cs">
       <DependentUpon>ListaExpediente.cs</DependentUpon>
+=======
+    <Compile Include="Lista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lista.Designer.cs">
+      <DependentUpon>Lista.cs</DependentUpon>
+>>>>>>> master
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -197,11 +205,16 @@
     <EmbeddedResource Include="Expediente.resx">
       <DependentUpon>Expediente.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListaExpediente.resx">
       <DependentUpon>ListaExpediente.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Lista.resx">
+      <DependentUpon>Lista.cs</DependentUpon>
+>>>>>>> master
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -247,8 +260,13 @@
     <None Include="Properties\DataSources\HjaContext.Persona.datasource" />
     <None Include="Properties\DataSources\HjaContext.PersonaRol.datasource" />
     <None Include="Properties\DataSources\HjaContext.Receta.datasource" />
+    <None Include="Properties\DataSources\HjaContext.RecetaDetalle.datasource" />
     <None Include="Properties\DataSources\HjaContext.Rol.datasource" />
+<<<<<<< HEAD
     <None Include="Properties\DataSources\ProyectoHogarAncianosEntidades.Repo.datasource" />
+=======
+    <None Include="Properties\DataSources\ProyectoHogarAncianosEntidades.MedicamentoReport.datasource" />
+>>>>>>> master
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

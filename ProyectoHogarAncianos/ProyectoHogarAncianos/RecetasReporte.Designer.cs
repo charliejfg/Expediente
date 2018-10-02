@@ -30,10 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.RecetaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.RecetaBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // RecetaBindingSource
+            // 
+            this.RecetaBindingSource.DataMember = "RecetaDetalles";
+            this.RecetaBindingSource.DataSource = typeof(HjaContext.Receta);
             // 
             // reportViewer1
             // 
@@ -44,19 +49,15 @@
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProyectoHogarAncianos.Reportes.ReporteRecetaPacienteFinal.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(1135, 694);
+            this.reportViewer1.Size = new System.Drawing.Size(672, 694);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // RecetaBindingSource
-            // 
-            this.RecetaBindingSource.DataMember = "RecetaDetalles";
-            this.RecetaBindingSource.DataSource = typeof(HjaContext.Receta);
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // RecetasReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1135, 694);
+            this.ClientSize = new System.Drawing.Size(672, 694);
             this.Controls.Add(this.reportViewer1);
             this.Name = "RecetasReporte";
             this.Text = "RecetasReporte";
