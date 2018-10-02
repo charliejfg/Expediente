@@ -12,6 +12,39 @@ namespace ProyectoHogarAncianosDatos
 
         private HjaDataContext context = new HjaDataContext();
 
+        public int CrearMedicamento(Medicamento medicamentoNuevo)
+        {
+            try
+            {
+                context.Medicamentos.InsertOnSubmit(medicamentoNuevo);
+                context.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                return 2;
+            }
+            return 0;
+        }
+
+        public int ModificarMedicamento(Medicamento medicamentoNuevo)
+        {
+            try
+            {
+                var query = (from it in context.Medicamentos
+                             where it.Id == medicamentoNuevo.Id
+                             select it).FirstOrDefault();
+                query.Descripcion = medicamentoNuevo.Descripcion;
+                query.Codigo = medicamentoNuevo.Codigo;
+                query.Peso = medicamentoNuevo.Peso;
+                context.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                return 2;
+            }
+            return 0;
+        }
+
         public Medicamento TraerMedicamentoPorId(int idMedicamento)
         {
             Medicamento Medicamento = null;

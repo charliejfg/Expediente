@@ -8,10 +8,10 @@ using ProyectoHogarAncianosLogica;
 
 namespace ProyectoHogarAncianos
 {
-    public partial class Paciente : MaterialForm
+    public partial class Pacientee : MaterialForm
     {
         private Persona _personaNueva = null;
-        public Paciente()
+        public Pacientee()
         {
             InitializeComponent();
             CenterToScreen();

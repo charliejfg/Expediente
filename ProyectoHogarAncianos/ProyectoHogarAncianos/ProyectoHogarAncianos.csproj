@@ -43,8 +43,9 @@
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Npgsql, Version=4.0.1.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Npgsql.4.0.1\lib\net451\Npgsql.dll</HintPath>
+    <Reference Include="netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+    <Reference Include="Npgsql, Version=3.0.5.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.3.0.5\lib\net45\Npgsql.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -55,7 +56,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\PostgreSQL\Npgsql\bin\net451\System.Threading.Tasks.Extensions.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -92,6 +93,12 @@
     <Compile Include="Cita.Designer.cs">
       <DependentUpon>Cita.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatosExpediente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatosExpediente.Designer.cs">
+      <DependentUpon>DatosExpediente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Encryptado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +110,18 @@
     </Compile>
     <Compile Include="Expediente.Designer.cs">
       <DependentUpon>Expediente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaExpediente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaExpediente.Designer.cs">
+      <DependentUpon>ListaExpediente.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -122,11 +141,11 @@
     <Compile Include="MenuPrincipal.Designer.cs">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Paciente.cs">
+    <Compile Include="Pacientee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Paciente.Designer.cs">
-      <DependentUpon>Paciente.cs</DependentUpon>
+    <Compile Include="Pacientee.Designer.cs">
+      <DependentUpon>Pacientee.cs</DependentUpon>
     </Compile>
     <Compile Include="Pacientes.cs">
       <SubType>Form</SubType>
@@ -169,11 +188,20 @@
     <EmbeddedResource Include="Cita.resx">
       <DependentUpon>Cita.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DatosExpediente.resx">
+      <DependentUpon>DatosExpediente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Encryptado.resx">
       <DependentUpon>Encryptado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Expediente.resx">
       <DependentUpon>Expediente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaExpediente.resx">
+      <DependentUpon>ListaExpediente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -184,8 +212,8 @@
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Paciente.resx">
-      <DependentUpon>Paciente.cs</DependentUpon>
+    <EmbeddedResource Include="Pacientee.resx">
+      <DependentUpon>Pacientee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pacientes.resx">
       <DependentUpon>Pacientes.cs</DependentUpon>
@@ -220,6 +248,7 @@
     <None Include="Properties\DataSources\HjaContext.PersonaRol.datasource" />
     <None Include="Properties\DataSources\HjaContext.Receta.datasource" />
     <None Include="Properties\DataSources\HjaContext.Rol.datasource" />
+    <None Include="Properties\DataSources\ProyectoHogarAncianosEntidades.Repo.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

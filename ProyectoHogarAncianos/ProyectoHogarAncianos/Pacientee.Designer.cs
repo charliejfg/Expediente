@@ -1,6 +1,6 @@
 ﻿namespace ProyectoHogarAncianos
 {
-    partial class Paciente
+    partial class Pacientee
     {
         /// <summary>
         /// Required designer variable.

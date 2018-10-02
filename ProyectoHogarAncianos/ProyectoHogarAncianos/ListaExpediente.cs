@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MaterialSkin;
+using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,21 +9,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MaterialSkin.Controls;
-using MaterialSkin;
 
 namespace ProyectoHogarAncianos
 {
-    public partial class Cita : MaterialForm
+    public partial class ListaExpediente : MaterialForm
     {
-        public Cita()
+        public ListaExpediente()
         {
             InitializeComponent();
+            this.CenterToScreen();
+            // Create a material theme manager and add the form to manage (this)
             MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-
-            // Configure color schema
             materialSkinManager.ColorScheme = new ColorScheme(
                 Primary.Blue400, Primary.Blue500,
                 Primary.Blue500, Accent.LightBlue200,
@@ -29,13 +29,17 @@ namespace ProyectoHogarAncianos
             );
         }
 
-        private void Cita_Load(object sender, EventArgs e)
+        private void materialListView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dtpFecha.Format = DateTimePickerFormat.Custom;
-            dtpFecha.CustomFormat = "dd/MM/yyyy";
+            DatosExpediente de = new DatosExpediente();
+            de.ShowDialog();
+        }
 
-            dtpHora.Format = DateTimePickerFormat.Custom;
-            dtpHora.CustomFormat = "hh:mm tt";
+        private void ListaExpediente_Load(object sender, EventArgs e)
+        {
+            materialListView1.Items.Add("1");
+            materialListView1.Items[0].SubItems.Add("116620079");
+            materialListView1.Items[0].SubItems.Add("Andres Cordero Ruiz");
         }
     }
 }

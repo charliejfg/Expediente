@@ -36,21 +36,35 @@ namespace ProyectoHogarAncianos
         private void Administracion_Load(object sender, EventArgs e)
         {
             //Se llena la listview de pacientes
-            LstPacientes.Items.Add("Carlos Fernadez Garcia", 0);
-            LstPacientes.Items[0].SubItems.Add("Hombre");
-            LstPacientes.Items[0].SubItems.Add("1");
-            LstPacientes.Items.Add("Georgi Mesen Cerdas", 0);
-            LstPacientes.Items[1].SubItems.Add("Hombre");
-            LstPacientes.Items[1].SubItems.Add("2");
-            LstPacientes.Items.Add("Pedro Ramos Llano", 0);
-            LstPacientes.Items[2].SubItems.Add("Hombre");
-            LstPacientes.Items[2].SubItems.Add("3");
-            LstPacientes.Items.Add("Andres Cordero Ruiz", 0);
-            LstPacientes.Items[3].SubItems.Add("Hombre");
-            LstPacientes.Items[3].SubItems.Add("4");
-            LstPacientes.Items.Add("Marco Perez Gomez", 0);
-            LstPacientes.Items[4].SubItems.Add("Hombre");
-            LstPacientes.Items[4].SubItems.Add("5");
+            PacienteLogica PacienteLogica = new PacienteLogica();
+            List<Paciente> ListaPaciente = new List<Paciente>();
+            ListaPaciente = PacienteLogica.TraerPaciente();
+            int p = 0;
+            foreach (Paciente PacienteLista in ListaPaciente)
+            {
+                LstPacientes.Items.Add(Convert.ToString(PacienteLista.Id));
+                LstPacientes.Items[p].SubItems.Add(PacienteLista.Cedula);
+                LstPacientes.Items[p].SubItems.Add(PacienteLista.Nombre);
+                LstPacientes.Items[p].SubItems.Add(PacienteLista.Apellido1);
+                LstPacientes.Items[p].SubItems.Add(PacienteLista.Apellido2);
+                p++;
+            }
+            //Se llena la listview de pacientes
+            //LstPacientes.Items.Add("Carlos Fernadez Garcia", 0);
+            //LstPacientes.Items[0].SubItems.Add("Hombre");
+            //LstPacientes.Items[0].SubItems.Add("1");
+            //LstPacientes.Items.Add("Georgi Mesen Cerdas", 0);
+            //LstPacientes.Items[1].SubItems.Add("Hombre");
+            //LstPacientes.Items[1].SubItems.Add("2");
+            //LstPacientes.Items.Add("Pedro Ramos Llano", 0);
+            //LstPacientes.Items[2].SubItems.Add("Hombre");
+            //LstPacientes.Items[2].SubItems.Add("3");
+            //LstPacientes.Items.Add("Andres Cordero Ruiz", 0);
+            //LstPacientes.Items[3].SubItems.Add("Hombre");
+            //LstPacientes.Items[3].SubItems.Add("4");
+            //LstPacientes.Items.Add("Marco Perez Gomez", 0);
+            //LstPacientes.Items[4].SubItems.Add("Hombre");
+            //LstPacientes.Items[4].SubItems.Add("5");
 
             //Se llena la listview de actividades
             ActividadLogica actividadLogica = new ActividadLogica();
@@ -65,13 +79,37 @@ namespace ProyectoHogarAncianos
             }
 
             //Se llena la listview de medicamentos
-            LstMedicamentos.Items.Add("Morfina");
-            LstMedicamentos.Items[0].SubItems.Add("Anestésicos");
-            LstMedicamentos.Items.Add("Paracetamol");
-            LstMedicamentos.Items[1].SubItems.Add("Antiinflamatorios");
-            LstMedicamentos.Items.Add("Fenobarbital");
-            LstMedicamentos.Items[2].SubItems.Add("Anticonvulsivo");
+            MedicamentoLogica medicamentoLogica = new MedicamentoLogica();
+            List<Medicamento> ListaMedicamento = new List<Medicamento>();
+            ListaMedicamento = medicamentoLogica.TraerMedicamentos();
+            int m = 0;
+            foreach (Medicamento medicamentoLista in ListaMedicamento)
+            {
+                LstMedicamentos.Items.Add(Convert.ToString(medicamentoLista.Id));
+                LstMedicamentos.Items[m].SubItems.Add(medicamentoLista.Codigo);
+                LstMedicamentos.Items[m].SubItems.Add(medicamentoLista.Descripcion);
+                m++;
+            }
 
+            //LstMedicamentos.Items.Add("Morfina");
+            //LstMedicamentos.Items[0].SubItems.Add("Anestésicos");
+            //LstMedicamentos.Items.Add("Paracetamol");
+            //LstMedicamentos.Items[1].SubItems.Add("Antiinflamatorios");
+            //LstMedicamentos.Items.Add("Fenobarbital");
+            //LstMedicamentos.Items[2].SubItems.Add("Anticonvulsivo");
+
+            //Se llena la listview de medicamentos
+            RecetaLogica recetaLogica = new RecetaLogica();
+            PacienteLogica pacienteLogica = new PacienteLogica();
+            List<Receta> ListaReceta = new List<Receta>();
+            ListaReceta = recetaLogica.TraerReceta();
+            int r = 0;
+            foreach (Receta recetaLista in ListaReceta)
+            {
+                LstRecetas.Items.Add(Convert.ToString(recetaLista.Id));
+                LstRecetas.Items[r].SubItems.Add(pacienteLogica.TraerPacientePorId(recetaLista.PamId).Nombre);
+                r++;
+            }
             //LstRecetas.Items.Add("1");
             //LstRecetas.Items[0].SubItems.Add("Andres Cordero Ruiz");
             //LstRecetas.Items.Add("2");
@@ -188,6 +226,28 @@ namespace ProyectoHogarAncianos
         {
             Actividades ac = new Actividades();
             ac.ShowDialog();
+        }
+
+        private void materialFlatButton1_Click(object sender, EventArgs e)
+        {
+            Pacientes ac = new Pacientes();
+            ac.ShowDialog();
+        }
+
+        private void txtBuscarPaciente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBuscarMedicamento_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNuevoMedicamento_Click(object sender, EventArgs e)
+        {
+            Medicamentos me = new Medicamentos();
+            me.ShowDialog();
         }
     }
 }

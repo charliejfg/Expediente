@@ -49,7 +49,7 @@ namespace ProyectoHogarAncianos
 
         private void materialFlatButton2_Click(object sender, EventArgs e)
         {
-            Paciente nuevoMenu = new Paciente();
+            Pacientee nuevoMenu = new Pacientee();
             Hide();
             nuevoMenu.ShowDialog();
         }

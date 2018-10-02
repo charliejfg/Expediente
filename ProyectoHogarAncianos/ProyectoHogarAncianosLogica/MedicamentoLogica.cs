@@ -10,6 +10,49 @@ namespace ProyectoHogarAncianosLogica
 {
     public class MedicamentoLogica
     {
+        public int CrearMedicamento(String codigo, String descripcion, int peso)
+        {
+            MedicamentoDatos nuevoDatos = new MedicamentoDatos();
+            int respuesta;
+            try
+            {
+                // Create a new category
+                Medicamento nuevaMedicamento = new Medicamento();
+                nuevaMedicamento.Descripcion = descripcion;
+                nuevaMedicamento.Codigo = codigo;
+                nuevaMedicamento.Peso = peso;
+
+
+                respuesta = nuevoDatos.CrearMedicamento(nuevaMedicamento);
+            }
+            catch (Exception)
+            {
+                return 1;
+            }
+            return respuesta;
+        }
+
+        public int ModificarMedicamento(int idMedicamento, String descripcion, String codigo, int peso)
+        {
+            MedicamentoDatos nuevoDatos = new MedicamentoDatos();
+            int respuesta;
+            try
+            {
+                // Create a new category
+                Medicamento nuevaMedicamento = new Medicamento();
+                nuevaMedicamento.Id = idMedicamento;
+                nuevaMedicamento.Descripcion = descripcion;
+                nuevaMedicamento.Codigo = codigo;
+                nuevaMedicamento.Peso = peso;
+
+                respuesta = nuevoDatos.ModificarMedicamento(nuevaMedicamento);
+            }
+            catch (Exception)
+            {
+                return 1;
+            }
+            return respuesta;
+        }
         public List<Medicamento> TraerMedicamentos()
         {
             MedicamentoDatos medicamentoDatos = new MedicamentoDatos();

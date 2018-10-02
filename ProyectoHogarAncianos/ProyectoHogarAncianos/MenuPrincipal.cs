@@ -112,8 +112,7 @@ namespace ProyectoHogarAncianos
 
         private void btnExpedientes_Click(object sender, EventArgs e)
         {
-            Expediente nuevaPagina = new Expediente();
-            Hide();
+            ListaExpediente nuevaPagina = new ListaExpediente();
             nuevaPagina.ShowDialog();
         }
     }

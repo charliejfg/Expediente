@@ -50,6 +50,16 @@ namespace ProyectoHogarAncianosLogica
             return ListaReceta;
         }
 
+        public List<RecetaDetalle> TraerDtalleReceta(int idReceta)
+        {
+            DetallesRecetaDatos recetaDatos = new DetallesRecetaDatos();
+            List<RecetaDetalle> ListaReceta = new List<RecetaDetalle>();
+
+            ListaReceta = recetaDatos.TraerRecetaDetalle(idReceta);
+
+            return ListaReceta;
+        }
+
         public long idUltimaReceta(long pacienteId)
         {
             RecetaDatos recetaDatos = new RecetaDatos();

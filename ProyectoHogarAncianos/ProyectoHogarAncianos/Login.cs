@@ -52,9 +52,11 @@ namespace ProyectoHogarAncianos
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
-            Encryptado pagina = new Encryptado();
-            Hide();
-            pagina.ShowDialog();
+            //Encryptado pagina = new Encryptado();
+            //Hide();
+            //pagina.ShowDialog();
+            Form1 f = new Form1();
+            f.ShowDialog();
         }
 
         private void materialLabel1_Click(object sender, EventArgs e)

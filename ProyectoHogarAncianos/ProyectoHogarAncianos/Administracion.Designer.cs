@@ -54,11 +54,12 @@
             this.PacienteReceta = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.materialFlatButton4 = new MaterialSkin.Controls.MaterialFlatButton();
             this.tabMedicamentos = new System.Windows.Forms.TabPage();
-            this.materialFlatButton3 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnNuevoMedicamento = new MaterialSkin.Controls.MaterialFlatButton();
             this.LstMedicamentos = new MaterialSkin.Controls.MaterialListView();
             this.NombreMedicamento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.TipoMedicamento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.CodigoMedicamento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabActividades = new System.Windows.Forms.TabPage();
+            this.btnNuevaActividad = new MaterialSkin.Controls.MaterialFlatButton();
             this.txtBuscarActividad = new System.Windows.Forms.TextBox();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.LstActividades = new MaterialSkin.Controls.MaterialListView();
@@ -68,10 +69,15 @@
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
             this.LstPacientes = new System.Windows.Forms.ListView();
             this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Genero = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.NumExpediente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.PrimerApellido = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SegundoApellido = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnNuevaActividad = new MaterialSkin.Controls.MaterialFlatButton();
+            this.idPaciente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.txtBuscarPaciente = new System.Windows.Forms.TextBox();
+            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
+            this.txtBuscarMedicamento = new System.Windows.Forms.TextBox();
+            this.idMedicamento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.materialTabControl1.SuspendLayout();
             this.tabUsuarios.SuspendLayout();
             this.tabCitas.SuspendLayout();
@@ -336,7 +342,9 @@
             // 
             // tabMedicamentos
             // 
-            this.tabMedicamentos.Controls.Add(this.materialFlatButton3);
+            this.tabMedicamentos.Controls.Add(this.txtBuscarMedicamento);
+            this.tabMedicamentos.Controls.Add(this.materialLabel3);
+            this.tabMedicamentos.Controls.Add(this.btnNuevoMedicamento);
             this.tabMedicamentos.Controls.Add(this.LstMedicamentos);
             this.tabMedicamentos.Location = new System.Drawing.Point(4, 22);
             this.tabMedicamentos.Name = "tabMedicamentos";
@@ -345,28 +353,30 @@
             this.tabMedicamentos.Text = "Medicamentos";
             this.tabMedicamentos.UseVisualStyleBackColor = true;
             // 
-            // materialFlatButton3
+            // btnNuevoMedicamento
             // 
-            this.materialFlatButton3.AutoSize = true;
-            this.materialFlatButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton3.Depth = 0;
-            this.materialFlatButton3.Icon = null;
-            this.materialFlatButton3.Location = new System.Drawing.Point(284, 23);
-            this.materialFlatButton3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton3.Name = "materialFlatButton3";
-            this.materialFlatButton3.Primary = false;
-            this.materialFlatButton3.Size = new System.Drawing.Size(167, 36);
-            this.materialFlatButton3.TabIndex = 1;
-            this.materialFlatButton3.Text = "Nuevo Medicamento";
-            this.materialFlatButton3.UseVisualStyleBackColor = true;
+            this.btnNuevoMedicamento.AutoSize = true;
+            this.btnNuevoMedicamento.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnNuevoMedicamento.Depth = 0;
+            this.btnNuevoMedicamento.Icon = null;
+            this.btnNuevoMedicamento.Location = new System.Drawing.Point(460, 23);
+            this.btnNuevoMedicamento.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnNuevoMedicamento.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnNuevoMedicamento.Name = "btnNuevoMedicamento";
+            this.btnNuevoMedicamento.Primary = false;
+            this.btnNuevoMedicamento.Size = new System.Drawing.Size(167, 36);
+            this.btnNuevoMedicamento.TabIndex = 1;
+            this.btnNuevoMedicamento.Text = "Nuevo Medicamento";
+            this.btnNuevoMedicamento.UseVisualStyleBackColor = true;
+            this.btnNuevoMedicamento.Click += new System.EventHandler(this.btnNuevoMedicamento_Click);
             // 
             // LstMedicamentos
             // 
             this.LstMedicamentos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.LstMedicamentos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.NombreMedicamento,
-            this.TipoMedicamento});
+            this.idMedicamento,
+            this.CodigoMedicamento,
+            this.NombreMedicamento});
             this.LstMedicamentos.Depth = 0;
             this.LstMedicamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.LstMedicamentos.FullRowSelect = true;
@@ -384,13 +394,14 @@
             // 
             // NombreMedicamento
             // 
+            this.NombreMedicamento.DisplayIndex = 0;
             this.NombreMedicamento.Text = "Nombre";
             this.NombreMedicamento.Width = 274;
             // 
-            // TipoMedicamento
+            // CodigoMedicamento
             // 
-            this.TipoMedicamento.Text = "Tipo";
-            this.TipoMedicamento.Width = 202;
+            this.CodigoMedicamento.Text = "Codigo";
+            this.CodigoMedicamento.Width = 202;
             // 
             // tabActividades
             // 
@@ -404,6 +415,23 @@
             this.tabActividades.TabIndex = 5;
             this.tabActividades.Text = "Actividades";
             this.tabActividades.UseVisualStyleBackColor = true;
+            // 
+            // btnNuevaActividad
+            // 
+            this.btnNuevaActividad.AutoSize = true;
+            this.btnNuevaActividad.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnNuevaActividad.Depth = 0;
+            this.btnNuevaActividad.Icon = null;
+            this.btnNuevaActividad.Location = new System.Drawing.Point(387, 23);
+            this.btnNuevaActividad.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnNuevaActividad.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnNuevaActividad.Name = "btnNuevaActividad";
+            this.btnNuevaActividad.Primary = false;
+            this.btnNuevaActividad.Size = new System.Drawing.Size(139, 36);
+            this.btnNuevaActividad.TabIndex = 12;
+            this.btnNuevaActividad.Text = "Nueva Actividad";
+            this.btnNuevaActividad.UseVisualStyleBackColor = true;
+            this.btnNuevaActividad.Click += new System.EventHandler(this.btnNuevaActividad_Click);
             // 
             // txtBuscarActividad
             // 
@@ -459,6 +487,8 @@
             // 
             // tabPacientes
             // 
+            this.tabPacientes.Controls.Add(this.txtBuscarPaciente);
+            this.tabPacientes.Controls.Add(this.materialLabel2);
             this.tabPacientes.Controls.Add(this.materialFlatButton1);
             this.tabPacientes.Controls.Add(this.LstPacientes);
             this.tabPacientes.Location = new System.Drawing.Point(4, 22);
@@ -474,7 +504,7 @@
             this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialFlatButton1.Depth = 0;
             this.materialFlatButton1.Icon = null;
-            this.materialFlatButton1.Location = new System.Drawing.Point(297, 6);
+            this.materialFlatButton1.Location = new System.Drawing.Point(434, 6);
             this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton1.Name = "materialFlatButton1";
@@ -483,13 +513,15 @@
             this.materialFlatButton1.TabIndex = 4;
             this.materialFlatButton1.Text = "Nuevo Paciente";
             this.materialFlatButton1.UseVisualStyleBackColor = true;
+            this.materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click);
             // 
             // LstPacientes
             // 
             this.LstPacientes.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.idPaciente,
             this.Nombre,
-            this.Genero,
-            this.NumExpediente});
+            this.PrimerApellido,
+            this.SegundoApellido});
             this.LstPacientes.FullRowSelect = true;
             this.LstPacientes.Location = new System.Drawing.Point(70, 51);
             this.LstPacientes.Name = "LstPacientes";
@@ -505,15 +537,15 @@
             this.Nombre.Text = "Nombre";
             this.Nombre.Width = 279;
             // 
-            // Genero
+            // PrimerApellido
             // 
-            this.Genero.Text = "Género";
-            this.Genero.Width = 119;
+            this.PrimerApellido.Text = "Primer Apellido";
+            this.PrimerApellido.Width = 119;
             // 
-            // NumExpediente
+            // SegundoApellido
             // 
-            this.NumExpediente.Text = "Número de expediente";
-            this.NumExpediente.Width = 127;
+            this.SegundoApellido.Text = "Segundo Apellido";
+            this.SegundoApellido.Width = 127;
             // 
             // pictureBox1
             // 
@@ -526,22 +558,55 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // btnNuevaActividad
+            // idPaciente
             // 
-            this.btnNuevaActividad.AutoSize = true;
-            this.btnNuevaActividad.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnNuevaActividad.Depth = 0;
-            this.btnNuevaActividad.Icon = null;
-            this.btnNuevaActividad.Location = new System.Drawing.Point(387, 23);
-            this.btnNuevaActividad.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnNuevaActividad.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnNuevaActividad.Name = "btnNuevaActividad";
-            this.btnNuevaActividad.Primary = false;
-            this.btnNuevaActividad.Size = new System.Drawing.Size(139, 36);
-            this.btnNuevaActividad.TabIndex = 12;
-            this.btnNuevaActividad.Text = "Nueva Actividad";
-            this.btnNuevaActividad.UseVisualStyleBackColor = true;
-            this.btnNuevaActividad.Click += new System.EventHandler(this.btnNuevaActividad_Click);
+            this.idPaciente.Text = "Id";
+            // 
+            // materialLabel2
+            // 
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel2.Location = new System.Drawing.Point(70, 15);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(55, 19);
+            this.materialLabel2.TabIndex = 5;
+            this.materialLabel2.Text = "Buscar";
+            // 
+            // txtBuscarPaciente
+            // 
+            this.txtBuscarPaciente.Location = new System.Drawing.Point(152, 13);
+            this.txtBuscarPaciente.Name = "txtBuscarPaciente";
+            this.txtBuscarPaciente.Size = new System.Drawing.Size(100, 20);
+            this.txtBuscarPaciente.TabIndex = 6;
+            this.txtBuscarPaciente.TextChanged += new System.EventHandler(this.txtBuscarPaciente_TextChanged);
+            // 
+            // materialLabel3
+            // 
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.Depth = 0;
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel3.Location = new System.Drawing.Point(80, 23);
+            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(55, 19);
+            this.materialLabel3.TabIndex = 2;
+            this.materialLabel3.Text = "Buscar";
+            // 
+            // txtBuscarMedicamento
+            // 
+            this.txtBuscarMedicamento.Location = new System.Drawing.Point(169, 21);
+            this.txtBuscarMedicamento.Name = "txtBuscarMedicamento";
+            this.txtBuscarMedicamento.Size = new System.Drawing.Size(100, 20);
+            this.txtBuscarMedicamento.TabIndex = 3;
+            this.txtBuscarMedicamento.TextChanged += new System.EventHandler(this.txtBuscarMedicamento_TextChanged);
+            // 
+            // idMedicamento
+            // 
+            this.idMedicamento.Text = "Id";
             // 
             // Administracion
             // 
@@ -588,14 +653,14 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ListView LstPacientes;
         private System.Windows.Forms.ColumnHeader Nombre;
-        private System.Windows.Forms.ColumnHeader Genero;
+        private System.Windows.Forms.ColumnHeader PrimerApellido;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
-        private System.Windows.Forms.ColumnHeader NumExpediente;
+        private System.Windows.Forms.ColumnHeader SegundoApellido;
         private MaterialSkin.Controls.MaterialListView LstActividades;
-        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton3;
+        private MaterialSkin.Controls.MaterialFlatButton btnNuevoMedicamento;
         private MaterialSkin.Controls.MaterialListView LstMedicamentos;
         private System.Windows.Forms.ColumnHeader NombreMedicamento;
-        private System.Windows.Forms.ColumnHeader TipoMedicamento;
+        private System.Windows.Forms.ColumnHeader CodigoMedicamento;
         private MaterialSkin.Controls.MaterialListView LstRecetas;
         private System.Windows.Forms.ColumnHeader numReceta;
         private System.Windows.Forms.ColumnHeader PacienteReceta;
@@ -617,5 +682,11 @@
         private System.Windows.Forms.TextBox txtBuscarActividad;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialFlatButton btnNuevaActividad;
+        private System.Windows.Forms.ColumnHeader idPaciente;
+        private System.Windows.Forms.TextBox txtBuscarPaciente;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private System.Windows.Forms.TextBox txtBuscarMedicamento;
+        private MaterialSkin.Controls.MaterialLabel materialLabel3;
+        private System.Windows.Forms.ColumnHeader idMedicamento;
     }
 }

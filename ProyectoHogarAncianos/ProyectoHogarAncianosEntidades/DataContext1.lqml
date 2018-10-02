@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Database Name="hja" EntityNamespace="HjaContext" ContextNamespace="HjaContext" Class="HjaDataContext" xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" ed:Guid="771f8539-d650-45ef-a363-0bb444b71481" Provider="Devart.Data.PostgreSql.Linq.Provider.PgSqlDataProvider, Devart.Data.PostgreSql.Linq" Extended="true" xmlns="http://schemas.devart.com/linqconnect/mapping">
-  <Connection Mode="ConnectionString" ConnectionString="User Id=hja;Password=hja;Host=localhost;Port=5432;Database=hja;Persist Security Info=True;Initial Schema=hja" Provider="Devart.Data.PostgreSql" />
+  <Connection Mode="ConnectionString" ConnectionString="User Id=hja;Password=123456;Host=localhost;Port=5432;Database=hja;Persist Security Info=True;Initial Schema=hja" Provider="Devart.Data.PostgreSql" />
   <Table Name="hja.receta" Member="Recetas">
     <Type Name="Receta" ed:Guid="fe8f4adf-e63c-4539-9708-e809b013dc83">
       <Column Name="id" Member="Id" Type="System.Int32" AutoSync="OnInsert" DbType="SERIAL NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="b2fcacf2-0afe-459c-8faf-c3162e6ff4e5" />
@@ -38,6 +38,7 @@
       <Column Name="codigo" Member="Codigo" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="0f2195ae-6348-444f-a5cb-6c07c0174f26" />
       <Column Name="clave" Member="Clave" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="cafb3158-9fce-4542-8a47-8d799867f6ad" />
       <Column Name="usuario" Member="Usuario" Type="System.String" DbType="VARCHAR" CanBeNull="true" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="false" ed:Guid="b2e36392-3149-402c-bd54-ff7f1c9968a7" />
+      <Column Name="peso" Member="Peso" Type="System.Decimal" DbType="NUMERIC(10)" CanBeNull="true" UpdateCheck="Never" Precision="10" Scale="0" ed:ValidateRequired="false" ed:Guid="876a3573-2043-4997-9553-a05757a7fdac" />
       <Association Name="Medicamento_RecetaDetalle" ed:AssociationGuid="7cc14274-0786-42ea-a337-27152b66fdf4" Member="RecetaDetalles" ed:Guid="63673f9a-e5b6-4a17-986f-54bf6eee6130" ThisKey="Id" OtherKey="MedicamentoId" Type="RecetaDetalle" />
     </Type>
   </Table>
@@ -77,6 +78,26 @@
       <Column Name="rol_id" Member="RolId" Type="System.Int32" DbType="INT4 NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="f08b72e9-2f0b-42fd-8a1a-66a37d399c94" />
       <Association Name="Rol_PersonaRol" ed:AssociationGuid="6a11386f-c654-490c-80e9-64bb6672c1eb" Member="Rol" ed:Guid="aa2d12d7-2b9b-47cf-81af-3c83aa52acd9" ThisKey="RolId" OtherKey="Id" Type="Rol" DeleteRule="NO ACTION" IsForeignKey="true" />
       <Association Name="Persona_PersonaRol" ed:AssociationGuid="cbf5b09f-b97a-4190-8e1d-b492249fb717" Member="Persona" ed:Guid="5519a64e-5226-412b-91ac-eb496696399f" ThisKey="PersonaId" OtherKey="Id" Type="Persona" DeleteRule="NO ACTION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="hja.paciente" Member="Pacientes">
+    <Type Name="Paciente" ed:Guid="5650b4ad-f1c7-46ba-ac2e-6b9e745bac71">
+      <Column Name="id" Member="Id" Type="System.Int32" AutoSync="OnInsert" DbType="SERIAL NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="b884ba25-e535-4661-969c-c4da125e870c" />
+      <Column Name="cedula" Member="Cedula" Type="System.String" DbType="CHAR(10)" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="10" Unicode="true" ed:ValidateMaxLength="10" ed:ValidateRequired="false" ed:Guid="0ea440d9-f521-4699-85f0-4c64c62e5afa" />
+      <Column Name="nombre" Member="Nombre" Type="System.String" DbType="CHAR(50)" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="56d27f9e-9a92-4d63-92b5-9835c5504436" />
+      <Column Name="apellido1" Member="Apellido1" Type="System.String" DbType="CHAR(50)" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="aba42d53-7350-4c73-9744-327696a32c76" />
+      <Column Name="apellido2" Member="Apellido2" Type="System.String" DbType="CHAR(50)" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="d549db4d-0b65-4ad6-aeb2-3c0ae5760f58" />
+      <Column Name="&quot;fechaNacimiento&quot;" Member="FechaNacimiento" Type="System.DateTime" DbType="DATE" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="6d354544-c194-4b87-80d5-dac1c0bf37b2" />
+      <Column Name="peso" Member="Peso" Type="System.Decimal" DbType="NUMERIC(10)" CanBeNull="true" UpdateCheck="Never" Precision="10" Scale="0" ed:ValidateRequired="false" ed:Guid="1c95ff7f-4522-490e-b076-d3daf55e6cc7" />
+      <Column Name="genero" Member="Genero" Type="System.String" DbType="CHAR(1)" CanBeNull="true" UpdateCheck="Never" FixedLength="true" MaxLength="1" Unicode="true" ed:ValidateMaxLength="1" ed:ValidateRequired="false" ed:Guid="2abb7f5c-0a25-4cc8-bd82-0ca04dc01171" />
+      <Column Name="altura" Member="Altura" Type="System.Decimal" DbType="NUMERIC(10)" CanBeNull="true" UpdateCheck="Never" Precision="10" Scale="0" ed:ValidateRequired="false" ed:Guid="b96be16f-2860-4b38-85ec-acce1222b9d2" />
+    </Type>
+  </Table>
+  <Table Name="hja.expediente" Member="Expedientes">
+    <Type Name="Expediente" ed:Guid="490a86c4-9159-4db0-91c6-80fb946a74ac">
+      <Column Name="id" Member="Id" Type="System.Int32" AutoSync="OnInsert" DbType="SERIAL NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="6b113e96-2865-4cb1-a9e5-f1859cb12893" />
+      <Column Name="&quot;idPaciente&quot;" Member="IdPaciente" Type="System.Int32" DbType="INT4" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="dc7b4614-f805-42e0-8b7b-100592b9a7a3" />
+      <Column Name="&quot;fechaCreacion&quot;" Member="FechaCreacion" Type="System.DateTime" DbType="DATE" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="5887479d-445e-4440-8ea1-018b060a14a9" />
     </Type>
   </Table>
   <Type Name="InfoPamResult" ed:Guid="ef384ed4-003c-42cb-b70d-79b361414998">

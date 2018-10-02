@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MaterialSkin;
+using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,14 +9,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MaterialSkin.Controls;
-using MaterialSkin;
 
 namespace ProyectoHogarAncianos
 {
-    public partial class Cita : MaterialForm
+    public partial class DatosExpediente : MaterialForm
     {
-        public Cita()
+        public DatosExpediente()
         {
             InitializeComponent();
             MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
@@ -27,15 +27,6 @@ namespace ProyectoHogarAncianos
                 Primary.Blue500, Accent.LightBlue200,
                 TextShade.WHITE
             );
-        }
-
-        private void Cita_Load(object sender, EventArgs e)
-        {
-            dtpFecha.Format = DateTimePickerFormat.Custom;
-            dtpFecha.CustomFormat = "dd/MM/yyyy";
-
-            dtpHora.Format = DateTimePickerFormat.Custom;
-            dtpHora.CustomFormat = "hh:mm tt";
         }
     }
 }
